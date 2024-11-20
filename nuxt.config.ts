@@ -23,6 +23,6 @@ export default defineNuxtConfig({
     storageKey: "nuxt-color-mode",
   },
   ui: {
-    icons: ["solar"],
+    icons: ["solar", "simple-icons"],
   },
 });

@@ -1,5 +1,5 @@
 <template>
-  <main class="dark:bg-zinc-900 bg-zinc-50 center transition-all duration-200 ease-in-out">
+  <main class="">
     <Navbar />
     <!-- <div class="flex justify-center items-center">
       <div class="w-[500px] h-[50px] bg-gradient-to-l from-orange-600 to-gray-600 rounded-full -rotate-[15deg]"></div>
@@ -12,7 +12,7 @@
         <span class="child">Mehrdad Anvar</span>
       </div>
     </div>
-    <div class="dark:text-zinc-500 p-6 rounded backdrop-brightness-105 backdrop-blur-md dark:backdrop-blur-lg mx-auto w-9/12 h-1/2">
+    <div class="dark:text-zinc-500 p-6 rounded backdrop-brightness-105 backdrop-blur-sm dark:backdrop-blur-lg mx-auto w-9/12 h-1/2">
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis totam explicabo fuga consequuntur nihil praesentium. Dignissimos omnis quod
       cupiditate illum. Perspiciatis hic blanditiis totam obcaecati ut architecto nam sed commodi.
     </div>
@@ -32,6 +32,7 @@
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sequi eaque vitae qui ratione, iusto animi modi quos ex, reiciendis, assumenda
       nisi nam harum! Eius nobis totam excepturi ab eos?
     </div>
+    <UDivider />
 
     <!-- <div class="w-[300px] h-[300px] mx-auto p-[1px] rounded-lg father">
       <div class="h-full bg-black rounded-lg">
@@ -50,13 +51,6 @@
 </template>
 <script setup></script>
 <style scoped>
-.center {
-  background-image: url("/sample.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 main {
 }
 .father {
