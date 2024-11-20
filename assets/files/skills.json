@@ -1,0 +1,47 @@
+{
+  "skills": [
+    {
+      "identity": 0,
+      "title": "Data Analysis",
+      "description": "Proficient in extracting actionable insights from complex datasets using statistical techniques and data visualization tools. Skilled in Python and R programming for data manipulation and analysis. Experienced in conducting hypothesis testing, creating meaningful visualizations, and presenting findings to drive informed decision-making. Strong knowledge of data cleaning, exploratory data analysis, and basic machine learning concepts. Adept at using Excel for data organization and reporting. Proven ability to translate data-driven insights into practical business recommendations.",
+      "children": []
+    },
+    {
+      "identity": 1,
+      "title": "Study Design",
+      "description": "",
+      "items": [
+        "Experienced in crafting robust research methodologies to address specific questions and objectives.",
+        "Proficient in designing experiments, surveys, and observational studies with a keen focus on minimizing biases and maximizing data validity.",
+        "Skilled in selecting appropriate sampling techniques, defining variables, and determining sample sizes for meaningful statistical analysis.",
+        "Knowledgeable about research ethics and ensuring compliance with regulatory guidelines.",
+        "Capable of creating detailed study protocols, implementing data collection procedures, and managing research timelines.",
+        "Strong analytical mindset for evaluating study outcomes and adjusting designs as needed.",
+        "Effective at communicating the rationale and implications of study design to interdisciplinary teams and stakeholders."
+      ],
+      "children": []
+    },
+    {
+      "identity": 2,
+      "title": "Literature Review",
+      "description": "",
+      "children": []
+    },
+    {
+      "identity": 3,
+      "title": "Web Development",
+      "description": "Fluent in Crafting Robust & Secure Web Applications",
+      "details": "I am fluent in crafting robust and efficient web solutions that prioritize security and scalability. Utilizing a strong foundation in web development, I create seamless user experiences, employing a combination of front-end and back-end technologies. Adept at implementing best practices for data protection, authentication, and authorization to ensure the safety of user information. Experienced in optimizing web applications for high performance, accommodating growing user bases while maintaining responsiveness. My skills in web development allow me to bridge the gap between creativity and technical functionality, resulting in impactful and reliable online platforms.",
+      "children": [
+        {
+          "id": 0,
+          "name": "front-end",
+          "stack": ["HTML 5", "CSS", "JavaScript", "Vue Js", "Nuxt 3", "Tailwind CSS"]
+        },
+        { "id": 1, "name": "back-end", "stack": ["Python", "Node Js", "Go", "Docker", ""] },
+
+        { "id": 2, "name": "dev-ops", "stack": ["Linux", ""] }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "skills": [],
+  "programming Languages": [],
+  "Javascript": [
+    "develope user interinterfaces Front-end Development (React.js, Vue.js)",
+    "Node.js for Back-end Development with Express",
+    "DOM Manipulation",
+    "AJAX and Asynchronous Programming"
+  ],
+  "Linux": [
+    "Shell Scripting",
+    "File System Navigatiopn",
+    "User and Permission Management",
+    "Process Management",
+    "Remote Access SSH, Security Practices",
+    "System Backups"
+  ],
+  "Containerization": [
+    "Familiarity with containerization tools such as Docker for creating, deploying, and running applications in containers."
+  ],
+  "CSS": [
+    {
+      "title": "Responsive Design",
+      "content": "Ability to create responsive layouts that adapt to different screen sizes using media queries and flexible grids."
+    },
+    {
+      "title": "CSS Preprocessors",
+      "content": "Experience with CSS preprocessors like Sass or Less to enhance maintainability and organization of stylesheets."
+    },
+    {}
+  ]
+}

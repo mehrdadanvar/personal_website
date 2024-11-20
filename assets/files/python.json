@@ -1,0 +1,47 @@
+{
+  "skills": [
+    {
+      "id": 1,
+      "name": "Data manipulation",
+      "description": "Manipulating and cleaning data",
+      "related_packages": ["pandas", "numpy"]
+    },
+    {
+      "id": 2,
+      "name": "Data visualization",
+      "description": "Creating clear and informative visualizations",
+      "related_packages": ["matplotlib", "seaborn"]
+    },
+    {
+      "id": 3,
+      "name": "Statistical modeling",
+      "description": "Fitting and interpreting regression models",
+      "related_packages": ["statsmodels", "scikit-learn"]
+    },
+    {
+      "id": 4,
+      "name": "Survival analysis",
+      "description": "Analyzing time-to-event data",
+      "related_packages": ["lifelines"],
+      "related_methods": ["Kaplan-Meier analysis", "Cox proportional hazards regression"]
+    },
+    {
+      "id": 5,
+      "name": "Machine learning",
+      "description": "Using machine learning techniques to analyze data",
+      "related_packages": ["scikit-learn", "tensorflow", "keras"]
+    },
+    {
+      "id": 6,
+      "name": "Reproducible research",
+      "description": "Creating transparent and reproducible research reports",
+      "related_packages": ["jupyter", "nbconvert"]
+    },
+    {
+      "id": 7,
+      "name": "Web scraping",
+      "description": "Extracting data from websites",
+      "related_packages": ["beautifulsoup4", "requests", "selenium"]
+    }
+  ]
+}

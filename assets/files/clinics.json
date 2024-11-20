@@ -1,0 +1,63 @@
+[
+  {
+    "_id": "643efe5f827caca814f8a82a",
+    "title": "General Physician in Energy Industry",
+    "geo": ["Iran", "Hormozgan", "Kish Island"],
+    "place": "Petro Orim Kish Company",
+    "period": "August 2019 - October 2020",
+    "definition": [
+      "Provided comprehensive medical care for employees within the energy sector, focusing on treating injuries, addressing common outpatient complaints, and ensuring the safe transportation of emergencies.",
+      "Managed healthcare needs, occupational risk factors across two drilling units in collaboration with safety officers, serving a workforce of 400 employees."
+    ],
+    "identity": 4
+  },
+  {
+    "_id": "643efe5f827caca814f8a829",
+    "title": "Internal Medicine Ward General Physician",
+    "place": "Namazi Hospital",
+    "geo": ["Iran", "Fars", "Shiraz"],
+    "period": "April 2018 - November 2018",
+    "definition": [
+      "Facilitated inpatient care of critical oncology patients with a team of 2 attending physicians and 10 nurses.",
+      "Reviewed diagnostic plans, laboratory and imaging studies with specialist attending physicians and followed up on progression of therapeutic procedures."
+    ],
+    "identity": 3
+  },
+  {
+    "_id": "643efe5f827caca814f8a82b",
+    "title": "Emergency Department General Practitioner",
+    "geo": ["Iran", "Kurdistan", "Saqqez"],
+    "place": "Public Hospital",
+    "period": "August 2016- April 2017",
+    "definition": [
+      "Conducted triage and provided initial assessments for medical and surgical emergencies within a fast-paced 20-bed emergency department, servicing a community of 200,000 individuals",
+      "Formulated and executed diagnostic plans to ensure prompt treatment for diverse presenting cases in close collaboration with on-call specialist supervisors."
+    ],
+    "identity": 2
+  },
+  {
+    "_id": "643efe5f827caca814f8a82c",
+    "title": "Military General Physician (Return of Service)",
+    "geo": ["Iran", "Kurdistan", "Saqqez"],
+    "place": "Iranian military ground forces",
+    "period": "April 2016 - December 2017",
+    "definition": [
+      "Implemented prevention strategies, early diagnosis & treatment plans for common presenting diseases in a population of 3000 military personnel/families at an Iranian military ground-forces base",
+      "Performed minor procedures including wound sutures & debridement, abscess drainage, fracture stabilization and splinting, foreign body removal.",
+      "Provided medical training to military personnel on topics including first aid, CPR, common injuries and diseases during training & combat."
+    ],
+    "identity": 1
+  },
+  {
+    "_id": "643efe5f827caca814f8a82d",
+    "title": "Family Physician/Primary Health Care Consultant",
+    "geo": ["Iran", "Fars", "Shiraz"],
+    "place": "Kamfirooz Health Home",
+    "period": "January 2016 - April 2016",
+    "definition": [
+      "Monitored health status of an under-served population of 10,000  by diagnosing and treating medical conditions, performing minor surgical procedures, stabilizing emergencies for safe referral.",
+      "Conducted periodic health & hygiene inspections of schools, assisted in family planning, assessed adherence to vaccination protocols, monitored high risk pregnancies & care of chronic condition."
+    ],
+    "identity": 0
+  }
+]

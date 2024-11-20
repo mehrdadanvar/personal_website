@@ -1,0 +1,47 @@
+[
+  {
+    "_id": "643efe5f827caca814f8a82a",
+    "title": "General Physician in Energy Industry",
+    "geo": ["Iran", "Hormozgan", "Kish Island"],
+    "place": "Petro Orim Kish Company",
+    "period": "September 2019 - October 2020",
+    "definition": "Treated injuries, common outpatient complaints, and coordinated safe transportation of emergencies on two offshore drilling units with 400 employees. Assisted in implementation of occupational safety standards.",
+    "identity": 4
+  },
+  {
+    "_id": "643efe5f827caca814f8a829",
+    "title": "Internal Medicine Ward General Physician",
+    "place": "Namazi Hospital",
+    "geo": ["Iran", "Fars", "Shiraz"],
+    "period": "March 2018 - August 2019",
+    "definition": "Facilitated care of critically ill cancer patients with a team of 2 attending physicians and 10 nurses.",
+    "identity": 3
+  },
+  {
+    "_id": "643efe5f827caca814f8a82b",
+    "title": "Emergency Department General Practitioner",
+    "geo": ["Iran", "Kurdistan", "Saqqez"],
+    "place": "Public Hospital",
+    "period": "May 2016-May 2017",
+    "definition": "Performed triage and initial assessment of medical and surgical emergencies at 20-bed emergency department public hospital covering a populace of 200,000 Saqqez, Kurdistan",
+    "identity": 2
+  },
+  {
+    "_id": "643efe5f827caca814f8a82c",
+    "title": "Military General Physician (Mandatory Public Service)",
+    "geo": ["Iran", "Kurdistan", "Saqqez"],
+    "place": "Iranian military ground forces",
+    "period": "August 2016 - April 2017",
+    "definition": "Supervised and implemented disease prevention strategies, early diagnosis & treatment plans for common\npresenting diseases in a population of 3000 military personnel/families at an Iranian military ground forces.",
+    "identity": 1
+  },
+  {
+    "_id": "643efe5f827caca814f8a82d",
+    "title": "Family Physician/Primary Health Care Consultant",
+    "geo": ["Iran", "Fars", "Shiraz"],
+    "place": "Kamfirooz Health Home",
+    "period": "December 2015-March 2016",
+    "definition": "Monitored health status of a rural population of 10,000 mainly by assisting in family planning, immunization, pediatric care, chronic diseases including diabetes and hypertension",
+    "identity": 0
+  }
+]

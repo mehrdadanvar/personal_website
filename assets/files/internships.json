@@ -1,0 +1,124 @@
+[
+  {
+    "id": 1,
+    "title": "Outpatient Medicine (I)",
+    "duration": 4,
+    "location": "Shahid Faghihi Hospital",
+    "description": "Gynecology & General Surgery",
+    "dates": {
+      "start": "2013-March-21",
+      "end": "2013-April-20"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Outpatient Medicine (II)",
+    "duration": 4,
+    "location": "Shahid Faghihi Hospital",
+    "description": "Internal Medicine & Pediatrics",
+    "dates": {
+      "start": "2013-September-23",
+      "end": "2013-October-22"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Community Medicine",
+    "duration": 4,
+    "location": "Shiraz School of Medicine",
+    "description": "Epidemiology, Population & Public Health",
+    "dates": {
+      "start": "2013-April-21",
+      "end": "2013-May-21"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Obstetrics & Gynecology",
+    "duration": 8,
+    "location": "Shahid Faghihi & Hafiz Hospital",
+    "description": "Emergencies, Prenatology, Labour & Delivery",
+    "dates": {
+      "start": "2013-May-22",
+      "end": "2013-July-22"
+    }
+  },
+  {
+    "id": 5,
+    "title": "Pediatrics",
+    "duration": 8,
+    "location": "Namazi Hospital",
+    "description": "Pediatric Emergencies, Neurology & Gastroenterology",
+    "dates": {
+      "start": "2013-July-23",
+      "end": "2013-September-22"
+    }
+  },
+  {
+    "id": 6,
+    "title": "Psychiatry",
+    "duration": 4,
+    "location": "Avesina Hospital",
+    "description": "Psychiatric emergencies & Mental disorders",
+    "dates": {
+      "start": "2013-October-23",
+      "end": "2013-November-21"
+    }
+  },
+  {
+    "id": 7,
+    "title": "Internal Medicine",
+    "duration": 4,
+    "location": "Shahid Faghihi Hospital",
+    "description": "Inpatient care General & Rheumatology wards",
+    "dates": {
+      "start": "2013-November-22",
+      "end": "2014-January-20"
+    }
+  },
+  {
+    "id": 8,
+    "title": "Emergency Medicine",
+    "duration": 8,
+    "location": "Shahid Faghihi & Namazi Hospital",
+    "description": "Poisonings, Overdoses & First line screenings",
+    "dates": {
+      "start": "2014-January-21",
+      "end": "2014-March-20"
+    }
+  },
+  {
+    "id": 9,
+    "title": "General Surgery (I)",
+    "duration": 4,
+    "location": "Namazi Hospital",
+    "description": "Inpatient pre & post-op Care, OR",
+    "dates": {
+      "start": "2014-March-21",
+      "end": "2014-April-20"
+    },
+    "wards": ["Inpatient Care", "ER", "Colo-rectal & Urology wards"]
+  },
+  {
+    "id": 10,
+    "title": "General Surgery (II)",
+    "duration": 4,
+    "location": "Shahid Faghihi",
+    "description": "ER, Colo-rectal & Urology wards",
+    "dates": {
+      "start": "2014-May-22",
+      "end": "2014-July-22"
+    }
+  },
+  {
+    "id": 11,
+    "title": "Thesis & Dissertation",
+    "duration": 4,
+    "location": "Trauma Research Center, Rajaee Trauma Hospital",
+    "description": "Regression modeling for identification of factors affecting trauma mortality",
+    "dates": {
+      "start": "2014-April-21",
+      "end": "2014-May-21"
+    }
+  }
+]

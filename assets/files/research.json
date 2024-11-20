@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "title": "Community Medicine Project Assistant Manager.",
+    "dates": "(2020-2021)",
+    "explanation": "Assisted in designing electronic questionnaires and data analysis for a university-affiliated endeavour related to the prevalence of hooka smoking and cessation strategies in Shiraz.",
+    "bullet_points": []
+  },
+  {
+    "id": 2,
+    "title": "Student Consultant at Shiraz Bone & Joint Research Center, Shiraz, Iran.",
+    "dates": "(2016-2019)",
+    "explanation": "Assisted in formulating/refining research questions, interpreting results and drafting three observational studies.",
+    "bullet_points": [
+      "Comparison of Core Muscles Endurance in Sited Occupied Staff and Non-Sited Occupied Staff of SUMS.",
+      "Intermediate Treatment Results of The Patients with Congenital Dislocation of The Hip Referred to Shiraz Orthopedic Clinics.",
+      "Relationship Between Radiographic Markers of Normal Tibiofibular Syndesmosis and Subjects' Demographics."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Research Assistant at Shiraz Trauma Center, Shiraz, Iran",
+    "dates": "(2015-2019)",
+    "explanation": "Identified potential use of trauma center & EMS administrative databases in studying epidemiological patterns of injuries.",
+    "bullet_points": [
+      "Risk factors of mortality in nosocomially infected traumatic patients in a trauma referral center in Southern Iran.",
+      "One-month Survival Following Road Traffic Accidents in a Level-I Trauma Center, Parametric versus Semi-Parametric Survival Models."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Data Analysis Advisor at Shiraz Neonatology Research Center",
+    "dates": "(2018-2019)",
+    "explanation": "Contributed to model development in quantifying risk of catheter-related blood stream infections in neonatal intensive care units."
+  }
+]
