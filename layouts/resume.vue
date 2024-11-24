@@ -1,7 +1,11 @@
 <template>
-  <div class="dark:bg-zinc-800 bg-zinc-50 center transition-all duration-200 ease-in-out">
+  <div class="resume dark:bg-zinc-900 bg-zinc-50 center transition-all duration-200 ease-in-out">
     <slot />
   </div>
 </template>
 <script setup></script>
-<style scoped></style>
+<style scoped>
+.resume {
+  font-family: "Crimson Text";
+}
+</style>

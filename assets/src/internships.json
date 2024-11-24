@@ -1,0 +1,81 @@
+{
+  "internships": [
+    {
+      "program": "Outpatient Medicine(II)",
+      "start_date": "2013-03-21",
+      "end_date": "2013-04-20",
+      "Location": "Shahid Faghihi Hospital",
+      "duration": "4 Weeks"
+    },
+    {
+      "program": "Community Medicine",
+      "start_date": "2013-04-21",
+      "end_date": "2013-05-21",
+      "Location": "School of Medicine",
+      "duration": "4 Weeks"
+    },
+    {
+      "program": "Obstetrics & Gynecology",
+      "start_date": "2013-05-22",
+      "end_date": "2013-07-22",
+      "Location": "Shahid Faghihi & Hafez Hospitals",
+      "duration": "8 Weeks"
+    },
+    {
+      "program": "Pediatrics",
+      "start_date": "2013-07-23",
+      "end_date": "2013-09-22",
+      "Location": "Namazi Hospital",
+      "duration": "8 Weeks"
+    },
+    {
+      "program": "Outpatient Medicine (I)",
+      "start_date": "2013-09-23",
+      "end_date": "2013-10-22",
+      "Location": "Shahid Faghihi Hospital",
+      "duration": "4 Weeks"
+    },
+    {
+      "program": "Psychiatry",
+      "start_date": "2013-10-23",
+      "end_date": "2013-11-21",
+      "Location": "Avesina Hospital",
+      "duration": "4 Weeks"
+    },
+    {
+      "program": "Internal Medicine",
+      "start_date": "2013-11-22",
+      "end_date": "2014-01-20",
+      "Location": "Shahid Faghihi Hospital",
+      "duration": "4 Weeks"
+    },
+    {
+      "program": "Emergency Medicine",
+      "start_date": "2014-01-21",
+      "end_date": "2014-03-20",
+      "Location": "Shahid Faghihi & Namazi Hospitals",
+      "duration": "8 Weeks"
+    },
+    {
+      "program": "General Surgery (I)",
+      "start_date": "2014-03-21",
+      "end_date": "2014-04-20",
+      "Location": "Namazi Hospital",
+      "duration": "4 Weeks"
+    },
+    {
+      "program": "Dissertation",
+      "start_date": "2014-04-21",
+      "end_date": "2014-05-21",
+      "Location": "Trauma Research Center, Rajaee Hospital",
+      "duration": "4 Weeks"
+    },
+    {
+      "program": "General Surgery (II)",
+      "start_date": "2014-05-22",
+      "end_date": "2014-07-22",
+      "Location": "Shahid Faghihi & Namazi Hospitals",
+      "duration": "8 Weeks"
+    }
+  ]
+}

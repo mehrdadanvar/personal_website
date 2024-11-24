@@ -1,0 +1,125 @@
+{
+  "title": "BlogPost",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "string",
+      "description": "Unique identifier for the blog post"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the blog post"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-friendly version of the title"
+    },
+    "content": {
+      "type": "string",
+      "description": "Main content of the blog post"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Short summary or excerpt of the blog post"
+    },
+    "author": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier for the author" },
+        "name": { "type": "string", "description": "Name of the author" }
+      },
+      "required": ["id", "name"]
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Categories assigned to the blog post"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Tags assigned to the blog post"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "published", "archived"],
+      "description": "Status of the blog post"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of when the blog post was created"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of the last update to the blog post"
+    },
+    "published_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of when the blog post was published"
+    },
+    "featured_image": {
+      "type": "string",
+      "description": "URL of the featured image for the blog post"
+    },
+    "seo": {
+      "type": "object",
+      "properties": {
+        "meta_title": { "type": "string", "description": "Meta title for SEO" },
+        "meta_description": { "type": "string", "description": "Meta description for SEO" },
+        "meta_keywords": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Meta keywords for SEO"
+        }
+      }
+    },
+    "comments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "description": "Unique identifier for the comment" },
+          "user": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string", "description": "User ID" },
+              "name": { "type": "string", "description": "Name of the user" }
+            },
+            "required": ["id", "name"]
+          },
+          "content": { "type": "string", "description": "Content of the comment" },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp of when the comment was created"
+          },
+          "likes": {
+            "type": "number",
+            "description": "Number of likes the comment received"
+          }
+        },
+        "required": ["id", "user", "content", "created_at"]
+      }
+    },
+    "views": {
+      "type": "number",
+      "description": "Number of times the blog post has been viewed"
+    },
+    "likes": {
+      "type": "number",
+      "description": "Number of likes the blog post has received"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "description": "Whether the blog post is marked as featured"
+    }
+  },
+  "required": ["title", "slug", "content", "author", "status", "created_at"]
+}

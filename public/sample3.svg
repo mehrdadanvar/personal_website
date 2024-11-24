@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 1422 800" opacity="1">
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="gggyrate-grad">
+            <stop stop-color="hsl(0, 0%, 100%)" stop-opacity="1" offset="0%"></stop>
+            <stop stop-color="hsl(0, 0%, 0%)" stop-opacity="1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke-width="1" stroke="url(#gggyrate-grad)" fill="none">
+        <rect width="990" height="990" x="-95" y="-95" transform="rotate(55, 400, 400)"
+            opacity="0.05"></rect>
+        <rect width="972" height="972" x="-86" y="-86" transform="rotate(54, 400, 400)"
+            opacity="0.07"></rect>
+        <rect width="954" height="954" x="-77" y="-77" transform="rotate(53, 400, 400)"
+            opacity="0.09"></rect>
+        <rect width="936" height="936" x="-68" y="-68" transform="rotate(52, 400, 400)"
+            opacity="0.10"></rect>
+        <rect width="918" height="918" x="-59" y="-59" transform="rotate(51, 400, 400)"
+            opacity="0.12"></rect>
+        <rect width="900" height="900" x="-50" y="-50" transform="rotate(50, 400, 400)"
+            opacity="0.14"></rect>
+        <rect width="882" height="882" x="-41" y="-41" transform="rotate(49, 400, 400)"
+            opacity="0.16"></rect>
+        <rect width="864" height="864" x="-32" y="-32" transform="rotate(48, 400, 400)"
+            opacity="0.17"></rect>
+        <rect width="846" height="846" x="-23" y="-23" transform="rotate(47, 400, 400)"
+            opacity="0.19"></rect>
+        <rect width="828" height="828" x="-14" y="-14" transform="rotate(46, 400, 400)"
+            opacity="0.21"></rect>
+        <rect width="810" height="810" x="-5" y="-5" transform="rotate(45, 400, 400)" opacity="0.23"></rect>
+        <rect width="792" height="792" x="4" y="4" transform="rotate(44, 400, 400)" opacity="0.24"></rect>
+        <rect width="774" height="774" x="13" y="13" transform="rotate(43, 400, 400)" opacity="0.26"></rect>
+        <rect width="756" height="756" x="22" y="22" transform="rotate(42, 400, 400)" opacity="0.28"></rect>
+        <rect width="738" height="738" x="31" y="31" transform="rotate(41, 400, 400)" opacity="0.30"></rect>
+        <rect width="720" height="720" x="40" y="40" transform="rotate(40, 400, 400)" opacity="0.31"></rect>
+        <rect width="702" height="702" x="49" y="49" transform="rotate(39, 400, 400)" opacity="0.33"></rect>
+        <rect width="684" height="684" x="58" y="58" transform="rotate(38, 400, 400)" opacity="0.35"></rect>
+        <rect width="666" height="666" x="67" y="67" transform="rotate(37, 400, 400)" opacity="0.37"></rect>
+        <rect width="648" height="648" x="76" y="76" transform="rotate(36, 400, 400)" opacity="0.38"></rect>
+        <rect width="630" height="630" x="85" y="85" transform="rotate(35, 400, 400)" opacity="0.40"></rect>
+        <rect width="612" height="612" x="94" y="94" transform="rotate(34, 400, 400)" opacity="0.42"></rect>
+        <rect width="594" height="594" x="103" y="103" transform="rotate(33, 400, 400)"
+            opacity="0.44"></rect>
+        <rect width="576" height="576" x="112" y="112" transform="rotate(32, 400, 400)"
+            opacity="0.45"></rect>
+        <rect width="558" height="558" x="121" y="121" transform="rotate(31, 400, 400)"
+            opacity="0.47"></rect>
+        <rect width="540" height="540" x="130" y="130" transform="rotate(30, 400, 400)"
+            opacity="0.49"></rect>
+        <rect width="522" height="522" x="139" y="139" transform="rotate(29, 400, 400)"
+            opacity="0.51"></rect>
+        <rect width="504" height="504" x="148" y="148" transform="rotate(28, 400, 400)"
+            opacity="0.53"></rect>
+        <rect width="486" height="486" x="157" y="157" transform="rotate(27, 400, 400)"
+            opacity="0.54"></rect>
+        <rect width="468" height="468" x="166" y="166" transform="rotate(26, 400, 400)"
+            opacity="0.56"></rect>
+        <rect width="450" height="450" x="175" y="175" transform="rotate(25, 400, 400)"
+            opacity="0.58"></rect>
+        <rect width="432" height="432" x="184" y="184" transform="rotate(24, 400, 400)"
+            opacity="0.60"></rect>
+        <rect width="414" height="414" x="193" y="193" transform="rotate(23, 400, 400)"
+            opacity="0.61"></rect>
+        <rect width="396" height="396" x="202" y="202" transform="rotate(22, 400, 400)"
+            opacity="0.63"></rect>
+        <rect width="378" height="378" x="211" y="211" transform="rotate(21, 400, 400)"
+            opacity="0.65"></rect>
+        <rect width="360" height="360" x="220" y="220" transform="rotate(20, 400, 400)"
+            opacity="0.67"></rect>
+        <rect width="342" height="342" x="229" y="229" transform="rotate(19, 400, 400)"
+            opacity="0.68"></rect>
+        <rect width="324" height="324" x="238" y="238" transform="rotate(18, 400, 400)"
+            opacity="0.70"></rect>
+        <rect width="306" height="306" x="247" y="247" transform="rotate(17, 400, 400)"
+            opacity="0.72"></rect>
+        <rect width="288" height="288" x="256" y="256" transform="rotate(16, 400, 400)"
+            opacity="0.74"></rect>
+        <rect width="270" height="270" x="265" y="265" transform="rotate(15, 400, 400)"
+            opacity="0.75"></rect>
+        <rect width="252" height="252" x="274" y="274" transform="rotate(14, 400, 400)"
+            opacity="0.77"></rect>
+        <rect width="234" height="234" x="283" y="283" transform="rotate(13, 400, 400)"
+            opacity="0.79"></rect>
+        <rect width="216" height="216" x="292" y="292" transform="rotate(12, 400, 400)"
+            opacity="0.81"></rect>
+        <rect width="198" height="198" x="301" y="301" transform="rotate(11, 400, 400)"
+            opacity="0.82"></rect>
+        <rect width="180" height="180" x="310" y="310" transform="rotate(10, 400, 400)"
+            opacity="0.84"></rect>
+        <rect width="162" height="162" x="319" y="319" transform="rotate(9, 400, 400)"
+            opacity="0.86"></rect>
+        <rect width="144" height="144" x="328" y="328" transform="rotate(8, 400, 400)"
+            opacity="0.88"></rect>
+        <rect width="126" height="126" x="337" y="337" transform="rotate(7, 400, 400)"
+            opacity="0.89"></rect>
+        <rect width="108" height="108" x="346" y="346" transform="rotate(6, 400, 400)"
+            opacity="0.91"></rect>
+        <rect width="90" height="90" x="355" y="355" transform="rotate(5, 400, 400)" opacity="0.93"></rect>
+        <rect width="72" height="72" x="364" y="364" transform="rotate(4, 400, 400)" opacity="0.95"></rect>
+        <rect width="54" height="54" x="373" y="373" transform="rotate(3, 400, 400)" opacity="0.96"></rect>
+        <rect width="36" height="36" x="382" y="382" transform="rotate(2, 400, 400)" opacity="0.98"></rect>
+        <rect width="18" height="18" x="391" y="391" transform="rotate(1, 400, 400)" opacity="1.00"></rect>
+    </g>
+</svg>

@@ -15,15 +15,15 @@
 const colorMode = useColorMode();
 console.log(colorMode);
 colorMode.preference = "system";
-onMounted(() => {
-  setTimeout(() => {
-    colorMode.preference = "dark";
-  }, 1000);
-});
+// onMounted(() => {
+//   setTimeout(() => {
+//     colorMode.preference = "dark";
+//   }, 1000);
+// });
 </script>
 <style scoped>
 .app {
-  font-family: "Roboto";
+  font-family: "Inter";
 }
 /* body {
   background-color: #fff;

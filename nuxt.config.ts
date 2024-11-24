@@ -6,8 +6,10 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       Roboto: true,
+      Inter: true,
       Lato: [100, 300],
       "Open+Sans": true,
+      "Crimson Text": true,
     },
   },
 
@@ -24,5 +26,9 @@ export default defineNuxtConfig({
   },
   ui: {
     icons: ["solar", "simple-icons"],
+  },
+  runtimeConfig: {
+    connectionString: process.env.DB_CONNECTION_STRING,
+    articlesConnection: process.env.ARTICLES_DB_CONNECTION_STRING,
   },
 });

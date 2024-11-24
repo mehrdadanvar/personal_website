@@ -39,7 +39,7 @@
 
 <style scoped>
 .projects {
-  font-family: "Open Sans";
+  font-family: "Roboto";
 }
 /* .right {
   background-repeat: no-repeat;

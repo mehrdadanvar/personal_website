@@ -16,7 +16,6 @@
 definePageMeta({
   layout: "resume",
 });
-const config = useRuntimeConfig();
 </script>
 
 <style></style>

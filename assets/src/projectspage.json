@@ -1,0 +1,26 @@
+[
+  {
+    "title": "GPT Decipher",
+    "identity": 0,
+    "description": "GPT Decipher is a platform I designed with the use of free and open source technologies in web development which tries to bring together professionals from a variety of medical fields to reflect on the accuracy and reliability of Chat GPT in answering Clinical Medical Question",
+    "status": "Under Developement"
+  },
+  {
+    "title": "GPT Decipher",
+    "identity": 1,
+    "description": "GPT Decipher is a platform I designed with the use of free and open source technologies in web development which tries to bring together professionals from a variety of medical fields to reflect on the accuracy and reliability of Chat GPT in answering Clinical Medical Question",
+    "status": "pre-deployment"
+  },
+  {
+    "title": "Blood Pressure Chart",
+    "identity": 2,
+    "description": "This is a simple application trying to give patients and clinicians a scure and simple platform to communicate blood pressure recording at home ",
+    "status": "pre-deployment"
+  },
+  {
+    "title": "Free Qbank",
+    "identity": 3,
+    "description": " A comprehensive collection of medical questions mimicing USMLE and MCCQE licening examinations with affordable pricing ",
+    "status": "pre-deployment"
+  }
+]
