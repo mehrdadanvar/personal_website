@@ -31,8 +31,10 @@
         <UIcon name="i-solar-double-alt-arrow-down-linear" class="text-5xl text-zinc-500 dark:text animate-bounce" />
       </div>
     </section>
-    <section class="projects flex flex-col items-center">
-      <UDivider label="Projects I am Working On" size="xs" />
+
+    <section class="projects flex flex-col items-center my-48">
+      <!-- <UDivider label="" size="xs" /> -->
+      <h2 class="text-4xl">Projects I am Working On</h2>
       <div class="grid grid-cols-2">
         <div v-for="item in projects" class="text-zinc-600 dark:text-zinc-400 p-6 rounded mx-auto w-9/12 h-1/2 py-36">
           <DarkFile>
@@ -146,14 +148,15 @@ img {
   filter: grayscale();
 }
 .hero {
-  background-image: url("/sample1.svg");
+  background-image: url("/sample12.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 .projects {
-  background-image: url("/sample3.svg");
+  background-image: url("/sample10.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
 .research {

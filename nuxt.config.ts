@@ -3,13 +3,15 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
   modules: ["@nuxtjs/google-fonts", "@nuxtjs/color-mode", "@nuxt/ui"],
+  ssr: true,
   googleFonts: {
     families: {
-      Roboto: true,
+      // Roboto: true,
       Inter: true,
-      Lato: [100, 300],
+      // Lato: [100, 300],
       "Open+Sans": true,
-      "Crimson Text": true,
+      // "Crimson Text": true,
+      "Source+Code+Pro": true,
     },
   },
 

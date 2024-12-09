@@ -43,7 +43,7 @@ let props = defineProps({
   year: { type: Number, default: 2020 },
   authors: { type: Array, default: () => ["Mehrdad Anvar", "et al"] },
   pdf: { type: String, default: "" },
-  abstract: { type: String, default: "lorem ipsum" },
+  abstract: { type: Object, default: "lorem ipsum" },
 });
 let isOpen = ref(false);
 function show_abstract() {

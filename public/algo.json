@@ -1,0 +1,238 @@
+{
+  "id": 1,
+  "text": "Jaundice, Scleral Icterus on Exam",
+  "type": "lab-result",
+  "children": [
+    {
+      "id": 2,
+      "text": "LFTs",
+      "type": "lab",
+      "children": [
+        {
+          "id": 3,
+          "text": "Unconjugated hyperbilirubinemia",
+          "type": "lab-result",
+          "children": [
+            {
+              "id": 4,
+              "text": "Hgb, LDH, haptoglobin, reticulocytes, blood smear",
+              "type": "lab",
+              "children": [
+                {
+                  "id": 5,
+                  "text": "Anemia, ↑ LDH, ↓ haptoglobin, ↑ reticulocytes ± schistocytes",
+                  "type": "lab-result",
+                  "children": [
+                    {
+                      "id": 6,
+                      "text": "See Normocytic Hemolytic Anemia, p. 96",
+                      "type": "other",
+                      "children": [],
+                      "end": true
+                    }
+                  ],
+                  "end": false
+                },
+                {
+                  "id": 7,
+                  "text": "Normal Hgb, LDH, haptoglobin, and reticulocytes, no schistocytes",
+                  "type": "lab-result",
+                  "children": [
+                    {
+                      "id": 8,
+                      "text": "Gilbert Syndrome (Adult)",
+                      "type": "diagnosis",
+                      "children": [
+                        {
+                          "id": 9,
+                          "text": "Self-resolves",
+                          "type": "treatment",
+                          "children": [],
+                          "end": true
+                        }
+                      ],
+                      "end": false
+                    },
+                    {
+                      "id": 10,
+                      "text": "Crigler-Najjar (Newborn)",
+                      "type": "diagnosis",
+                      "children": [
+                        {
+                          "id": 11,
+                          "text": "Phototherapy",
+                          "type": "treatment",
+                          "children": [],
+                          "end": true
+                        }
+                      ],
+                      "end": false
+                    }
+                  ],
+                  "end": false
+                }
+              ],
+              "end": false
+            }
+          ],
+          "end": false
+        },
+        {
+          "id": 12,
+          "text": "Conjugated hyperbilirubinemia",
+          "type": "lab-result",
+          "children": [
+            {
+              "id": 13,
+              "text": "Cholestatic pattern (ALP > ALT/AST)",
+              "type": "lab-result",
+              "children": [
+                {
+                  "id": 14,
+                  "text": "RUQ ultrasound",
+                  "type": "lab",
+                  "children": [
+                    {
+                      "id": 15,
+                      "text": "CBD dilation or gallstones",
+                      "type": "lab-result",
+                      "children": [
+                        {
+                          "id": 16,
+                          "text": "Charcot's triad or Reynolds' pentad",
+                          "type": "lab-result",
+                          "children": [
+                            {
+                              "id": 17,
+                              "text": "Cholangitis",
+                              "type": "diagnosis",
+                              "children": [
+                                {
+                                  "id": 18,
+                                  "text": "Ceftriaxone + metronidazole",
+                                  "type": "treatment",
+                                  "children": [],
+                                  "end": true
+                                },
+                                {
+                                  "id": 19,
+                                  "text": "ERCP",
+                                  "type": "treatment",
+                                  "children": [],
+                                  "end": true
+                                },
+                                {
+                                  "id": 20,
+                                  "text": "Interval cholecystectomy",
+                                  "type": "treatment",
+                                  "children": [],
+                                  "end": true
+                                }
+                              ],
+                              "end": false
+                            }
+                          ],
+                          "end": false
+                        },
+                        {
+                          "id": 21,
+                          "text": "RUQ pain, jaundice, without fever",
+                          "type": "lab-result",
+                          "children": [
+                            {
+                              "id": 22,
+                              "text": "Choledocholithiasis",
+                              "type": "diagnosis",
+                              "children": [
+                                {
+                                  "id": 23,
+                                  "text": "ERCP and elective cholecystectomy",
+                                  "type": "treatment",
+                                  "children": [],
+                                  "end": true
+                                }
+                              ],
+                              "end": false
+                            }
+                          ],
+                          "end": false
+                        }
+                      ],
+                      "end": false
+                    },
+                    {
+                      "id": 24,
+                      "text": "CBD dilation + strictures",
+                      "type": "lab-result",
+                      "children": [
+                        {
+                          "id": 25,
+                          "text": "Primary Sclerosing Cholangitis",
+                          "type": "diagnosis",
+                          "children": [
+                            {
+                              "id": 26,
+                              "text": "Ursodiol and liver transplant",
+                              "type": "treatment",
+                              "children": [],
+                              "end": true
+                            }
+                          ],
+                          "end": false
+                        }
+                      ],
+                      "end": false
+                    }
+                  ],
+                  "end": false
+                }
+              ],
+              "end": false
+            }
+          ],
+          "end": false
+        },
+        {
+          "id": 27,
+          "text": "Normal ALT/AST, ALP",
+          "type": "lab-result",
+          "children": [
+            {
+              "id": 28,
+              "text": "Rotor or Dubin-Johnson Syndrome",
+              "type": "diagnosis",
+              "children": [
+                {
+                  "id": 29,
+                  "text": "No treatment necessary",
+                  "type": "treatment",
+                  "children": [],
+                  "end": true
+                }
+              ],
+              "end": false
+            }
+          ],
+          "end": false
+        }
+      ],
+      "end": false
+    },
+    {
+      "id": 30,
+      "text": "Normal bilirubin",
+      "type": "lab-result",
+      "children": [
+        {
+          "id": 31,
+          "text": "Jaundice Mimics",
+          "type": "diagnosis",
+          "children": [],
+          "end": true
+        }
+      ],
+      "end": false
+    }
+  ],
+  "end": false
+}

@@ -1,19 +1,59 @@
 <template>
   <UContainer>
-    <h1>Peer-Reviewed Publications</h1>
-    <section class="backdrop-blur-lg">
-      <div v-for="pub in newpubs" class="border rounded-lg border-zinc-300 p-6">
-        <h2 class="text-xl font-semibold text-zinc-700">{{ pub.title }}</h2>
-        <h4 class="text-xl">{{ pub.journal }}</h4>
-        <h3>{{ pub.year }}</h3>
-        <span v-for="element in pub.authors">{{ element }} </span>
-        <p>{{ pub.link }}</p>
-        <div class="text-justify">{{ pub.abstract }}</div>
+    <h1></h1>
+    <section class="h-screen">
+      <p>Applications of Artificila Intellegence in Health</p>
+    </section>
+    <section>
+      <h2 class="py-6 text-3xl">Research Experince</h2>
+
+      <DarkFile>
+        <ResumeResearch />
+      </DarkFile>
+    </section>
+    <section class="">
+      <h2 class="py-6 text-3xl">Peer-Reviewed Publications</h2>
+      <div v-for="pub in newpubs" class="my-12">
+        <DarkFile>
+          <h2 class="text-xl font-semibold text-zinc-700 dark:text-zinc-300">{{ pub.title }}</h2>
+          <h4 class="text-xl">{{ pub.journal }}</h4>
+          <h3>{{ pub.year }}</h3>
+          <div class="">
+            <span
+              class="text-zinc-400"
+              v-for="(author, index) in pub.authors"
+              :key="index"
+              :class="{ 'text-zinc-900 dark:text-zinc-200 ': author == 'Mehrdad Anvar' }"
+              >{{ author }}{{ index < pub.authors.length - 1 ? ", " : "." }}</span
+            >
+          </div>
+          <a class="flex items-center justify-center max-w-fit px-4 rounded-lg gap-3 text-sm bg-zinc-100" :href="pub.link"> Full Text </a>
+          <div class="text-justify py-6 flex flex-col gap-2 text-zinc-600 dark:text-zinc-400">
+            <div class="">
+              <span>Bakcground:</span>
+              <p>{{ pub.abstract.background }}</p>
+            </div>
+            <div>
+              <span>Methods:</span>
+              <p>{{ pub.abstract.methods }}</p>
+            </div>
+            <div>
+              <span>Results:</span>
+              <p>{{ pub.abstract.results }}</p>
+            </div>
+            <div>
+              <span>Conclusion:</span>
+              <p>{{ pub.abstract.conclusion }}</p>
+            </div>
+          </div>
+        </DarkFile>
       </div>
     </section>
   </UContainer>
 </template>
+
 <script setup>
+definePageMeta({ layout: "scroll" });
 import pubs from "../assets/files/pubs.json";
 
 let newpubs = pubs.sort((a, b) => {

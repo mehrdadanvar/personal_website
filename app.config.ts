@@ -1,7 +1,7 @@
 export default defineAppConfig({
   ui: {
     primary: "violet",
-    gray: "cool",
+    zinc: "cool",
     slideover: {
       width: "w-screen max-w-2xl",
     },
@@ -9,7 +9,7 @@ export default defineAppConfig({
       color: {
         white: {
           outline:
-            "shadow-sm bg-white dark:bg-gray-800 text-gray-800 dark:text-white ring-1 ring-inset ring-gray-300 dark:ring-gray-700 focus:ring-1 focus:ring-primary-400 dark:focus:ring-gray-400",
+            "shadow-sm bg-white dark:bg-zinc-800 text-zinc-800 dark:text-white ring-1 ring-inset ring-zinc-300 dark:ring-zinc-700 focus:ring-1 focus:ring-zinc-400 dark:focus:ring-zinc-400",
         },
       },
     },

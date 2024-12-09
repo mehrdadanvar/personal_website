@@ -1,63 +1,139 @@
 <template>
-  <UContainer>
-    <article class="">
-      <div>welcome to my blog</div>
-      <div>
-        <section v-for="item in blogs">
-          <h1 class="text-4xl py-24 text-zinc-700 dark:text-zinc-300">{{ item.article_title }}</h1>
-          <div class="lg:grid lg:grid-cols-2 gap-3">
-            <div v-for="element in item.intro" class="py-3">
-              <p class="text-lg font-semibold text-zinc-800 dark:text-zinc-300">{{ element.name }}</p>
-              <p class="text-zinc-700 dark:text-zinc-400">{{ element.definition }}</p>
-            </div>
-          </div>
-          <div v-for="element in item.sections" class="py-12">
-            <article>
-              <h2 class="font-semibold text-2xl">{{ element.title }}</h2>
-              <UBadge :ui="{ rounded: 'rounded-full' }" size="xl" class="px-5 py-1 my-4" color="black">Case History:</UBadge>
-              <p class="py-6 text-lg">{{ element.intro_case }}</p>
-              <div class="features py-6 bg-zinc-200 rounded-2xl p-6">
-                <h3 class="textl-xl">Presenting Features</h3>
-                <p v-for="member in element.presenting_features" class="pl-6 py-1">- {{ member }}</p>
-              </div>
-              <div class="physical exam">
-                <h3>Physical Exam Findings:</h3>
-                <p v-for="member in element.pe" class="pl-6 py-1">- {{ member }}</p>
-              </div>
-              <div class="labs">
-                <h3>Lab Findings:</h3>
-                <p v-for="member in element.labs" class="pl-6 py-1">- {{ member }}</p>
-              </div>
-              <div class="learning">
-                <h3>Learning:</h3>
-                <p v-for="member in element.learning_points" class="pl-6 py-1">- {{ member }}</p>
-              </div>
-              <div class="Management">
-                <h3>Management:</h3>
-                <p v-for="member in element.management" class="pl-6 py-1">- {{ member }}</p>
-              </div>
-              <div class="tips">
-                <h3>Tips:</h3>
-                <p v-for="member in element.tips" class="pl-6 py-1">- {{ member }}</p>
-              </div>
-            </article>
-            <UDivider class="pt-6" />
-          </div>
-        </section>
+  <div>
+    <section class="hero py-36 flex flex-col md:flex-row gap-6">
+      <div class="left md:translate-x-36 backdrop-blur-xl z-10 flex flex-col justify-evenly">
+        <h1 class="text-4xl text-zinc-700 dark:text-zinc-200">A helpfull blog for medical students preparing for MCCQE, USMLE</h1>
+        <p class="py-6 text-zinc-600 dark:text-zinc-500">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ipsam fugiat in eum ex repellendus possimus saepe maxime inventore
+          reprehenderit. Magnam, at atque sunt mollitia dolores fugit natus placeat est!
+        </p>
+        <div class="buttons flex gap-4">
+          <UButton color="black" class="px-6">Read More ...</UButton>
+          <UButton color="white" class="px-6">Explore Articles</UButton>
+        </div>
       </div>
-    </article>
-  </UContainer>
+      <div class="right">
+        <div class="">
+          <img src="/blog_1.png" alt="" class="rounded-3xl w-full filter grayscale opacity-75" />
+        </div>
+      </div>
+    </section>
+    <div class="search h-36 mx-auto w-10/12">
+      <p>Search for articles</p>
+      <SearchBlog class="" />
+    </div>
+    <section class="features">
+      <div class="w-11/12 p-12 mx-auto">
+        <h2 class="text-3xl pb-12 text-center">Featured Articles</h2>
+        <div class="flex flex-row">
+          <div v-if="status == 'pending'">pending {{ status }}</div>
+          <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row gap-2">
+            <article v-for="item in loaded_blogs">
+              <DarkFile>
+                <img src="/blog_1.png" alt="" class="rounded-2xl mb-6 mx-auto grayscale opacity-75" />
+                <div class="flex gap-4 mb-3">
+                  <UIcon name="i-solar-calendar-bold" class="text-zinc-500 text-xl" />
+                  <p class="text-zinc-500 text-sm">{{ item.data_published }}-06-12</p>
+                </div>
+                <h4 class="text-zinc-800 font-semibold text-lg dark:text-zinc-300 hover:opacity-50 transition-all duration-200">
+                  <NuxtLink :to="'/blog/' + item.slug">{{ item.title }}</NuxtLink>
+                </h4>
+                <div class="flex gap-4 py-2 italic"></div>
+                <p class="text-zinc-800 py-1">Reviewd Cases</p>
+                <ol class="list-disc text-sm text-zinc-500 pl-6">
+                  <li v-for="element in item.sections" class="py-1">{{ element }}</li>
+                </ol>
+                <UDivider class="py-6" />
+                <div class="flex justify-between">
+                  <div class="flex items-center gap-4">
+                    <UIcon name="i-solar-user-circle-bold-duotone" class="text-3xl text-zinc-500" />
+                    <div class="text-sm">
+                      <p>Author</p>
+                      <p>Mehrdad Anvar, MD</p>
+                    </div>
+                  </div>
+                  <UButton
+                    :ui="{ icon: { size: { xs: 'h-6 w-6' } } }"
+                    color="white"
+                    class="px-6"
+                    variant="solid"
+                    icon="i-solar-round-alt-arrow-right-broken"
+                    :trailing="true"
+                    size="xs"
+                    >Read More</UButton
+                  >
+                </div>
+                <!-- <div>{{ item }}</div> -->
+              </DarkFile>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="categories">
+      <h2 class="text-3xl pb-24">Categories</h2>
+      <div class="flex">
+        <DarkFile v-for="(item, index) in Categories" :key="index" class="w-[300px]">
+          <h3 class="py-6">{{ item.name }}</h3>
+          <p class="text-zinc-500 dark:text-zinc-400">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad cum sit provident saepe a omnis illum odio, praesentium nemo cupiditate optio
+            ea consequuntur. Aliquid laboriosam ipsa molestias dignissimos optio laborum!
+          </p>
+          <UButton color="black" class="px-6 mt-12">Read More</UButton>
+        </DarkFile>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script setup>
-let blogs = ref([]);
-async function load_articles() {
-  let response = await $fetch("/api/getArticles");
-  console.log(response);
-  blogs.value = response.articles;
-}
+definePageMeta({
+  layout: "blog",
+});
+// let blogs = ref([]);
+// async function load_articles() {
+//   let response = await $fetch("/api/getArticles");
+//   console.log(response);
+//   blogs.value = response.articles;
+// }
+let Categories = [
+  { name: "Cardiology", number: 5 },
+  { name: "Gastroenterology", number: 11 },
+  { name: "Obstetrics", number: 6 },
+];
+//load_articles();
 
-load_articles();
+let blogs = ref([]);
+let { data: loaded_blogs, status } = await useAsyncData(
+  "loaded_blogs",
+  async () => {
+    let response = await $fetch("/api/getAbstracts");
+    console.log(response);
+    blogs.value = response.articles;
+    return response.articles;
+  },
+  { lazy: true }
+);
 </script>
 
-<style scoped></style>
+<style scoped>
+.hero {
+  background-image: url("/sample6.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.categories {
+  background-image: url("/sample12.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.features {
+  background-image: url("/sample13.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* img {
+  filter: opacity(0.5);
+  filter: grayscale();
+} */
+</style>
