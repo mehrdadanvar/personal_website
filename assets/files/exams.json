@@ -8,5 +8,10 @@
     "title": "Academic IELTS",
     "date": "October 2018",
     "scores": ["Listening 8.5", "Speaking 7.5", "Reading 7.0", "Writing 7.0"]
+  },
+  {
+    "title": "Medical Council of Canada Qualifying Examination",
+    "date": "November 2024",
+    "scores": ["Pass"]
   }
 ]

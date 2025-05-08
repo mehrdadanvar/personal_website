@@ -7,6 +7,7 @@ function delay(ms: number) {
 
 async function loadArticles() {
   try {
+    await delay(2000);
     const database = client.db("blog_articles");
     let article_collection = database.collection("abstract_collection");
     let result = await article_collection.find({}).toArray();

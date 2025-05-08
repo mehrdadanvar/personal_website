@@ -23,7 +23,7 @@ colorMode.preference = "system";
 </script>
 <style scoped>
 .app {
-  font-family: "Inter";
+  font-family: "Open Sans", sans-serif;
 }
 /* body {
   background-color: #fff;

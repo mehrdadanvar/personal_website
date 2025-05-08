@@ -1,24 +1,21 @@
 <template>
   <div>
-    <section class="hero py-36 flex flex-col md:flex-row gap-6">
-      <div class="left md:translate-x-36 backdrop-blur-xl z-10 flex flex-col justify-evenly">
-        <h1 class="text-4xl text-zinc-700 dark:text-zinc-200">A helpfull blog for medical students preparing for MCCQE, USMLE</h1>
+    <section class="hero py-28 flex flex-col md:flex-row gap-6 h-screen">
+      <div class="left backdrop-blur-sm flex flex-col items-center justify-evenly h-2/3 mx-24 rounded-3xl p-6">
+        <h1 class="text-4xl text-zinc-300 dark:text-zinc-200">
+          A helpfull blog for medical students preparing for MCCQE, USMLE
+        </h1>
         <p class="py-6 text-zinc-600 dark:text-zinc-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ipsam fugiat in eum ex repellendus possimus saepe maxime inventore
-          reprehenderit. Magnam, at atque sunt mollitia dolores fugit natus placeat est!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ipsam fugiat in eum ex repellendus possimus
+          saepe maxime inventore reprehenderit. Magnam, at atque sunt mollitia dolores fugit natus placeat est!
         </p>
         <div class="buttons flex gap-4">
           <UButton color="black" class="px-6">Read More ...</UButton>
           <UButton color="white" class="px-6">Explore Articles</UButton>
         </div>
       </div>
-      <div class="right">
-        <div class="">
-          <img src="/blog_1.png" alt="" class="rounded-3xl w-full filter grayscale opacity-75" />
-        </div>
-      </div>
     </section>
-    <div class="search h-36 mx-auto w-10/12">
+    <div class="search h-36 mx-auto w-10/12 py-24 flex flex-col items-center">
       <p>Search for articles</p>
       <SearchBlog class="" />
     </div>
@@ -30,12 +27,14 @@
           <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row gap-2">
             <article v-for="item in loaded_blogs">
               <DarkFile>
-                <img src="/blog_1.png" alt="" class="rounded-2xl mb-6 mx-auto grayscale opacity-75" />
+                <img src="/blog_1.png" alt="" class="rounded-full mb-6 mx-auto grayscale opacity-75 max-w-md" />
                 <div class="flex gap-4 mb-3">
                   <UIcon name="i-solar-calendar-bold" class="text-zinc-500 text-xl" />
                   <p class="text-zinc-500 text-sm">{{ item.data_published }}-06-12</p>
                 </div>
-                <h4 class="text-zinc-800 font-semibold text-lg dark:text-zinc-300 hover:opacity-50 transition-all duration-200">
+                <h4
+                  class="text-zinc-800 font-semibold text-lg dark:text-zinc-300 hover:opacity-50 transition-all duration-200"
+                >
                   <NuxtLink :to="'/blog/' + item.slug">{{ item.title }}</NuxtLink>
                 </h4>
                 <div class="flex gap-4 py-2 italic"></div>
@@ -76,8 +75,9 @@
         <DarkFile v-for="(item, index) in Categories" :key="index" class="w-[300px]">
           <h3 class="py-6">{{ item.name }}</h3>
           <p class="text-zinc-500 dark:text-zinc-400">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad cum sit provident saepe a omnis illum odio, praesentium nemo cupiditate optio
-            ea consequuntur. Aliquid laboriosam ipsa molestias dignissimos optio laborum!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad cum sit provident saepe a omnis illum odio,
+            praesentium nemo cupiditate optio ea consequuntur. Aliquid laboriosam ipsa molestias dignissimos optio
+            laborum!
           </p>
           <UButton color="black" class="px-6 mt-12">Read More</UButton>
         </DarkFile>
@@ -90,12 +90,7 @@
 definePageMeta({
   layout: "blog",
 });
-// let blogs = ref([]);
-// async function load_articles() {
-//   let response = await $fetch("/api/getArticles");
-//   console.log(response);
-//   blogs.value = response.articles;
-// }
+
 let Categories = [
   { name: "Cardiology", number: 5 },
   { name: "Gastroenterology", number: 11 },
@@ -118,9 +113,10 @@ let { data: loaded_blogs, status } = await useAsyncData(
 
 <style scoped>
 .hero {
-  background-image: url("/sample6.svg");
+  background-image: url("/blog_1.webp");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .categories {
   background-image: url("/sample12.svg");
