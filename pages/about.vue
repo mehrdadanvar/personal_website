@@ -1,5 +1,5 @@
 <template>
-  <main class="">
+  <UContainer class="">
     <section class="w-full md:w-2/3 mx-auto mt-24">
       <HeroTerminal />
     </section>
@@ -8,7 +8,7 @@
         <AboutBionew />
       </DarkFile>
     </section>
-  </main>
+  </UContainer>
 </template>
 
 <script setup>
