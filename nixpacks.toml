@@ -1,14 +1,14 @@
 [phases.setup]
-nixPkgs = ["nodejs_20","python3", "gcc", "gnumake"]
+nixPkgs = ["nodejs_22","python3", "gcc", "gnumake"]
 
 [phases.install]
 cmds = ["npm install"]
 
 [phases.build]
-cmds = ["npm run build"]
+cmds = ["node -v","npm -v","npm run build"]
 
 [start]
 cmd = "node .output/server/index.mjs"
 
 [variables]
-NODE_VERSION = "20"
+NODE_VERSION = "22"
