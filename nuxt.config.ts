@@ -1,7 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
+  vite: {
+    plugins: [tailwindcss()],
+  },
 
   modules: ["@nuxt/ui", "@nuxt/content", "@nuxt/icon", "@nuxt/fonts"],
   css: ["~/assets/css/main.css"],
@@ -25,16 +30,16 @@ export default defineNuxtConfig({
       },
     },
   },
-  content: {
-    build: {
-      markdown: {
-        highlight: {
-          theme: "github-light",
-          langs: ["vue", "javascript", "typescript", "css", "python"],
-        },
-      },
-    },
-  },
+  // content: {
+  //   build: {
+  //     markdown: {
+  //       highlight: {
+  //         theme: "github-light",
+  //         langs: ["vue", "javascript", "typescript", "css", "python"],
+  //       },
+  //     },
+  //   },
+  // },
   experimental: {
     payloadExtraction: true,
   },
