@@ -36,18 +36,18 @@
             <div v-for="(option, index) in options">
               <div class="flex gap-3 justify-center items-center">
                 <span> Option {{ index + 1 }}</span>
-                <UInput v-model="options[index].text" class="px-6 flex-grow" size="lg" />
+                <UInput v-model="options[index].text" class="px-6 grow" size="lg" />
                 <UCheckbox v-model="options[index].correct" label="Correct" :disabled="options[index].disabled" @click="lock_checkboxes(index)" />
               </div>
             </div>
           </div>
           <!-- <div>{{ options }}</div> -->
           <div class="flex flex-col gap-6 p-6 rounded-lg border border-zinc-300">
-            <div class="flex-grow">
+            <div class="grow">
               <span>Description</span>
               <UTextarea v-model="response_object.description" :rows="7" />
             </div>
-            <div class="flex-grow">
+            <div class="grow">
               <span>Details</span>
               <UTextarea v-model="response_object.details" :rows="7" />
             </div>

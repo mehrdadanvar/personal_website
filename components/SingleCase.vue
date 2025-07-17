@@ -5,7 +5,7 @@
         <div class="mb-6 w-40 text-center text-violet-600 bg-violet-100 rounded-full border">
           Question {{ question.ui_id + 1 }} / {{ question.question_length }}
         </div>
-        <UDivider class="my-3"></UDivider>
+        <USeparator class="my-3"></USeparator>
         <p>{{ question.source }}</p>
         <p v-if="question.body">{{ question.body }}</p>
         <p v-else>{{ question.question_body }}</p>
@@ -54,8 +54,14 @@
             </div>
           </div>
           <div class="flex flex-row gap-6 justify-center items-center py-6 bg-gray-200 border border-gray-200">
-            <UButton @click="chechAnswer" class="shadow-custom" icon="i-solar-question-circle-bold" :trailing="true">Check Answer</UButton>
-            <UButton @click="post_response" class="px-12 bg-violet-500 hover:bg-violet-700" icon="i-solar-round-arrow-up-bold" :trailing="true"
+            <UButton @click="chechAnswer" class="shadow-custom" icon="i-solar-question-circle-bold" :trailing="true"
+              >Check Answer</UButton
+            >
+            <UButton
+              @click="post_response"
+              class="px-12 bg-violet-500 hover:bg-violet-700"
+              icon="i-solar-round-arrow-up-bold"
+              :trailing="true"
               >Submit</UButton
             >
             <button class="px-6 py-1 rounded-full butt shadow-custom">sample</button>
@@ -69,7 +75,10 @@
                 <span class="text-3xl text-cyan-600"><UIcon name="i-solar-chat-round-check-bold"></UIcon></span>
                 <p>{{ answer_object.text }}</p>
               </div>
-              <div v-else class="flex gap-3 justify-center items-center font-semibold text-gray-500 bg-gray-100 rounded-lg">
+              <div
+                v-else
+                class="flex gap-3 justify-center items-center font-semibold text-gray-500 bg-gray-100 rounded-lg"
+              >
                 <span class="text-3xl text-gray-600"><UIcon name="i-solar-shield-warning-bold"></UIcon></span>
                 <p>{{ answer_object.text }}</p>
               </div>
@@ -139,6 +148,8 @@
   </article>
 </template>
 <script setup>
+import { USeparator } from "#components";
+
 let props = defineProps({
   case: { type: Object },
   questions: { type: Array },

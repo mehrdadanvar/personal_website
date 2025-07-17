@@ -28,11 +28,11 @@
     </div>
     <div>{{ options }}</div>
     <div class="flex gap-6 p-6 rounded-lg border border-zinc-300">
-      <div class="flex-grow">
+      <div class="grow">
         <span>Description</span>
         <UTextarea v-model="response_object.description" :rows="7" />
       </div>
-      <div class="flex-grow">
+      <div class="grow">
         <span>Details</span>
         <UTextarea v-model="response_object.details" :rows="7" />
       </div>

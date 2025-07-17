@@ -2,19 +2,9 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  modules: ["@nuxtjs/google-fonts", "@nuxtjs/color-mode", "@nuxt/ui"],
+  modules: ["@nuxtjs/color-mode", "@nuxt/ui", "@nuxt/content"],
+  css: ["~/assets/css/main.css"],
   ssr: true,
-  googleFonts: {
-    families: {
-      // Roboto: true,
-      Inter: true,
-      // Lato: [100, 300],
-      "Open+Sans": true,
-      // "Crimson Text": true,
-      "Source+Code+Pro": true,
-    },
-  },
-
   colorMode: {
     preference: "system", // default value of $colorMode.preference
     fallback: "light", // fallback value if not system preference found
@@ -26,11 +16,36 @@ export default defineNuxtConfig({
     storage: "localStorage", // or 'sessionStorage' or 'cookie'
     storageKey: "nuxt-color-mode",
   },
-  ui: {
-    icons: ["solar", "simple-icons"],
-  },
   runtimeConfig: {
     connectionString: process.env.DB_CONNECTION_STRING,
     articlesConnection: process.env.ARTICLES_DB_CONNECTION_STRING,
+    privateConnection: process.env.COOLIFY_CONNECTION_STRING,
+  },
+  typescript: {
+    typeCheck: false,
+    strict: false,
+    tsConfig: {
+      compilerOptions: {
+        allowJs: true,
+        baseUrl: ".",
+        paths: {
+          "#types": ["./types"],
+        },
+        // Add the "types" array to include @types/fhir
+      },
+    },
+  },
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: "github-light",
+          langs: ["vue", "javascript", "typescript", "css", "python"],
+        },
+      },
+    },
+  },
+  experimental: {
+    payloadExtraction: true,
   },
 });

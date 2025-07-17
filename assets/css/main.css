@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+@theme {
+  --font-sans: "Source Sans 3", sans-serif;
+}
+
+@layer utilities {
+  .font-Inter {
+    font-family: "Fira Sans", sans-serif;
+  }
+}

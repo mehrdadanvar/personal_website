@@ -1,32 +1,57 @@
 <template>
   <div class="sticky top-1 z-20">
     <nav
-      class="flex flex-row items-center justify-between rounded-xl border border-zinc-300/50 dark:border-zinc-800 z-30 w-9/12 px-6 mx-auto overflow-hidden backdrop-blur-sm bg-opacity-40 dark:text-zinc-400"
+      class="flex flex-row items-center justify-between rounded-xl border border-zinc-300/50 dark:border-zinc-800 z-30 w-9/12 px-6 mx-auto backdrop-blur-sm bg-opacity-40"
     >
       <div>
         <NuxtLink to="/">/</NuxtLink>
       </div>
-      <div class="flex text-base items-center justify-around w-1/2">
-        <NuxtLink to="/blog">Blog</NuxtLink>
-        <NuxtLink to="/resume">Vitae</NuxtLink>
-        <NuxtLink to="/about">About</NuxtLink>
-
-        <!-- <div>
-          <select v-model="$colorMode.preference">
-            <option value="system">System</option>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-            <option value="sepia">Sepia</option>
-          </select>
-        </div> -->
+      <div>
+        <UNavigationMenu :items="items" class="w-full justify-center" color="neutral" />
       </div>
+
       <Modes />
     </nav>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const colorMode = useColorMode();
+import type { NavigationMenuItem } from "@nuxt/ui";
+let items = ref<NavigationMenuItem[]>([
+  {
+    label: "About",
+    to: "/about",
+    icon: "",
+    children: [],
+  },
+  {
+    label: "Projects",
+    to: "/projects",
+    icon: "",
+    children: [
+      {
+        label: "HyperQbank",
+        icon: "",
+        description: "A modern Medical Exam Preparation Platform",
+        to: "/projects/hyperqbank",
+      },
+    ],
+  },
+
+  {
+    label: "Blog",
+    to: "/blog",
+    icon: "",
+    children: [],
+  },
+  {
+    label: "Vitae",
+    to: "/resume",
+    icon: "",
+    children: [],
+  },
+]);
 </script>
 
 <style scoped></style>

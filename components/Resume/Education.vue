@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <UDivider />
+    <USeparator />
   </section>
 </template>
 

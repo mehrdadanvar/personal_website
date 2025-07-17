@@ -1,5 +1,5 @@
 <template>
-  <main class="container mx-auto grid grid-cols-1 divide-gray-100 p-6 gap-6">
+  <div class="container mx-auto grid grid-cols-1 divide-gray-100 p-6 gap-6 mb-24">
     <Navbar />
     <ResumeEducation />
     <ResumeInternships />
@@ -9,7 +9,7 @@
     <ResumePresentation />
     <ResumeExam />
     <!-- <ResumeSkills /> -->
-  </main>
+  </div>
 </template>
 
 <script setup>
@@ -18,4 +18,8 @@ definePageMeta({
 });
 </script>
 
-<style></style>
+<style scoped>
+.container {
+  font-family: "Crimson Text";
+}
+</style>

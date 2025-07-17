@@ -1,13 +1,30 @@
 <template>
-  <footer class="dark:bg-gradient-to-br dark:from-zinc-900 dark:via-zinc-900 dark:to-zinc-700 bg-gradient-to-bl from-zinc-50 via-zinc-50 to-zinc-400">
+  <footer
+    class="dark:bg-linear-to-br dark:from-zinc-900 dark:via-zinc-900 dark:to-zinc-700 bg-linear-to-bl from-zinc-50 via-zinc-50 to-zinc-400"
+  >
     <section class="mx-auto w-9/12 backdrop-blur-lg">
       <div class="grid grid-cols-4 h-72">
         <div class="col-span-2">
           <h2 class="dark:text-white text-xl pb-3">Mehrdad Anvar</h2>
           <div class="socials pt-6">
             <span v-for="element in socials" class="text-zinc-400 pr-4">
-              <UIcon :name="element.icon_name" class="hover:scale-125 text-xl" />
+              <NuxtLink :to="element.link">
+                <UIcon :name="element.icon_name" class="hover:scale-125 text-xl" />
+              </NuxtLink>
             </span>
+          </div>
+          <div>
+            <p class="py-2">
+              I have used
+              <NuxtLink to="https://nuxtjs.org/" target="_blank">
+                <UBadge variant="soft" size="md">Nuxt v4.0</UBadge>
+              </NuxtLink>
+              and
+              <NuxtLink to="https://ui.nuxt.com/">
+                <UBadge variant="soft">Nuxt UI v3.2.0</UBadge>
+              </NuxtLink>
+              to build this website. It is hosted over on Oracle Cloud.
+            </p>
           </div>
         </div>
         <div class="col-span-1 flex flex-col gap-6">
@@ -15,7 +32,7 @@
             v-for="element in seconds"
             class="text-zinc-500 dark:text-zinc-400 hover:font-semibold hover:cursor-pointer hover:translate-x-1 transition-all"
           >
-            <nuxt-link :to="element.route">{{ element.name }}</nuxt-link>
+            <NuxtLink :to="element.route">{{ element.name }}</NuxtLink>
           </p>
         </div>
         <div class="col-span-1 flex flex-col gap-6">
@@ -24,13 +41,17 @@
           </p>
         </div>
       </div>
-      <UDivider class="pb-6" />
+      <USeparator class="pb-6" />
       <div class="h-6 flex justify-around p-3 my-1 items-center rounded-full">
         <p class="">Mehrdad Anvar</p>
-        <p class="text-sm">Last Update November 2024</p>
+        <p class="text-sm">Last Update July 2025</p>
         <div>
           <span v-for="element in states" class="hover:cursor-pointer">
-            <UIcon :name="element.icon_name" class="text-xl px-6 text-zinc-500" @click="changeColrMode(element.condition)" />
+            <UIcon
+              :name="element.icon_name"
+              class="text-xl px-6 text-zinc-500"
+              @click="changeColrMode(element.condition)"
+            />
           </span>
         </div>
       </div>
@@ -39,6 +60,8 @@
   </footer>
 </template>
 <script setup>
+import { USeparator } from "#components";
+
 let socials = [
   {
     id: 0,

@@ -27,7 +27,9 @@
               >{{ author }}{{ index < pub.authors.length - 1 ? ", " : "." }}</span
             >
           </div>
-          <a class="flex items-center justify-center max-w-fit px-4 rounded-lg gap-3 text-sm bg-zinc-100" :href="pub.link"> Full Text </a>
+          <NuxtLink :to="pub.link" target="_blank">
+            <UBadge color="neutral" variant="subtle">Full Text </UBadge>
+          </NuxtLink>
           <div class="text-justify py-6 flex flex-col gap-2 text-zinc-600 dark:text-zinc-400">
             <div class="">
               <span>Bakcground:</span>

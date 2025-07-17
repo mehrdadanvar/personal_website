@@ -41,10 +41,17 @@
     "id": 3,
     "year": 2016,
     "title": "Logistic Regression Modeling for Evaluation of Factors Affecting Trauma Outcome in a Level I Trauma Center in Shiraz.",
-    "authors": ["Mahnaz Yadollahi", "Mehrdad Anvar", "Haleh Ghaem", "Shahram Bolandparvaz", "Shahram Paydar", "Fateme Izianloo"],
+    "authors": [
+      "Mahnaz Yadollahi",
+      "Mehrdad Anvar",
+      "Haleh Ghaem",
+      "Shahram Bolandparvaz",
+      "Shahram Paydar",
+      "Fateme Izianloo"
+    ],
     "journal": "Iranina Red Crescent Medical Journal",
     "pissue": [19, 1, "0-0"],
-    "link": "",
+    "link": "https://www.ircmj.com/article_194557.html",
     "pdf": "https://archive.ircmj.com/article/19/1/21963-pdf.pdf",
     "abstract": {
       "background": "Injury-related mortality is preventable, making the identification of factors that negatively influence trauma outcomes a critical step in reducing the burden of injuries.",

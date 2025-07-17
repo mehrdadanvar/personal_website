@@ -1,31 +1,34 @@
 <template>
-  <div class="bio">
+  <div class="bio flex flex-col gap-3">
     <h1 class="hidden">About Mehrdad Anvar</h1>
 
-    <p class="my-3">
+    <p class="">
       <span class="text-4xl">I</span>
-      was born at the end of the 8-year conflict between Iran and Iraq in a small town to the southwest of Iran. My mother who was the head of school
-      of nursing at the time was on the final year of graduating from Tehran University of Medical Sciences. Growing up in an academic family, I
-      developed a natural inclination towards comprehending the intricacies of the human body and health. My passion for these subjects led me to
-      pursue high school biology and eventually, medical school.
+      was born in a small town in southwest Iran, just as the eight-year conflict between Iran and Iraq was drawing to a
+      close. My mother, who was the head of the school of nursing at the time, was in her final year at Tehran
+      University of Medical Sciences. Growing up in such an academic environment, I naturally became fascinated by the
+      human body and health. This passion eventually led me to pursue biology in high school and then, medical school.
     </p>
-    <p class="my-3">
-      After eight years of intensive medical training at Shiraz University of Medical Sciences and involvement in various research projects, my
-      outlook on healthcare broadened. While treating patients was a key part of my daily routine, I found myself drawn to making a larger impact on
-      public health. However, the curriculum was heavily geared toward preparing clinicians to manage crowded clinics, with limited emphasis on
-      research. To bridge this gap, I devised a long-term self-education plan built on two key pillars that have shaped my professional journey.
+    <p class="">
+      After eight years of intensive medical training at Shiraz University of Medical Sciences and participating in
+      various research projects, my perspective on healthcare really expanded. While treating patients was a big part of
+      my daily life, I found myself increasingly drawn to making a broader impact on public health. However, the
+      curriculum primarily focused on preparing clinicians for busy clinics, with less emphasis on research. To address
+      this, I developed a long-term self-education plan with two main goals that have truly shaped my career.
     </p>
-    <p class="my-3">
-      The first pillar was developing a solid foundation in research methodology. I attended university workshops that taught me statistics and
-      quantitative reasoning, sparking my interest in computer science and programming—areas that have since become passions of mine. The second
-      pillar involved deepening my theoretical knowledge through hands-on experience. I volunteered to help draft and edit research projects and
-      dissertations, collaborated with peers and seniors, and later offered guidance in turning raw ideas into well-structured research proposals.
-      These experiences also honed my skills in dataset analysis tailored to each project’s needs.
+    <p class="">
+      My first goal was to build a strong foundation in research methodology. I attended university workshops where I
+      learned statistics and quantitative reasoning, which actually sparked my interest in computer science and
+      programming—areas I've since become very passionate about. The second goal involved deepening my theoretical
+      knowledge through practical experience. I volunteered to help draft and edit research projects and dissertations,
+      collaborated with peers and seniors, and later even helped others turn their initial ideas into well-structured
+      research proposals. These experiences also sharpened my skills in analyzing datasets, tailoring my approach to
+      each project's unique needs.
     </p>
-    <p class="my-3">
-      By the end of my medical education, I had gained experience across a variety of study designs, from narrative reviews to clinical trials. Today,
-      I combine my clinical expertise with a population-level understanding of healthcare, proudly embracing the role of a curious and data-driven
-      medical professional.
+    <p class="">
+      By the time I finished my medical education, I had gained experience with a wide range of study designs, from
+      narrative reviews to clinical trials. Today, I combine my clinical expertise with a population-level understanding
+      of healthcare, and I'm proud to be a curious, data-driven medical professional.
     </p>
     <div></div>
   </div>

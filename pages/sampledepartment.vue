@@ -2,9 +2,9 @@
   <main class="">
     <div><Navbar /></div>
     <div class="flex justify-center items-center sticky top-1 z-10">
-      <div class="w-[500px] h-[50px] bg-gradient-to-l from-orange-400/50 to-black rounded-full blur-xl -rotate-[15deg]"></div>
+      <div class="w-[500px] h-[50px] bg-linear-to-l from-orange-400/50 to-black rounded-full blur-xl -rotate-[15deg]"></div>
       <div class="w-[300px] h-[300px] bg-orange-600/50 rounded-full blur-2xl z-50"></div>
-      <div class="w-[500px] h-[50px] bg-gradient-to-r from-orange-600 to-black rounded-full blur-2xl rotate-[15deg]"></div>
+      <div class="w-[500px] h-[50px] bg-linear-to-r from-orange-600 to-black rounded-full blur-2xl rotate-[15deg]"></div>
     </div>
     <div class="mx-auto w-3/4">
       <section class="grid grid-cols-4 gap-6">

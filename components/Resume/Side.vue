@@ -1,6 +1,6 @@
 <template>
   <section
-    class="grid grid-cols-1 gap-2 p-6 lg:grid lg:grid-cols-1 lg:items-center lg:h-screen bg-gradient-to-br from-white via-white to-slate-300"
+    class="grid grid-cols-1 gap-2 p-6 lg:grid lg:grid-cols-1 lg:items-center lg:h-screen bg-linear-to-br from-white via-white to-slate-300"
   >
     <h1 class="text-gray-700 sm: text-xl lg:text-3xl">Mehrdad Anvar</h1>
     <div class="text-gray-500 text-sm lg:text-2xl">

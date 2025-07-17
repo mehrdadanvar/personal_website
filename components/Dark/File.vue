@@ -2,7 +2,7 @@
   <div>
     <div class="mx-auto p-[2px] rounded-lg senior backdrop-blur-[5px]">
       <div class="h-full dark:bg-black/50 rounded-lg">
-        <div class="p-6 h-full rounded-lg bg-gradient-to-bl dark:from-zinc-500/20 dark:to-zinc-800/30 from-zinc-400/20 to-zinc-50/20">
+        <div class="p-6 h-full rounded-lg bg-linear-to-bl dark:from-zinc-500/20 dark:to-zinc-800/30 from-zinc-400/20 to-zinc-50/20">
           <slot />
         </div>
       </div>
