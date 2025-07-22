@@ -1,6 +1,6 @@
 <template>
   <section class="flex flex-col gap-8 mb-12">
-    <h2 class="text-3xl text-zinc-600 dark:text-zinc-400">Education</h2>
+    <h2 class="text-3xl text-yellow-700">Education</h2>
     <div class="grid grid-cols-1 gap-10">
       <div v-for="x in schools" :key="x" class="sm:flex sm:flex-col sm:gap-6 md:grid md:grid-cols-4">
         <h3 class="text-zinc-600 dark:text-zinc-500 lg:text-xl col-span-1">
@@ -25,20 +25,6 @@
 
 <script setup>
 import schools from "../../assets/files/schools.json";
-console.log(schools, "test is");
-// let { data: schools } = await useFetch("/api/schools");
-// let schools = ref([{}, {}]);
-// let { data: schools } = await useFetch("@assets/files/schools.json");
-// console.log(schools, "is schools");
-
-// async function load_schools() {
-//   let { data: schools } = await useFetch("schools.json");
-
-//   // schools.value = some;
-//   // console.log("sefetch", some);
-// }
-// load_schools();
-//let school_logos = ref(["../assets/svgs/school1.svg", "../assets/svgs/school2.png"]);
 </script>
 
 <style scoped></style>

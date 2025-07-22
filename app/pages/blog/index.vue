@@ -6,11 +6,7 @@
           <h1 class="text-4xl text-zinc-300 dark:text-zinc-200">
             A helpfull blog for medical students preparing for MCCQE, USMLE
           </h1>
-          <p class="py-6 text-zinc-600 dark:text-zinc-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ipsam fugiat in eum ex repellendus
-            possimus saepe maxime inventore reprehenderit. Magnam, at atque sunt mollitia dolores fugit natus placeat
-            est!
-          </p>
+
           <div class="buttons flex gap-4">
             <UButton color="neutral" class="px-6">Read More ...</UButton>
             <UButton color="neutral" class="px-6" variant="outline">Explore Articles</UButton>
@@ -82,11 +78,7 @@
         <div class="flex mx-auto w-11/12">
           <DarkFile v-for="(item, index) in Categories" :key="index" class="w-[300px]">
             <h3 class="py-6">{{ item.name }}</h3>
-            <p class="text-zinc-500 dark:text-zinc-400">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad cum sit provident saepe a omnis illum odio,
-              praesentium nemo cupiditate optio ea consequuntur. Aliquid laboriosam ipsa molestias dignissimos optio
-              laborum!
-            </p>
+
             <UButton color="neutral" class="px-6 mt-12 hover:cursor-pointer" variant="ghost">Read More</UButton>
           </DarkFile>
         </div>

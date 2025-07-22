@@ -14,7 +14,11 @@
       /> -->
     </div>
     <div class="flex flex-wrap gap-1">
-      <span class="text-zinc-600" v-for="(author, index) in props.authors" :key="index" :class="{ 'text-teal-700 ': author == 'Mehrdad Anvar' }"
+      <span
+        class="text-zinc-600"
+        v-for="(author, index) in props.authors"
+        :key="index"
+        :class="{ 'text-teal-700 ': author == 'Mehrdad Anvar' }"
         >{{ author }}{{ index < props.authors.length - 1 ? ", " : "." }}</span
       >
     </div>
@@ -29,8 +33,12 @@
     </div>
 
     <div class="transition-all ease-linear duration-75 text-slate-500 text-sm md:text-base">
-      <div :class="{ hidden: !isOpen, 'ease-linear duration-75': isOpen }" class="text-justify">
-        {{ props.abstract }}
+      <div
+        :class="{ hidden: !isOpen, 'ease-linear duration-75': isOpen }"
+        class="text-justify"
+        v-for="(value, key) in props.abstract"
+      >
+        {{ key }}: {{ value }}
       </div>
     </div>
   </div>

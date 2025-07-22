@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Trauma Epidemiology & Injury Surveillance",
+    "description": "Exploring injury patterns across age and gender groups in Iran's largest trauma centers. My research has centered on leveraging administrative databases to understand injury mechanisms, mortality predictors, and trauma outcomes, providing actionable insights for prevention and healthcare optimization.",
+    "highlights": [
+      "Analyzed over 47,000 trauma cases to identify demographic and clinical predictors of mortality.",
+      "Quantified the timing and patterns of trauma-related in-hospital deaths, revealing a shift from trimodal to bimodal distribution.",
+      "Highlighted high-risk groups such as elderly males with thoracic or head injuries.",
+      "Proposed data-driven improvements in trauma surveillance systems and care strategies."
+    ]
+  },
+  {
+    "title": "Risk Modeling & Outcome Prediction",
+    "description": "Designing data-driven models to improve trauma care and neonatal infection outcomes. Through statistical modeling and regression analysis, I contributed to identifying high-risk patients in both trauma and neonatal intensive care units.",
+    "highlights": [
+      "Developed logistic regression models to predict early and late trauma mortality.",
+      "Identified age, ISS >16, thoracic injuries, and nosocomial infections as major outcome predictors.",
+      "Supported risk quantification models for catheter-related bloodstream infections in NICUs.",
+      "Recommended data-centric strategies to reduce in-hospital complications and mortality."
+    ]
+  },
+  {
+    "title": "Community & Preventive Medicine Research",
+    "description": "Integrating fieldwork and analytics to tackle community health challenges. As part of university-affiliated and government-supported projects, I collaborated on studies addressing behavioral risk factors and health service quality.",
+    "highlights": [
+      "Led electronic data collection and analysis for a community survey on hookah smoking and cessation strategies.",
+      "Co-authored a study evaluating the impact of ISO certification on patient satisfaction across teaching hospitals.",
+      "Applied structured patient feedback tools (KQCAH) to measure healthcare quality in resource-limited settings."
+    ]
+  },
+  {
+    "title": "Orthopedics, Musculoskeletal & Rehabilitation Research",
+    "description": "Supporting observational studies in musculoskeletal and orthopedic epidemiology. At Shiraz Bone & Joint Research Center, I contributed to the formulation, analysis, and reporting of clinical studies aimed at improving orthopedic patient care.",
+    "highlights": [
+      "Compared core muscle endurance in sedentary vs. active hospital staff.",
+      "Assessed treatment outcomes in patients with congenital hip dislocation.",
+      "Investigated anatomical and radiographic factors in tibiofibular syndesmosis alignment.",
+      "Strengthened methodological rigor in designing and interpreting clinical orthopedic research."
+    ]
+  }
+]
