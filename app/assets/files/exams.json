@@ -13,5 +13,10 @@
     "title": "Medical Council of Canada Qualifying Examination",
     "date": "November 2024",
     "scores": ["Pass"]
+  },
+  {
+    "title": "Medical Council of Canada National Assessment Collaboration",
+    "date": "May 2025",
+    "scores": ["Pass"]
   }
 ]

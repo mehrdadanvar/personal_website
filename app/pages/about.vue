@@ -1,5 +1,7 @@
 <template>
   <UContainer class="">
+    <title>About Mehrdad Anvar</title>
+
     <section class="w-full md:w-2/3 mx-auto mt-24">
       <HeroTerminal />
     </section>

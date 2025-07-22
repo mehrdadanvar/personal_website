@@ -5,23 +5,7 @@
         <div>
           <section>
             <h1 class="text-4xl py-24 text-zinc-700 dark:text-zinc-300">{{ blog.article_title }}</h1>
-            <p class="py-6">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto qui excepturi ipsum cumque aut ut soluta
-              dicta corrupti odio, eveniet repudiandae, laborum error officiis tempora laboriosam eaque id ab et commodi
-              at unde? Perspiciatis quaerat officiis impedit facere magnam adipisci, blanditiis enim voluptatum vel.
-              Incidunt sit odit eaque reprehenderit, numquam dolorem velit dolorum cumque accusamus maiores quaerat,
-              molestias vel! Eos vero ipsa, cum ullam libero beatae incidunt ex nisi culpa tempore ratione quam quis
-              aperiam dolorum ducimus quisquam. Mollitia eligendi similique dolor, veniam deleniti fugit cum incidunt
-              tenetur laboriosam suscipit sit harum consectetur fuga animi, repellendus excepturi deserunt sunt earum
-              voluptas at exercitationem sint facere corrupti accusamus! Necessitatibus eius dolore sit iste blanditiis
-              ullam hic deleniti iure nostrum officia? Delectus illum saepe maxime ducimus voluptatum perspiciatis quae
-              sint blanditiis eligendi nesciunt nostrum illo, repudiandae nulla ut sed? Sed ullam libero expedita
-              consectetur repellendus aliquid earum? Fugit pariatur iure molestias laborum, dolores aspernatur amet
-              dolor ratione quasi assumenda reprehenderit sunt, inventore provident, ea facere architecto ut voluptates?
-              Harum placeat facere quod ipsam laudantium laborum dignissimos nostrum nesciunt quasi tenetur
-              necessitatibus minima blanditiis voluptate, voluptates, deserunt exercitationem fuga non! Porro nisi,
-              quasi facere excepturi voluptates sint sequi cupiditate quas voluptatem sit voluptatibus.
-            </p>
+
             <USeparator />
             <div class="lg:grid lg:grid-cols-2 gap-3">
               <div v-for="element in blog.intro" class="py-4 px-3">
@@ -41,18 +25,17 @@
                     <UBadge
                       icon="i-solar-glasses-bold-duotone"
                       size="sm"
-                      color="black"
-                      variant="solid"
-                      label="Badge"
+                      color="neutral"
+                      variant="outline"
+                      label="Presentation"
                       :trailing="true"
                     />
-                    <UIcon name="i-solar-adhesive-plaster-bold" />
                     <ul class="list-disc list-inside">
                       <li v-for="member in element.presenting_features" class="ml-6 py-1 list-outside">{{ member }}</li>
                     </ul>
                   </div>
                   <div class="physicalexam p-6">
-                    <UBadge color="black" class="mb-6"><h3>Physical Exam:</h3></UBadge>
+                    <UBadge color="neutral" class="mb-6"><h3>Physical Exam</h3></UBadge>
                     <p v-for="member in element.physical" class="pl-6 py-1">- {{ member }}</p>
                   </div>
                 </div>

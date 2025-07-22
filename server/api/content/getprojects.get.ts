@@ -1,7 +1,9 @@
-import { getPrivate_mongoClient } from "~/server/connection";
+// import { getPrivate_mongoClient } from "~/server/connection";
+
+import { usePrivateMongoClient } from "~~/server/utils/connection";
 
 async function getProjects(slug: string | undefined) {
-  const client = await getPrivate_mongoClient();
+  const client = await usePrivateMongoClient();
   if (!client) {
     return new Response("Failed to connect to MongoDB", { status: 500 });
   }

@@ -1,6 +1,6 @@
 ---
 date: 2022-01-01
-title: Idea 1
+title: Hyper ECG
 slug: hyperecg
 ---
 

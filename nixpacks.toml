@@ -12,3 +12,4 @@ cmd = "node .output/server/index.mjs"
 
 [variables]
 NODE_VERSION = "22"
+NODE_ENV = "production"

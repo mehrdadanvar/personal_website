@@ -1,11 +1,11 @@
 <template>
   <UContainer>
-    <h1></h1>
-    <section class="h-screen">
+    <title>Mehrdad Anvar Research</title>
+    <!-- <section class="h-screen">
       <p>Applications of Artificila Intellegence in Health</p>
-    </section>
-    <section>
-      <h2 class="py-6 text-3xl">Research Experince</h2>
+    </section> -->
+    <section class="mt-24">
+      <h2 class="py-6 text-3xl hidden">Research Experince</h2>
 
       <DarkFile>
         <ResumeResearch />
@@ -55,7 +55,7 @@
 </template>
 
 <script setup>
-definePageMeta({ layout: "scroll" });
+definePageMeta({ layout: "default" });
 import pubs from "../assets/files/pubs.json";
 
 let newpubs = pubs.sort((a, b) => {

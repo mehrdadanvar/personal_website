@@ -8,7 +8,7 @@
           <h2 class="dark:text-white text-xl pb-3">Mehrdad Anvar</h2>
           <div class="socials pt-6">
             <span v-for="element in socials" class="text-zinc-400 pr-4">
-              <NuxtLink :to="element.link">
+              <NuxtLink :to="element.link" target="_blank">
                 <UIcon :name="element.icon_name" class="hover:scale-125 text-xl" />
               </NuxtLink>
             </span>

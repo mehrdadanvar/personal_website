@@ -1,19 +1,22 @@
 <template>
   <div>
     <section class="hero py-28 flex flex-col md:flex-row gap-6 h-screen">
-      <div class="left backdrop-blur-sm flex flex-col items-center justify-evenly h-2/3 mx-24 rounded-3xl p-6">
-        <h1 class="text-4xl text-zinc-300 dark:text-zinc-200">
-          A helpfull blog for medical students preparing for MCCQE, USMLE
-        </h1>
-        <p class="py-6 text-zinc-600 dark:text-zinc-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ipsam fugiat in eum ex repellendus possimus
-          saepe maxime inventore reprehenderit. Magnam, at atque sunt mollitia dolores fugit natus placeat est!
-        </p>
-        <div class="buttons flex gap-4">
-          <UButton color="neutral" class="px-6">Read More ...</UButton>
-          <UButton color="neutral" class="px-6" variant="outline">Explore Articles</UButton>
+      <UContainer>
+        <div class="left backdrop-blur-sm flex flex-col items-center justify-evenly h-2/3 mx-24 rounded-3xl p-6">
+          <h1 class="text-4xl text-zinc-300 dark:text-zinc-200">
+            A helpfull blog for medical students preparing for MCCQE, USMLE
+          </h1>
+          <p class="py-6 text-zinc-600 dark:text-zinc-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ipsam fugiat in eum ex repellendus
+            possimus saepe maxime inventore reprehenderit. Magnam, at atque sunt mollitia dolores fugit natus placeat
+            est!
+          </p>
+          <div class="buttons flex gap-4">
+            <UButton color="neutral" class="px-6">Read More ...</UButton>
+            <UButton color="neutral" class="px-6" variant="outline">Explore Articles</UButton>
+          </div>
         </div>
-      </div>
+      </UContainer>
     </section>
     <div class="search h-36 mx-auto w-10/12 py-24 flex flex-col items-center">
       <p>Search for articles</p>
@@ -94,7 +97,7 @@
 
 <script setup>
 definePageMeta({
-  layout: "blog",
+  layout: "default",
 });
 
 let Categories = [
