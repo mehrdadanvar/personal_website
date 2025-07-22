@@ -1,5 +1,3 @@
-// import { getPrivate_mongoClient } from "~/server/connection";
-
 import { usePrivateMongoClient } from "~~/server/utils/connection";
 
 async function getProjects(slug: string | undefined) {

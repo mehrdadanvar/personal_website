@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/ui", "@nuxt/content", "@nuxt/icon", "@nuxt/fonts"],
+  modules: ["@nuxt/ui", "@nuxt/content", "@nuxt/icon", "@nuxt/fonts", "@nuxtjs/sitemap", "@nuxtjs/robots"],
   css: ["~/assets/css/main.css"],
   ssr: true,
   runtimeConfig: {
@@ -32,17 +32,22 @@ export default defineNuxtConfig({
       },
     },
   },
-  // content: {
-  //   build: {
-  //     markdown: {
-  //       highlight: {
-  //         theme: "github-light",
-  //         langs: ["vue", "javascript", "typescript", "css", "python"],
-  //       },
-  //     },
-  //   },
-  // },
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: "github-light",
+          langs: ["vue", "javascript", "typescript", "css", "python"],
+        },
+      },
+    },
+  },
   experimental: {
     payloadExtraction: true,
+    viewTransition: true,
+  },
+  site: {
+    url: "https://mdanvar.ca",
+    name: "Mehrdad Anvar Website",
   },
 });
