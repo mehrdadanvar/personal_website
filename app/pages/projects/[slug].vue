@@ -7,9 +7,13 @@
       <h2>{{ project.description }}</h2>
       <p>{{ project.long_description }}</p>
       <div>
-        <UTimeline :default-value="project.timeline.length - 1" :items="project.timeline" color="neutral" />
+        <UTimeline :default-value="project.timeline.length - 1" :items="project.timeline" color="neutral" size="xl" />
+      </div>
+      <div v-for="item in mdc">
+        <ContentRenderer :value="item" />
       </div>
     </section>
+
     <!-- <div class="text-red-400">{{ mdc }}</div>
     <div class="text-cyan-400">{{ mehrdad }}</div>
     <div v-for="element in mdprojects" class="border">{{ element }}</div> -->

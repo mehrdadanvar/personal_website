@@ -2,6 +2,7 @@
 @import "@nuxt/ui";
 @theme {
   --font-sans: "Source Sans 3", sans-serif;
+  --font-mono: "Cascadia Mono", monospace;
 }
 
 @layer utilities {

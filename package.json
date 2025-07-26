@@ -20,6 +20,7 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "@iconify-json/material-icon-theme": "^1.2.16",
     "typescript": "^5.8.3",
     "vue-tsc": "^3.0.3"
   }

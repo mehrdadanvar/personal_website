@@ -58,6 +58,11 @@
                           >Read More</UButton
                         >
                       </NuxtLink>
+                      <div>
+                        <span v-for="element in item.techStack">
+                          <UIcon :name="`i-material-icon-theme:${element}`" class="size-5" />
+                        </span>
+                      </div>
                     </div>
                   </template>
                 </UCard>

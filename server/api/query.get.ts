@@ -23,7 +23,6 @@ async function loadSingleArticle(slug: String) {
 }
 export default defineEventHandler(async (event) => {
   const query = getQuery(event);
-  console.log(query);
   let article = await loadSingleArticle(query.title);
   if (article) {
     return { article };
