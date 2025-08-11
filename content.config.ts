@@ -7,5 +7,11 @@ export default defineContentConfig({
       // Specify the type of content in this collection
       type: "page",
     }),
+    articles: defineCollection({
+      // Load every file inside the `content` directory
+      source: "articles/*.md",
+      // Specify the type of content in this collection
+      type: "page",
+    }),
   },
 });

@@ -4,7 +4,7 @@
     <h1>Projects</h1>
     <p class="py-6">
       The following represents a list of projects I have been working on. Most of these will at some point be
-      open-sourced and hosted on GitHub. However, as I am constantly jumping beetwen projects and chnages are drastic, I
+      open-sourced and hosted on GitHub. However, as I am constantly jumping between projects and changes are drastic, I
       have not yet decided open sourcing them. This page will receive regular updates as I move on to complete these
       projects.
     </p>
@@ -20,7 +20,7 @@
         </UCard>
       </div>
     </div>
-    <!-- <div>{{ mdprojects }}</div> -->
+    <!-- <div>{{ md_projects }}</div> -->
   </UContainer>
 </template>
 <script setup lang="ts">
@@ -30,6 +30,6 @@ const { data: response } = await useAsyncData("projects", () => $fetch("/api/con
   getCachedData: (key, nuxtApp) => nuxtApp.payload.data[key] || nuxtApp.static.data[key],
 });
 
-const { data: mdprojects } = await useAsyncData("ideas", () => queryCollection("ideas").all());
-console.log(mdprojects.value);
+const { data: md_projects } = await useAsyncData("ideas", () => queryCollection("ideas").all());
+console.log(md_projects.value);
 </script>
