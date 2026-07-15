@@ -1,5 +1,7 @@
 <template>
-  <div class="terminal text-zinc-500 border border-zinc-500 mx-auto rounded-lg min-w-fit backdrop-blur-md backdrop-brightness-105">
+  <div
+    class="terminal text-zinc-500 border border-zinc-500 mx-auto rounded-lg min-w-fit backdrop-blur-md backdrop-brightness-105"
+  >
     <div class="bg-zinc-900 dark:bg-zinc-600/80 rounded-t-lg">
       <div class="flex flex-row gap-1 justify-end items-center h-7 pr-3">
         <div class="w-3 h-3 rounded-full bg-zinc-400"></div>
@@ -19,6 +21,8 @@
         <p>{{ rendered_text[2] }}</p>
         <p>{{ rendered_text[3] }}</p>
         <p>{{ rendered_text[4] }}</p>
+        <p>{{ rendered_text[5] }}</p>
+        <p>{{ rendered_text[6] }}</p>
       </div>
     </div>
     <!-- <p>{{ rendered_text }}</p> -->
@@ -28,11 +32,12 @@
 import { ref } from "vue";
 let major_text = [
   "$ sudo apt-get install arch-linux forget all other operating systems",
-  "let backgroundJob = await liflongLearn(['medicine','computer_scince','statistics']) ",
+  "let backgroundJob = await lifelongLearn(['medicine','computer_science','statistics']) ",
   "from skills import programming",
-  "function delay('immigrate to canada'){",
+  "async function delay(){",
+  "return Promise betterlife upon immigration    ",
+  "haha await lifelong bureaucracy in licensing and immigration ",
   "}",
-  "codes =  ['1', '2', '4']",
   "codes =  ['1', '2', '4']",
 ];
 let minor_text = ref("");

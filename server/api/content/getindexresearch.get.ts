@@ -1,7 +1,7 @@
-import { usePrivateMongoClient } from "~~/server/utils/connection";
+import { getMongoClient } from "~~/server/utils/connection";
 
 async function getResearch() {
-  const client = await usePrivateMongoClient();
+  const client = await getMongoClient();
   if (!client) {
     return new Response("Failed to fetch data", { status: 500 });
   }

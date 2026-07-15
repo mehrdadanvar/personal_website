@@ -51,7 +51,6 @@
 <script setup>
 let some = ref([1, 2, 3, 4, 5]);
 let raw_skills = ref([]);
-console.log("hi this is skills");
 // async function load_skills() {
 //   let response = await fetch("skills.json");
 //   let data = await response.text();

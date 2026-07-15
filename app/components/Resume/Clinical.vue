@@ -15,7 +15,7 @@
           <div class="py-2 text-gray-500">
             <p class="lg:text-xl">{{ job.place }}</p>
             <ol class="flex gap-3 text-lg">
-              <li v-for="x in job.geo" :key="x">{{ x }}</li>
+              <li v-for="x in job.geo" :key="x">{{ x }},</li>
             </ol>
 
             <ol
@@ -44,7 +44,6 @@ import jobs from "../../assets/files/clinics.json";
 //   jobs.value = content;
 // }
 // load_clinics();
-// console.log(jobs);
 </script>
 
 <style></style>

@@ -36,7 +36,6 @@ let side_props = defineProps({
   name: String,
   title: String,
 });
-console.log(side_props);
 let socials = [
   {
     id: 0,

@@ -7,11 +7,9 @@
 <script setup>
 import { onMounted } from "vue";
 onMounted(() => {
-  console.log("mounted");
   load_svg();
   setTimeout(() => {
     let canvas = document.getElementById("canvas");
-    console.log(canvas);
     let ctx = canvas.getContext("2d");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -26,9 +24,18 @@ onMounted(() => {
         this.canvasHeight = canvasHeight;
       }
       draw(context) {
-        this.text = this.characters.charAt(Math.floor(Math.random() * this.characters.length));
-        context.fillText(this.text, this.x * this.fontSize, this.y * this.fontSize);
-        if (this.y * this.fontSize > this.canvasHeight && Math.random() > 0.98) {
+        this.text = this.characters.charAt(
+          Math.floor(Math.random() * this.characters.length),
+        );
+        context.fillText(
+          this.text,
+          this.x * this.fontSize,
+          this.y * this.fontSize,
+        );
+        if (
+          this.y * this.fontSize > this.canvasHeight &&
+          Math.random() > 0.98
+        ) {
           this.y = 0;
         } else {
           this.y += 1;
@@ -44,7 +51,6 @@ onMounted(() => {
         this.columns = this.canvasWidth / this.fontSize;
         this.symbols = [];
         this.#initialize();
-        console.log(this.symbols);
       }
       #initialize() {
         for (let i = 0; i < this.columns; i++) {

@@ -3,20 +3,27 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-22",
   devtools: { enabled: true },
-  vite: {
-    plugins: [tailwindcss()],
-    build: {
-      sourcemap: false,
-    },
-  },
+  // vite: {
+  //   plugins: [tailwindcss()],
+  //   build: {
+  //     sourcemap: false,
+  //   },
+  // },
 
-  modules: ["@nuxt/ui", "@nuxt/content", "@nuxt/icon", "@nuxt/fonts", "@nuxtjs/sitemap", "@nuxtjs/robots"],
+  modules: [
+    "@nuxt/ui",
+    "@nuxt/content",
+    "@nuxt/icon",
+    "@nuxt/fonts",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
+  ],
   css: ["~/assets/css/main.css"],
   ssr: true,
   runtimeConfig: {
-    connectionString: process.env.DB_CONNECTION_STRING,
+    websiteConnection: process.env.WEBSITE_CONNECTION_STRING,
     articlesConnection: process.env.ARTICLES_DB_CONNECTION_STRING,
-    privateConnection: process.env.COOLIFY_CONNECTION_STRING,
+    connectionString: process.env.DB_CONNECTION_STRING,
   },
   typescript: {
     typeCheck: false,

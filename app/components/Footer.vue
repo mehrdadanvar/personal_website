@@ -9,7 +9,10 @@
           <div class="socials pt-6">
             <span v-for="element in socials" class="text-zinc-400 pr-4">
               <NuxtLink :to="element.link" target="_blank">
-                <UIcon :name="element.icon_name" class="hover:scale-125 text-xl" />
+                <UIcon
+                  :name="element.icon_name"
+                  class="hover:scale-125 text-xl"
+                />
               </NuxtLink>
             </span>
           </div>
@@ -50,7 +53,7 @@
             <UIcon
               :name="element.icon_name"
               class="text-xl px-6 text-zinc-500"
-              @click="changeColrMode(element.condition)"
+              @click="changeColorMode(element.condition)"
             />
           </span>
         </div>
@@ -60,8 +63,6 @@
   </footer>
 </template>
 <script setup>
-import { USeparator } from "#components";
-
 let socials = [
   {
     id: 0,
@@ -84,7 +85,7 @@ let socials = [
 let seconds = [
   { name: "Blog", route: "/blog" },
   { name: "Projects", route: "/projects" },
-  { name: "Resume", route: "/resume" },
+  { name: "Resume", route: "/vita" },
   { name: "Research", route: "/research" },
   "Blog",
   "Projects",
@@ -111,7 +112,7 @@ let states = [
   },
 ];
 const colorMode = useColorMode();
-async function changeColrMode(input) {
+async function changeColorMode(input) {
   colorMode.preference = input;
 }
 </script>

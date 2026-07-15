@@ -2,14 +2,18 @@
   <div>
     <section class="hero py-28 flex flex-col md:flex-row gap-6 h-screen">
       <UContainer>
-        <div class="left backdrop-blur-sm flex flex-col items-center justify-evenly h-2/3 mx-24 rounded-3xl p-6">
+        <div
+          class="left backdrop-blur-sm flex flex-col items-center justify-evenly h-2/3 mx-24 rounded-3xl p-6"
+        >
           <h1 class="text-4xl text-zinc-300 dark:text-zinc-200">
             A helpfull blog for medical students preparing for MCCQE, USMLE
           </h1>
 
           <div class="buttons flex gap-4">
             <UButton color="neutral" class="px-6">Read More ...</UButton>
-            <UButton color="neutral" class="px-6" variant="outline">Explore Articles</UButton>
+            <UButton color="neutral" class="px-6" variant="outline"
+              >Explore Articles</UButton
+            >
           </div>
         </div>
       </UContainer>
@@ -23,7 +27,10 @@
         <h2 class="text-3xl pb-12 text-center">Featured Articles</h2>
         <div class="flex flex-row">
           <div v-if="status == 'pending'">pending {{ status }}</div>
-          <div v-else class="grid grid-cols-1 lg:grid-cols-2 lg:flex lg:flex-row gap-2">
+          <div
+            v-else
+            class="grid grid-cols-1 lg:grid-cols-2 lg:flex lg:flex-row gap-2"
+          >
             <article v-for="item in loaded_blogs.articles">
               <DarkFile>
                 <img
@@ -33,23 +40,35 @@
                   width="200"
                 />
                 <div class="flex gap-4 mb-3">
-                  <UIcon name="i-solar-calendar-bold" class="text-zinc-500 text-xl" />
-                  <p class="text-zinc-500 text-sm">{{ item.data_published }}-06-12</p>
+                  <UIcon
+                    name="i-solar-calendar-bold"
+                    class="text-zinc-500 text-xl"
+                  />
+                  <p class="text-zinc-500 text-sm">
+                    {{ item.data_published }}-06-12
+                  </p>
                 </div>
                 <h4
                   class="text-zinc-800 font-semibold text-lg dark:text-zinc-300 hover:opacity-50 transition-all duration-200"
                 >
-                  <NuxtLink :to="'/blog/' + item.slug">{{ item.title }}</NuxtLink>
+                  <NuxtLink :to="'/blog/' + item.slug">{{
+                    item.title
+                  }}</NuxtLink>
                 </h4>
                 <div class="flex gap-4 py-2 italic"></div>
                 <p class="text-zinc-800 py-1">Reviewd Cases</p>
                 <ol class="list-disc text-sm text-zinc-500 pl-6">
-                  <li v-for="element in item.sections" class="py-1">{{ element }}</li>
+                  <li v-for="element in item.sections" class="py-1">
+                    {{ element }}
+                  </li>
                 </ol>
                 <USeparator class="py-6" />
                 <div class="flex justify-between">
                   <div class="flex items-center gap-4">
-                    <UIcon name="i-solar-user-circle-bold-duotone" class="text-3xl text-zinc-500" />
+                    <UIcon
+                      name="i-solar-user-circle-bold-duotone"
+                      class="text-3xl text-zinc-500"
+                    />
                     <div class="text-sm">
                       <p>Author</p>
                       <p>Mehrdad Anvar, MD</p>
@@ -76,10 +95,19 @@
       <UContainer>
         <h2 class="text-3xl pb-24">Categories</h2>
         <div class="flex mx-auto w-11/12">
-          <DarkFile v-for="(item, index) in Categories" :key="index" class="w-[300px]">
+          <DarkFile
+            v-for="(item, index) in Categories"
+            :key="index"
+            class="w-[300px]"
+          >
             <h3 class="py-6">{{ item.name }}</h3>
 
-            <UButton color="neutral" class="px-6 mt-12 hover:cursor-pointer" variant="ghost">Read More</UButton>
+            <UButton
+              color="neutral"
+              class="px-6 mt-12 hover:cursor-pointer"
+              variant="ghost"
+              >Read More</UButton
+            >
           </DarkFile>
         </div>
       </UContainer>
@@ -104,7 +132,6 @@ let Categories = [
 //   "loaded_blogs",
 //   async () => {
 //     let response = await $fetch("/api/getAbstracts");
-//     console.log(response);
 //     blogs.value = response.articles;
 //     return response.articles;
 //   },
@@ -112,7 +139,6 @@ let Categories = [
 // );
 
 let { data: loaded_blogs, status } = await useFetch("/api/getAbstracts");
-console.log(loaded_blogs);
 </script>
 
 <style scoped>

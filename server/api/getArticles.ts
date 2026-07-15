@@ -1,6 +1,5 @@
-import { MongoClient } from "mongodb";
-let config = useRuntimeConfig();
-const client = new MongoClient(config.connectionString);
+import { getMongoClient } from "~~/server/utils/connection";
+
 function delay(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -8,10 +7,10 @@ function delay(ms: number) {
 async function loadArticles() {
   //await delay(2000);
   try {
-    const database = client.db("blog_articles");
-    let article_collection = database.collection("case_sums");
-    let result = await article_collection.find({}).toArray();
-    console.log(result);
+    let client = await getMongoClient();
+    const database = client?.db("blog_articles");
+    let article_collection = database?.collection("case_sums");
+    let result = await article_collection?.find({}).toArray();
     if (result) {
       return result;
     } else {

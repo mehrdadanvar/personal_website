@@ -3,10 +3,11 @@
   <UContainer class="">
     <h1>Projects</h1>
     <p class="py-6">
-      The following represents a list of projects I have been working on. Most of these will at some point be
-      open-sourced and hosted on GitHub. However, as I am constantly jumping between projects and changes are drastic, I
-      have not yet decided open sourcing them. This page will receive regular updates as I move on to complete these
-      projects.
+      The following represents a list of projects I have been working on. Most
+      of these will at some point be open-sourced and hosted on GitHub. However,
+      as I am constantly jumping between projects and changes are drastic, I
+      have not yet decided open sourcing them. This page will receive regular
+      updates as I move on to complete these projects.
     </p>
 
     <div class="flex flex-col gap-6 mb-24">
@@ -26,10 +27,16 @@
 <script setup lang="ts">
 let { data } = useNuxtData("projects");
 
-const { data: response } = await useAsyncData("projects", () => $fetch("/api/content/getprojects"), {
-  getCachedData: (key, nuxtApp) => nuxtApp.payload.data[key] || nuxtApp.static.data[key],
-});
+const { data: response } = await useAsyncData(
+  "projects",
+  () => $fetch("/api/content/getprojects"),
+  {
+    getCachedData: (key, nuxtApp) =>
+      nuxtApp.payload.data[key] || nuxtApp.static.data[key],
+  },
+);
 
-const { data: md_projects } = await useAsyncData("ideas", () => queryCollection("ideas").all());
-console.log(md_projects.value);
+const { data: md_projects } = await useAsyncData("ideas", () =>
+  queryCollection("ideas").all(),
+);
 </script>

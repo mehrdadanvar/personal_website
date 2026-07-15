@@ -1,6 +1,20 @@
 [
   {
     "_id": "643efe5f827caca814f8a82a",
+    "title": "Cardiology Intern/Trainee",
+    "geo": ["Canada", "BC", "North Vancouver"],
+    "place": "North Shore Heart Center",
+    "period": "October 2025 - present",
+    "definition": [
+      "Conducted comprehensive cardiac assessments and physical examinations for a diverse patient population under the direct supervision of the head of cardiology at LGH hospital Dr. John Vyselaar.",
+      "Collaborated on the development of diagnostic and therapeutic plans by presenting detailed patient histories and evidence-based clinical findings.",
+      "Observed and assisted in the longitudinal management of patients with complex cardiovascular conditions, including CAD, HF, arrhythmias, and Peripheral Vascular and Valvular diseases.",
+      "Maintained accurate and detailed clinical documentation within the EMR system."
+    ],
+    "identity": 5
+  },
+  {
+    "_id": "643efe5f827caca814f8a82a",
     "title": "General Physician in Energy Industry",
     "geo": ["Iran", "Hormozgan", "Kish Island"],
     "place": "Petro Orim Kish Company",
@@ -27,7 +41,7 @@
     "_id": "643efe5f827caca814f8a82b",
     "title": "Emergency Department General Practitioner",
     "geo": ["Iran", "Kurdistan", "Saqqez"],
-    "place": "Public Hospital",
+    "place": "Saqqez Public Hospital",
     "period": "August 2016- April 2017",
     "definition": [
       "Conducted triage and provided initial assessments for medical and surgical emergencies within a fast-paced 20-bed emergency department, servicing a community of 200,000 individuals",

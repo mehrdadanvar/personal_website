@@ -1,7 +1,7 @@
-import { usePrivateMongoClient } from "~~/server/utils/connection";
+import { getMongoClient } from "~~/server/utils/connection";
 
 async function getProjects(slug: string | undefined) {
-  const client = await usePrivateMongoClient();
+  const client = await getMongoClient();
   if (!client) {
     return new Response("Failed to connect to MongoDB", { status: 500 });
   }
@@ -18,8 +18,6 @@ async function getProjects(slug: string | undefined) {
 
 export default defineEventHandler(async (event) => {
   let quey = getQuery(event);
-  console.log(quey, typeof quey);
-  console.log(quey.slug);
   if (quey.slug === undefined) {
     const result = await getProjects(undefined);
     return { projects: result };

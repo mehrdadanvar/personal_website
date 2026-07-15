@@ -1,8 +1,12 @@
 <template>
   <article class="mt-12 target">
     <div class="flex gap-6 text-lg text-gray-600">
-      <div class="px-12 py-12 mb-6 w-7/12 leading-10 bg-gray-100 rounded-2xl border border-white qq">
-        <div class="mb-6 w-40 text-center text-violet-600 bg-violet-100 rounded-full border">
+      <div
+        class="px-12 py-12 mb-6 w-7/12 leading-10 bg-gray-100 rounded-2xl border border-white qq"
+      >
+        <div
+          class="mb-6 w-40 text-center text-violet-600 bg-violet-100 rounded-full border"
+        >
           Question {{ question.ui_id + 1 }} / {{ question.question_length }}
         </div>
         <USeparator class="my-3"></USeparator>
@@ -30,10 +34,16 @@
         </div>
       </div>
       <div class="w-5/12">
-        <div class="flex flex-col overflow-clip bg-white rounded-xl options shadow-custom">
+        <div
+          class="flex flex-col overflow-clip bg-white rounded-xl options shadow-custom"
+        >
           <div class="">
-            <div class="flex justify-between items-center px-6 py-8 bg-gray-200">
-              <p class="px-4 py-1 text-violet-800 bg-purple-100 rounded-full">Choose Your Answer</p>
+            <div
+              class="flex justify-between items-center px-6 py-8 bg-gray-200"
+            >
+              <p class="px-4 py-1 text-violet-800 bg-purple-100 rounded-full">
+                Choose Your Answer
+              </p>
               <div class="flex gap-3 items-center">
                 <div class="show-hide">
                   <span v-if="!details_visible" class="flex gap-3 items-center">
@@ -45,16 +55,30 @@
                     <p>Hide Explanation</p>
                   </span>
                 </div>
-                <UToggle v-model="details_visible" color="violet" class="shadow-custom" />
+                <UToggle
+                  v-model="details_visible"
+                  color="violet"
+                  class="shadow-custom"
+                />
               </div>
             </div>
             <div class="p-6 bg-gray-100">
-              <URadioGroup v-model="selected_answer" :options="available_options" color="purple" />
+              <URadioGroup
+                v-model="selected_answer"
+                :options="available_options"
+                color="purple"
+              />
               {{ selected_answer }}
             </div>
           </div>
-          <div class="flex flex-row gap-6 justify-center items-center py-6 bg-gray-200 border border-gray-200">
-            <UButton @click="chechAnswer" class="shadow-custom" icon="i-solar-question-circle-bold" :trailing="true"
+          <div
+            class="flex flex-row gap-6 justify-center items-center py-6 bg-gray-200 border border-gray-200"
+          >
+            <UButton
+              @click="chechAnswer"
+              class="shadow-custom"
+              icon="i-solar-question-circle-bold"
+              :trailing="true"
               >Check Answer</UButton
             >
             <UButton
@@ -64,7 +88,9 @@
               :trailing="true"
               >Submit</UButton
             >
-            <button class="px-6 py-1 rounded-full butt shadow-custom">sample</button>
+            <button class="px-6 py-1 rounded-full butt shadow-custom">
+              sample
+            </button>
           </div>
           <div class="h-16 text-center bg-gray-100">
             <div v-if="answer_object.status !== null" class="py-3">
@@ -72,14 +98,18 @@
                 v-if="answer_object.status == true"
                 class="flex gap-3 justify-center items-center font-semibold text-cyan-800 bg-cyan-50 rounded-lg"
               >
-                <span class="text-3xl text-cyan-600"><UIcon name="i-solar-chat-round-check-bold"></UIcon></span>
+                <span class="text-3xl text-cyan-600"
+                  ><UIcon name="i-solar-chat-round-check-bold"></UIcon
+                ></span>
                 <p>{{ answer_object.text }}</p>
               </div>
               <div
                 v-else
                 class="flex gap-3 justify-center items-center font-semibold text-gray-500 bg-gray-100 rounded-lg"
               >
-                <span class="text-3xl text-gray-600"><UIcon name="i-solar-shield-warning-bold"></UIcon></span>
+                <span class="text-3xl text-gray-600"
+                  ><UIcon name="i-solar-shield-warning-bold"></UIcon
+                ></span>
                 <p>{{ answer_object.text }}</p>
               </div>
             </div>
@@ -92,21 +122,37 @@
       <BulletImage :case_id="question.source_id" />
     </div>
     <div class="image" v-if="question.body_image">
-      <img :src="`https://my.aceqbank.com${question.body_image}`" alt="" class="mx-auto my-6 rounded-2xl" />
+      <img
+        :src="`https://my.aceqbank.com${question.body_image}`"
+        alt=""
+        class="mx-auto my-6 rounded-2xl"
+      />
     </div>
     <div>
       <div class="gcse-search"></div>
     </div>
     <div class="border bg-gray-200/50">
-      <div class="p-6 leading-8 text-gray-700 rounded-xl transition-all duration-75 response" v-if="details_visible">
+      <div
+        class="p-6 leading-8 text-gray-700 rounded-xl transition-all duration-75 response"
+        v-if="details_visible"
+      >
         <!-- <UTabs :items="tabs" :default-index="0" /> -->
         <div class="controls">{{ question.title }}</div>
 
         <div class="p-6 bg-white rounded-lg border">
-          <h4 class="inline-block px-6 mb-6 text-violet-600 rounded-full bg-primary-100">Desciption</h4>
+          <h4
+            class="inline-block px-6 mb-6 text-violet-600 rounded-full bg-primary-100"
+          >
+            Desciption
+          </h4>
           <div v-if="question.source.id == 1">
-            <div v-for="sentence in question.response.description" class="text-lg leading-9">
-              <p v-if="sentence.includes('correct')" class="font-semibold">{{ sentence }}</p>
+            <div
+              v-for="sentence in question.response.description"
+              class="text-lg leading-9"
+            >
+              <p v-if="sentence.includes('correct')" class="font-semibold">
+                {{ sentence }}
+              </p>
               <p v-else>{{ sentence }}</p>
             </div>
           </div>
@@ -115,8 +161,17 @@
           </div>
         </div>
         <div class="p-6 bg-white rounded-lg border">
-          <h4 class="inline-block px-6 text-violet-600 rounded-full bg-primary-100">Details</h4>
-          <p v-for="member in question.response.details" class="text-lg leading-9">{{ member }}</p>
+          <h4
+            class="inline-block px-6 text-violet-600 rounded-full bg-primary-100"
+          >
+            Details
+          </h4>
+          <p
+            v-for="member in question.response.details"
+            class="text-lg leading-9"
+          >
+            {{ member }}
+          </p>
         </div>
         <div class="p-4 font-semibold bg-white rounded-lg summary">
           <div v-if="question.source.id < 3">
@@ -124,9 +179,15 @@
           </div>
         </div>
       </div>
-      <div v-if="question.response.image && details_visible" class="p-6 bg-white border">
+      <div
+        v-if="question.response.image && details_visible"
+        class="p-6 bg-white border"
+      >
         <p class="text-red-500">
-          <img :src="'https://my.aceqbank.com' + question.response.image" alt="" />
+          <img
+            :src="'https://my.aceqbank.com' + question.response.image"
+            alt=""
+          />
         </p>
       </div>
       <div>
@@ -159,7 +220,6 @@ let props = defineProps({
 let question = props.case;
 let questions = props.questions;
 let current_index = props.current_index;
-console.log(current_index);
 
 let answers = ["A", "B", "C", "D", "E"];
 let answer_object = ref({ status: null, text: "" });
@@ -172,7 +232,7 @@ let available_options = ref(
       label: answers[index] + " ) " + element.text,
       value: element.text,
     };
-  })
+  }),
 );
 
 let known_correct = computed(() => {
@@ -202,7 +262,6 @@ async function chechAnswer() {
 
 async function post_response() {
   if (selected_answer.value == "" || question.user.seen == true) {
-    console.log("you should provide a response or already answered");
     return;
   }
   let response = await $fetch("/api/saveAnswerDepartments", {
@@ -215,7 +274,6 @@ async function post_response() {
       response: selected_answer.value,
     },
   });
-  console.log(response);
 }
 
 let edit_question = ref(false);
@@ -233,7 +291,9 @@ let status_result = ref(question.status);
 </script>
 <style scoped>
 .qq {
-  box-shadow: inset 20px 20px 50px 10px rgba(255, 255, 255), inset -20px -20px 50px 10px rgba(255, 255, 255);
+  box-shadow:
+    inset 20px 20px 50px 10px rgba(255, 255, 255),
+    inset -20px -20px 50px 10px rgba(255, 255, 255);
 }
 .butt:active {
   background-color: rgb(218, 218, 218);

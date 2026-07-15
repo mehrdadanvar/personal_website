@@ -7,7 +7,11 @@
         <NuxtLink to="/">Home</NuxtLink>
       </div>
       <div>
-        <UNavigationMenu :items="items" class="w-full justify-center" color="neutral" />
+        <UNavigationMenu
+          :items="items"
+          class="w-full justify-center"
+          color="neutral"
+        />
       </div>
 
       <Modes />
@@ -53,7 +57,7 @@ let items = ref<NavigationMenuItem[]>([
   },
   {
     label: "Vitae",
-    to: "/resume",
+    to: "/vita",
     icon: "",
     children: [],
   },

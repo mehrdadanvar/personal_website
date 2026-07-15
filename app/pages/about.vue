@@ -3,7 +3,7 @@
     <title>About Mehrdad Anvar</title>
 
     <section class="w-full md:w-2/3 mx-auto mt-24">
-      <HeroTerminal />
+      <HeroTerminal1 />
     </section>
     <section class="py-24">
       <DarkFile>

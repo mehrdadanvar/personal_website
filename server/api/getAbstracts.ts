@@ -11,7 +11,6 @@ async function loadArticles() {
     const database = client.db("blog_articles");
     let article_collection = database.collection("abstract_collection");
     let result = await article_collection.find({}).toArray();
-    console.log(result);
     if (result) {
       return result;
     } else {

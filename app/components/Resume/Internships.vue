@@ -2,7 +2,11 @@
   <section class="flex flex-col gap-8">
     <h2 class="text-3xl text-yellow-700">Internships</h2>
     <div class="grid grid-cols-1 lg:gap-1">
-      <div v-for="item in final_internships" :key="item.id" class="sm:flex sm:flex-col sm:pb-6 md:grid md:grid-cols-4 md:pb-12">
+      <div
+        v-for="item in final_internships"
+        :key="item.id"
+        class="sm:flex sm:flex-col sm:pb-6 md:grid md:grid-cols-4 md:pb-12"
+      >
         <h4 class="text-gray-800 lg:text-xl col-span-1">
           {{ item.short_dates }}
         </h4>
@@ -33,7 +37,6 @@ function clean_dates(input_obj) {
 let final_internships = internships.map((item) => {
   return { ...item, short_dates: clean_dates(item.dates) };
 });
-console.log(final_internships);
 </script>
 
 <style></style>
