@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1980"
+   height="1080"
+   viewBox="0 0 523.87499 285.75"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="back_1.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="drawing.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.36346801"
+     inkscape:cx="744.21955"
+     inkscape:cy="597.0264"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient14"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#a8a8a8;stop-opacity:0;"
+         offset="0.56380612"
+         id="stop15" />
+      <stop
+         style="stop-color:#4a4a4a;stop-opacity:1;"
+         offset="1"
+         id="stop14" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0.54056305"
+         id="stop3" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2"
+       id="linearGradient3"
+       x1="258.78308"
+       y1="-39.727348"
+       x2="258.78308"
+       y2="428.32123"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient14"
+       id="radialGradient15"
+       cx="251.50366"
+       cy="112.76323"
+       fx="251.50366"
+       fy="112.76323"
+       r="40.48011"
+       gradientTransform="matrix(0.71383415,0,0,0.53920888,72.78545,65.791176)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:url(#radialGradient15);stroke:#000000;stroke-width:0.15875;stroke-linecap:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       id="path14"
+       ry="21.770588"
+       rx="28.839424"
+       cy="126.59411"
+       cx="252.31735" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:url(#linearGradient3);stroke-width:1.43828;stroke-linecap:round;stroke-miterlimit:0;stroke-dasharray:none;paint-order:markers fill stroke"
+       d="m 25.477941,227.84559 c 70.176943,-43.01943 152.090109,-66.67758 234.397049,-67.69853 80.85062,-1.00289 161.86863,19.82306 232.21323,59.69117"
+       id="path2"
+       inkscape:path-effect="#path-effect2"
+       inkscape:original-d="m 25.477941,227.84559 c 54.83824,-37.6103 141.954639,-69.08178 234.397049,-67.69853 72.71639,1.08809 156.50736,23.29411 232.21323,59.69117"
+       sodipodi:nodetypes="csc"
+       transform="translate(-9.2651786,-37.060714)" />
+  </g>
+</svg>
