@@ -1,165 +1,129 @@
 <template>
-  <footer class="relative overflow-hidden border-t border-zinc-200/80 dark:border-zinc-800/80 bg-zinc-50/80 dark:bg-zinc-950/90 text-zinc-600 dark:text-zinc-400 transition-colors">
-    <!-- SVG Background Accent Layer -->
+  <footer class="relative border-t border-zinc-200/80 dark:border-zinc-800/80 bg-zinc-100/90 dark:bg-zinc-950/90 overflow-hidden mt-20 text-xs text-zinc-600 dark:text-zinc-400">
+    <!-- SVG Background Overlay with enhanced contrast -->
     <div
-      class="absolute inset-0 pointer-events-none opacity-10 dark:opacity-15 bg-center bg-no-repeat bg-cover"
+      class="absolute inset-0 pointer-events-none opacity-30 dark:opacity-20 bg-cover bg-center"
       style="background-image: url('/sample23.svg');"
     ></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-        <!-- Col 1: Bio & Credentials -->
-        <div class="space-y-4">
-          <div class="flex items-center gap-2.5">
-            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
-              <UIcon name="i-solar-medical-kit-bold-duotone" class="size-5" />
-            </div>
-            <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
-              Mehrdad Anvar, MD
-            </h3>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Col 1: Bio & Credentials -->
+      <div class="space-y-3">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 flex items-center justify-center font-bold text-xs">
+            MA
           </div>
-          <p class="text-xs leading-relaxed text-zinc-600 dark:text-zinc-400">
-            Physician, Population &amp; Public Health Researcher, and Full-Stack Systems Engineer.
-            Dedicated to designing open-source medical platforms, trauma registries, and clinical decision support tools.
-          </p>
-          <div class="flex items-center gap-3 pt-2">
-            <a
-              v-for="social in socials"
-              :key="social.id"
-              :href="social.link"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="w-8 h-8 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 flex items-center justify-center text-zinc-500 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:border-emerald-500/40 transition-all"
-              :title="social.name"
-            >
-              <UIcon :name="social.icon" class="size-4" />
-            </a>
+          <div>
+            <span class="font-bold text-sm text-zinc-900 dark:text-zinc-100 block">Mehrdad Anvar, MD</span>
+            <span class="text-[11px] text-zinc-500">Shiraz University of Medical Sciences</span>
           </div>
         </div>
-
-        <!-- Col 2: Clinical Projects -->
-        <div class="space-y-3">
-          <h4 class="text-xs font-semibold uppercase tracking-wider text-zinc-900 dark:text-zinc-200">
-            Clinical Systems &amp; Software
-          </h4>
-          <ul class="space-y-2 text-xs">
-            <li>
-              <NuxtLink to="/projects/hyperqbank" class="hover:text-emerald-600 dark:hover:text-emerald-400 flex items-center gap-1.5 transition-colors">
-                <UIcon name="i-solar-double-alt-arrow-right-linear" class="size-3 text-emerald-500" />
-                <span>HyperQbank — MCCQE1 &amp; USMLE Prep</span>
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/projects/hyperrx" class="hover:text-emerald-600 dark:hover:text-emerald-400 flex items-center gap-1.5 transition-colors">
-                <UIcon name="i-solar-double-alt-arrow-right-linear" class="size-3 text-emerald-500" />
-                <span>HyperRx — Health Canada Drug Monograph API</span>
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/projects/hyperecg" class="hover:text-emerald-600 dark:hover:text-emerald-400 flex items-center gap-1.5 transition-colors">
-                <UIcon name="i-solar-double-alt-arrow-right-linear" class="size-3 text-emerald-500" />
-                <span>HyperECG — Vector Graphics Wave Simulator</span>
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/projects/hyperradio" class="hover:text-emerald-600 dark:hover:text-emerald-400 flex items-center gap-1.5 transition-colors">
-                <UIcon name="i-solar-double-alt-arrow-right-linear" class="size-3 text-emerald-500" />
-                <span>HyperRadiology — Imaging Case Registry</span>
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Col 3: Research & Literature Databases -->
-        <div class="space-y-3">
-          <h4 class="text-xs font-semibold uppercase tracking-wider text-zinc-900 dark:text-zinc-200">
-            Scholarly Indices &amp; Domains
-          </h4>
-          <ul class="space-y-2 text-xs">
-            <li>
-              <NuxtLink to="/research" class="hover:text-emerald-600 dark:hover:text-emerald-400 flex items-center gap-1.5 transition-colors">
-                <UIcon name="i-solar-document-text-bold-duotone" class="size-3.5 text-emerald-500" />
-                <span>Trauma Epidemiology &amp; Registries</span>
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/research" class="hover:text-emerald-600 dark:hover:text-emerald-400 flex items-center gap-1.5 transition-colors">
-                <UIcon name="i-solar-chart-2-bold-duotone" class="size-3.5 text-emerald-500" />
-                <span>Risk Modeling &amp; Mortality Prediction</span>
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/research" class="hover:text-emerald-600 dark:hover:text-emerald-400 flex items-center gap-1.5 transition-colors">
-                <UIcon name="i-solar-users-group-two-rounded-bold-duotone" class="size-3.5 text-emerald-500" />
-                <span>Community &amp; Preventive Medicine</span>
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/vita" class="hover:text-emerald-600 dark:hover:text-emerald-400 flex items-center gap-1.5 transition-colors">
-                <UIcon name="i-solar-diploma-bold-duotone" class="size-3.5 text-emerald-500" />
-                <span>PubMed &amp; Embase Index References</span>
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Col 4: Platform Specs & Tech -->
-        <div class="space-y-3">
-          <h4 class="text-xs font-semibold uppercase tracking-wider text-zinc-900 dark:text-zinc-200">
-            Platform Architecture
-          </h4>
-          <p class="text-xs leading-relaxed text-zinc-600 dark:text-zinc-400">
-            Built with
-            <span class="font-semibold text-zinc-800 dark:text-zinc-200">Nuxt 4</span>,
-            <span class="font-semibold text-zinc-800 dark:text-zinc-200">Nuxt UI</span>, and
-            <span class="font-semibold text-zinc-800 dark:text-zinc-200">Tailwind CSS</span>. Designed for clinical accessibility and high performance.
-          </p>
-          <div class="flex items-center gap-2 pt-1">
-            <UBadge variant="soft" color="neutral" size="sm" class="text-xs">Nuxt v4</UBadge>
-            <UBadge variant="soft" color="success" size="sm" class="text-xs">Open Science</UBadge>
-            <UBadge variant="soft" color="info" size="sm" class="text-xs">Medical Tech</UBadge>
-          </div>
+        <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+          Physician and systems engineer specializing in trauma registry analytics, mortality prediction modeling, and clinical data platforms.
+        </p>
+        <div class="flex items-center gap-3 pt-1">
+          <a
+            href="https://github.com/mehrdadanvar"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="p-1.5 rounded-lg bg-zinc-200/80 dark:bg-zinc-800/80 text-zinc-700 dark:text-zinc-300 hover:text-teal-700 dark:hover:text-teal-400 transition-colors"
+            title="GitHub"
+          >
+            <UIcon name="i-simple-icons-github" class="size-4" />
+          </a>
+          <a
+            href="https://linkedin.com/in/mehrdadanvar"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="p-1.5 rounded-lg bg-zinc-200/80 dark:bg-zinc-800/80 text-zinc-700 dark:text-zinc-300 hover:text-teal-700 dark:hover:text-teal-400 transition-colors"
+            title="LinkedIn"
+          >
+            <UIcon name="i-simple-icons-linkedin" class="size-4" />
+          </a>
         </div>
       </div>
 
-      <!-- Separator line -->
-      <div class="border-t border-zinc-200/80 dark:border-zinc-800/80 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-        <div class="flex items-center gap-2">
-          <span>&copy; {{ currentYear }} Mehrdad Anvar, MD</span>
-          <span>&mdash;</span>
-          <span class="text-zinc-500">Academic &amp; Clinical Informatics Website</span>
-        </div>
-        <div class="flex items-center gap-4">
-          <NuxtLink to="/about" class="hover:text-emerald-600 transition-colors">About</NuxtLink>
-          <NuxtLink to="/vita" class="hover:text-emerald-600 transition-colors">Curriculum Vitae</NuxtLink>
-          <NuxtLink to="/blog" class="hover:text-emerald-600 transition-colors">Blog</NuxtLink>
+      <!-- Col 2: Clinical Systems & Software -->
+      <div class="space-y-3">
+        <h4 class="font-bold text-xs uppercase tracking-wider text-zinc-900 dark:text-zinc-100">
+          Clinical Platforms
+        </h4>
+        <ul class="space-y-2 text-xs">
+          <li>
+            <NuxtLink to="/projects" class="hover:text-teal-700 dark:hover:text-teal-400 transition-colors flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>
+              HyperQbank &mdash; Licensing Exam Engine
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/projects" class="hover:text-teal-700 dark:hover:text-teal-400 transition-colors flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>
+              HyperRx &mdash; Health Canada DPD Monograph Parser
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/projects" class="hover:text-teal-700 dark:hover:text-teal-400 transition-colors flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>
+              HyperECG &mdash; SVG 12-Lead Simulator
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/projects" class="hover:text-teal-700 dark:hover:text-teal-400 transition-colors flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>
+              HyperRadiology &mdash; Diagnostic Archive
+            </NuxtLink>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Research Indices -->
+      <div class="space-y-3">
+        <h4 class="font-bold text-xs uppercase tracking-wider text-zinc-900 dark:text-zinc-100">
+          Research Indices
+        </h4>
+        <ul class="space-y-2 text-xs">
+          <li>
+            <NuxtLink to="/research" class="hover:text-teal-700 dark:hover:text-teal-400 transition-colors">
+              Trauma Mortality Predictors (OR Analysis)
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/research" class="hover:text-teal-700 dark:hover:text-teal-400 transition-colors">
+              Hospital ISO Certification Impact Study
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/research" class="hover:text-teal-700 dark:hover:text-teal-400 transition-colors">
+              Time Distribution of Trauma Mortality
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/research" class="hover:text-teal-700 dark:hover:text-teal-400 transition-colors">
+              PubMed &amp; Embase Indexing Directory
+            </NuxtLink>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Engineering Stack -->
+      <div class="space-y-3">
+        <h4 class="font-bold text-xs uppercase tracking-wider text-zinc-900 dark:text-zinc-100">
+          Architecture
+        </h4>
+        <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+          Engineered with Nuxt 4, Nuxt UI, and Tailwind CSS. Modern academic design system with glassmorphic cards and SVG backgrounds.
+        </p>
+        <div class="pt-1 flex flex-wrap gap-1">
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-zinc-200/80 dark:bg-zinc-800/80 text-zinc-700 dark:text-zinc-300">Nuxt 4</span>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-zinc-200/80 dark:bg-zinc-800/80 text-zinc-700 dark:text-zinc-300">Tailwind CSS</span>
+          <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-zinc-200/80 dark:bg-zinc-800/80 text-zinc-700 dark:text-zinc-300">TypeScript</span>
         </div>
       </div>
     </div>
+
+    <!-- Bottom copyright -->
+    <div class="relative z-10 border-t border-zinc-200/60 dark:border-zinc-800/60 py-4 text-center text-[11px] text-zinc-500">
+      &copy; {{ new Date().getFullYear() }} Dr. Mehrdad Anvar, MD &mdash; All Rights Reserved. Professional Academic &amp; Clinical Informatics Site.
+    </div>
   </footer>
 </template>
-
-<script setup lang="ts">
-const currentYear = new Date().getFullYear();
-
-const socials = [
-  {
-    id: 0,
-    name: "LinkedIn",
-    icon: "i-simple-icons-linkedin",
-    link: "https://www.linkedin.com/in/mehrdad-anvar/",
-  },
-  {
-    id: 1,
-    name: "GitHub",
-    icon: "i-simple-icons-github",
-    link: "https://github.com/mehrdadanvar",
-  },
-  {
-    id: 2,
-    name: "Email",
-    icon: "i-solar-letter-bold-duotone",
-    link: "mailto:mehrdad.anvar@gmail.com",
-  },
-];
-</script>
