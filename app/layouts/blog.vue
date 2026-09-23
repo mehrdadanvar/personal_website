@@ -1,16 +1,12 @@
 <template>
-  <div class="dark:bg-zinc-900 bg-zinc-50 center transition-all duration-200 ease-in-out">
-    <div class="">
-      <!-- <aside class="border w-3/12">sidebar</aside> -->
-      <main>
-        <div class="">
-          <NuxtLoadingIndicator />
-          <slot />
-        </div>
-      </main>
-    </div>
+  <div class="min-h-screen flex flex-col justify-between bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans transition-colors duration-200 relative overflow-x-hidden">
+    <NuxtLoadingIndicator color="#10b981" />
+    <Navbar />
+    <main class="grow">
+      <slot />
+    </main>
+    <Footer />
   </div>
-  <Footer />
 </template>
-<script setup></script>
-<style scoped></style>
+
+<script setup lang="ts"></script>

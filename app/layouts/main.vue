@@ -1,9 +1,12 @@
 <template>
-  <div class="dark:bg-zinc-900/90 bg-zinc-100/50 center transition-all duration-200 ease-in-out">
-    <NuxtLoadingIndicator />
-    <slot />
+  <div class="min-h-screen flex flex-col justify-between bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-sans transition-colors duration-200 relative overflow-x-hidden">
+    <NuxtLoadingIndicator color="#10b981" />
+    <Navbar />
+    <main class="grow">
+      <slot />
+    </main>
     <Footer />
   </div>
 </template>
-<script setup></script>
-<style scoped></style>
+
+<script setup lang="ts"></script>

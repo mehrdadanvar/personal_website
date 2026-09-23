@@ -1,165 +1,165 @@
 <template>
-  <div>
-    <section class="hero py-28 flex flex-col md:flex-row gap-6 h-screen">
-      <UContainer>
-        <div
-          class="left backdrop-blur-sm flex flex-col items-center justify-evenly h-2/3 mx-24 rounded-3xl p-6"
-        >
-          <h1 class="text-4xl text-zinc-300 dark:text-zinc-200">
-            A helpfull blog for medical students preparing for MCCQE, USMLE
-          </h1>
+  <div class="relative min-h-screen py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-10">
+    <title>Clinical Review Articles &amp; Blog — Dr. Mehrdad Anvar</title>
 
-          <div class="buttons flex gap-4">
-            <UButton color="neutral" class="px-6">Read More ...</UButton>
-            <UButton color="neutral" class="px-6" variant="outline"
-              >Explore Articles</UButton
-            >
-          </div>
-        </div>
-      </UContainer>
-    </section>
-    <div class="search h-36 mx-auto w-10/12 py-24 flex flex-col items-center">
-      <p>Search for articles</p>
-      <SearchBlog class="" />
+    <!-- SVG Background Overlay -->
+    <div
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-15 dark:opacity-10 bg-top bg-no-repeat bg-contain z-0"
+      style="background-image: url('/sample13.svg');"
+    ></div>
+
+    <!-- Header Banner -->
+    <div class="relative z-10 space-y-3 border-b border-zinc-200/80 dark:border-zinc-800/80 pb-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
+        <UIcon name="i-solar-notebook-bold-duotone" class="size-4" />
+        Clinical Reviews &amp; Exam Preparation
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-zinc-100 tracking-tight">
+        Medical &amp; Clinical Knowledge Base
+      </h1>
+      <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 max-w-3xl leading-relaxed">
+        Evidence-based clinical reviews, high-yield differential diagnosis breakdowns, and MCCQE1 / USMLE scenario analyses.
+      </p>
     </div>
-    <section class="features">
-      <div class="w-11/12 p-12 mx-auto">
-        <h2 class="text-3xl pb-12 text-center">Featured Articles</h2>
-        <div class="flex flex-row">
-          <div v-if="status == 'pending'">pending {{ status }}</div>
-          <div
-            v-else
-            class="grid grid-cols-1 lg:grid-cols-2 lg:flex lg:flex-row gap-2"
-          >
-            <article v-for="item in loaded_blogs.articles">
-              <DarkFile>
-                <img
-                  src="/blog_1.png"
-                  alt=""
-                  class="rounded-full mb-6 mx-auto grayscale opacity-75 max-w-md"
-                  width="200"
-                />
-                <div class="flex gap-4 mb-3">
-                  <UIcon
-                    name="i-solar-calendar-bold"
-                    class="text-zinc-500 text-xl"
-                  />
-                  <p class="text-zinc-500 text-sm">
-                    {{ item.data_published }}-06-12
-                  </p>
-                </div>
-                <h4
-                  class="text-zinc-800 font-semibold text-lg dark:text-zinc-300 hover:opacity-50 transition-all duration-200"
-                >
-                  <NuxtLink :to="'/blog/' + item.slug">{{
-                    item.title
-                  }}</NuxtLink>
-                </h4>
-                <div class="flex gap-4 py-2 italic"></div>
-                <p class="text-zinc-800 py-1">Reviewd Cases</p>
-                <ol class="list-disc text-sm text-zinc-500 pl-6">
-                  <li v-for="element in item.sections" class="py-1">
-                    {{ element }}
-                  </li>
-                </ol>
-                <USeparator class="py-6" />
-                <div class="flex justify-between">
-                  <div class="flex items-center gap-4">
-                    <UIcon
-                      name="i-solar-user-circle-bold-duotone"
-                      class="text-3xl text-zinc-500"
-                    />
-                    <div class="text-sm">
-                      <p>Author</p>
-                      <p>Mehrdad Anvar, MD</p>
-                    </div>
-                  </div>
-                  <UButton
-                    color="neutral"
-                    class="px-6"
-                    variant="soft"
-                    icon="i-solar-round-alt-arrow-right-broken"
-                    :trailing="true"
-                    size="xs"
-                    >Read More</UButton
-                  >
-                </div>
-                <!-- <div>{{ item }}</div> -->
-              </DarkFile>
-            </article>
+
+    <!-- Featured Categories & Search Bento Grid -->
+    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <!-- Search Tile (7 cols) -->
+      <div class="lg:col-span-7 rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/75 dark:bg-zinc-900/60 backdrop-blur-xl shadow-xs space-y-4">
+        <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-bold text-sm">
+          <UIcon name="i-solar-magnifer-bold-duotone" class="size-5" />
+          <span>Search Clinical Topics &amp; Guidelines</span>
+        </div>
+        <p class="text-xs text-zinc-500 dark:text-zinc-400">
+          Filter by condition, presentation symptom, or organ system.
+        </p>
+        <SearchBlog class="w-full" />
+      </div>
+
+      <!-- Categories Tile (5 cols) -->
+      <div class="lg:col-span-5 rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/75 dark:bg-zinc-900/60 backdrop-blur-xl shadow-xs space-y-4">
+        <div class="flex items-center justify-between border-b border-zinc-200/80 dark:border-zinc-800/80 pb-3">
+          <span class="text-xs font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Clinical Specialities</span>
+          <span class="text-xs text-emerald-600 dark:text-emerald-400">MCCQE1 High-Yield</span>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span v-for="cat in categories" :key="cat.name" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium bg-zinc-100 dark:bg-zinc-800/80 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700 hover:border-emerald-500/40 transition-all cursor-pointer">
+            <span>{{ cat.name }}</span>
+            <span class="text-xs font-mono opacity-60">({{ cat.number }})</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Articles Grid -->
+    <div class="relative z-10 space-y-6">
+      <div class="flex items-center justify-between">
+        <h2 class="text-2xl font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
+          Featured Clinical Reviews
+        </h2>
+        <span class="text-xs text-zinc-500">Updated Regularly</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div
+          v-for="item in articlesList"
+          :key="item._id || item.slug"
+          class="rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/75 dark:bg-zinc-900/60 backdrop-blur-xl shadow-xs hover:border-emerald-500/50 hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+        >
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-4 text-xs text-zinc-500 dark:text-zinc-400 border-b border-zinc-200/80 dark:border-zinc-800/80 pb-3">
+              <span class="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-semibold">
+                <UIcon name="i-solar-calendar-bold" class="size-3.5" />
+                {{ item.data_published || '2024' }}
+              </span>
+              <span class="font-mono text-xs bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-md">
+                {{ item.cases || item.sections?.length || 0 }} Clinical Cases Reviewed
+              </span>
+            </div>
+
+            <h3 class="text-xl font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors leading-snug">
+              <NuxtLink :to="'/blog/' + item.slug">
+                {{ item.title }}
+              </NuxtLink>
+            </h3>
+
+            <div v-if="item.sections && item.sections.length > 0" class="bg-zinc-50/80 dark:bg-zinc-950/40 p-4 rounded-2xl border border-zinc-200/50 dark:border-zinc-800/50 space-y-2">
+              <span class="text-xs font-semibold text-zinc-700 dark:text-zinc-300 uppercase tracking-wider block">Key Case Modules:</span>
+              <ul class="space-y-1.5 text-xs text-zinc-600 dark:text-zinc-400">
+                <li v-for="(sec, idx) in item.sections.slice(0, 4)" :key="idx" class="flex items-start gap-1.5">
+                  <UIcon name="i-solar-double-alt-arrow-right-linear" class="size-3 text-emerald-500 shrink-0 mt-0.5" />
+                  <span class="line-clamp-1">{{ sec }}</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-zinc-200/80 dark:border-zinc-800/80 flex items-center justify-between mt-6">
+            <div class="flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
+              <UIcon name="i-solar-user-circle-bold-duotone" class="size-5 text-emerald-600" />
+              <span>Mehrdad Anvar, MD</span>
+            </div>
+
+            <NuxtLink
+              :to="'/blog/' + item.slug"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 transition-all"
+            >
+              <span>Read Full Review</span>
+              <UIcon name="i-solar-arrow-right-linear" class="size-3.5" />
+            </NuxtLink>
           </div>
         </div>
       </div>
-    </section>
-    <section class="categories py-24">
-      <UContainer>
-        <h2 class="text-3xl pb-24">Categories</h2>
-        <div class="flex mx-auto w-11/12">
-          <DarkFile
-            v-for="(item, index) in Categories"
-            :key="index"
-            class="w-[300px]"
-          >
-            <h3 class="py-6">{{ item.name }}</h3>
-
-            <UButton
-              color="neutral"
-              class="px-6 mt-12 hover:cursor-pointer"
-              variant="ghost"
-              >Read More</UButton
-            >
-          </DarkFile>
-        </div>
-      </UContainer>
-    </section>
+    </div>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 definePageMeta({
   layout: "default",
 });
 
-let Categories = [
+const categories = [
   { name: "Cardiology", number: 5 },
   { name: "Gastroenterology", number: 11 },
-  { name: "Obstetrics", number: 6 },
+  { name: "Obstetrics & Gynecology", number: 6 },
+  { name: "Emergency Medicine & Trauma", number: 8 },
 ];
-//load_articles();
 
-// let blogs = ref([]);
-// let { data: loaded_blogs, status } = await useAsyncData(
-//   "loaded_blogs",
-//   async () => {
-//     let response = await $fetch("/api/getAbstracts");
-//     blogs.value = response.articles;
-//     return response.articles;
-//   },
-//   { lazy: true }
-// );
+const fallbackArticles = [
+  {
+    _id: "1",
+    title: "Chronic Non-Inflammatory Diarrhea: A Clinical Review of Common Etiologies",
+    data_published: "2024",
+    cases: 9,
+    sections: [
+      "Celiac Disease: When Autoimmunity Meets Gluten",
+      "Carcinoid Syndrome: The Symphony of Serotonin",
+      "Bile Acid Malabsorption: When the Enterohepatic Circuit Short-Circuits",
+      "Irritable Bowel Syndrome: The Great Gut Communicator"
+    ],
+    slug: "chronic_non-inflammatory_diarrhea_a_clinical_review_of_common_etiologies"
+  },
+  {
+    _id: "2",
+    title: "Dilated Cardiomyopathy: A Clinical Review of Common Etiologies",
+    data_published: "2024",
+    cases: 6,
+    sections: [
+      "The Unexpected Heart Challenge: Peripartum Cardiomyopathy",
+      "Tachycardia-Induced Cardiomyopathy",
+      "Takotsubo Cardiomyopathy in Traumatic Stress"
+    ],
+    slug: "dilated_cardiomyopathy_a_clinical_review_of_common_etiologies"
+  }
+];
 
-let { data: loaded_blogs, status } = await useFetch("/api/getAbstracts");
+const { data: loaded_blogs } = await useFetch("/api/getAbstracts").catch(() => ({ data: ref(null) }));
+
+const articlesList = computed(() => {
+  if (loaded_blogs.value && loaded_blogs.value.articles && Array.isArray(loaded_blogs.value.articles) && loaded_blogs.value.articles.length > 0) {
+    return loaded_blogs.value.articles;
+  }
+  return fallbackArticles;
+});
 </script>
-
-<style scoped>
-.hero {
-  background-image: url("/blog_1.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.categories {
-  background-image: url("/sample12.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.features {
-  background-image: url("/sample13.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-/* img {
-  filter: opacity(0.5);
-  filter: grayscale();
-} */
-</style>
