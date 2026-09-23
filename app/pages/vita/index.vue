@@ -27,7 +27,7 @@
       <!-- Section 1: Academic Background & Degrees -->
       <div class="rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/75 dark:bg-zinc-900/60 backdrop-blur-xl shadow-xs space-y-6">
         <div class="flex items-center gap-3 text-emerald-600 dark:text-emerald-400 border-b border-zinc-200/80 dark:border-zinc-800/80 pb-4">
-          <UIcon name="i-solar-academic-cap-bold-duotone" class="size-6" />
+          <UIcon name="i-solar-diploma-bold-duotone" class="size-6" />
           <h2 class="text-xl font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">Education &amp; Qualifications</h2>
         </div>
 
