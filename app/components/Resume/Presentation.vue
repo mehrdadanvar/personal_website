@@ -1,35 +1,39 @@
 <template>
-  <section class="flex flex-col gap-8">
-    <h2 class="text-3xl text-yellow-700">Presentations</h2>
-    <div class="grid grid-cols-1 gap-10">
-      <div v-for="item in presentations" :key="item" class="sm:flex sm:flex-col sm:gap-6 md:grid md:grid-cols-4">
-        <h4 class="text-gray-700 lg:text-xl col-span-1">
-          {{ item.date }}
-        </h4>
-        <div class="flex flex-col gap-2 col-span-3">
-          <h3 class="text-xl text-gray-700 lg:text-2xl">
-            {{ item.presentation_title }}
-          </h3>
-          <div class="py-2 text-gray-500">
-            <p class="text-xl">{{ item.type }}</p>
-
-            <p class="text-xl">
-              {{ item.conference_title }}
-            </p>
-            <ul class="list-disc flex flex-col gap-2 mt-6 lg:text-xl">
-              <li v-for="bullet in item.bullet_points">
-                {{ bullet }}
-              </li>
-            </ul>
+  <section class="flex flex-col gap-6">
+    <h2 class="text-2xl font-bold text-teal-800 dark:text-teal-300">Presentations</h2>
+    <UTimeline :items="formattedItems" color="neutral" class="px-2">
+      <template #default="{ item }">
+        <div class="space-y-1 pb-6">
+          <div class="flex items-center justify-between gap-4">
+            <h3 class="text-base font-bold text-zinc-900 dark:text-zinc-100">
+              {{ item.presentation_title || item.title }}
+            </h3>
+            <span class="text-xs font-mono font-semibold text-teal-700 dark:text-teal-400 shrink-0">
+              {{ item.date }}
+            </span>
           </div>
+
+          <p class="text-xs font-medium text-zinc-600 dark:text-zinc-400">
+            {{ item.type }} <span v-if="item.conference_title">— {{ item.conference_title }}</span>
+          </p>
         </div>
-      </div>
-    </div>
+      </template>
+    </UTimeline>
   </section>
 </template>
 
-<script setup>
-import presentations from "../../assets/files/presentations.json";
-</script>
+<script setup lang="ts">
+import fallbackPresentations from "~/assets/files/presentations.json";
 
-<style></style>
+const props = defineProps<{
+  items?: any[];
+}>();
+
+const formattedItems = computed(() => {
+  const raw = (props.items && props.items.length > 0) ? props.items : fallbackPresentations;
+  return raw.map((x: any) => ({
+    ...x,
+    icon: "i-solar-videocamera-record-bold"
+  }));
+});
+</script>

@@ -1,31 +1,46 @@
 <template>
-  <section class="flex flex-col gap-8">
-    <h2 class="text-3xl text-yellow-700">Peer Reviewed Publications</h2>
-    <div class="grid grid-cols-1 gap-10">
-      <div
-        class="sm:flex sm:flex-col sm:gap-6 md:grid md:grid-cols-4"
-        v-for="pub in newpubs"
-      >
-        <ResumeSinglePub
-          :title="pub.title"
-          :journal="pub.journal"
-          :year="pub.year"
-          :authors="pub.authors"
-          :pdf="pub.pdf"
-          :abstract="pub.abstract"
-        />
-      </div>
-    </div>
+  <section class="flex flex-col gap-6">
+    <h2 class="text-2xl font-bold text-teal-800 dark:text-teal-300">Peer-Reviewed Publications</h2>
+    <UTimeline :items="formattedItems" color="neutral" class="px-2">
+      <template #default="{ item }">
+        <div class="space-y-1.5 pb-6">
+          <div class="flex items-center justify-between gap-4">
+            <span class="text-xs font-mono font-bold text-teal-700 dark:text-teal-400 uppercase tracking-wider">
+              {{ item.journal }} &mdash; {{ item.year }}
+            </span>
+            <a v-if="item.link || item.pdf" :href="item.link || item.pdf" target="_blank" rel="noopener noreferrer" class="text-xs text-teal-700 dark:text-teal-400 hover:underline flex items-center gap-1">
+              <span>Full Text</span>
+              <UIcon name="i-solar-export-bold" class="size-3" />
+            </a>
+          </div>
+
+          <h3 class="text-sm font-bold text-zinc-900 dark:text-zinc-100 leading-snug">
+            {{ item.title }}
+          </h3>
+
+          <p class="text-xs text-zinc-500 leading-relaxed">
+            <span v-if="Array.isArray(item.authors)">{{ item.authors.join(', ') }}</span>
+            <span v-else>{{ item.authors }}</span>
+          </p>
+        </div>
+      </template>
+    </UTimeline>
   </section>
 </template>
 
-<script setup>
-// let { data: pubs } = await useFetch("/api/pubs");
-import pubs from "../../assets/files/pubs.json";
+<script setup lang="ts">
+import fallbackPubs from "~/assets/files/pubs.json";
 
-let newpubs = pubs.sort((a, b) => {
-  return b.id - a.id;
+const props = defineProps<{
+  items?: any[];
+}>();
+
+const formattedItems = computed(() => {
+  const raw = (props.items && props.items.length > 0) ? props.items : fallbackPubs;
+  const sorted = [...raw].sort((a: any, b: any) => (b.year || 0) - (a.year || 0));
+  return sorted.map((x: any) => ({
+    ...x,
+    icon: "i-solar-document-text-bold"
+  }));
 });
 </script>
-
-<style scoped></style>

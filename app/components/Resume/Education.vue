@@ -1,53 +1,39 @@
-<!-- <template>
-  <section class="flex flex-col gap-8 mb-12">
-    <h2 class="text-3xl text-yellow-700">Education</h2>
-    <div class="grid grid-cols-1 gap-10">
-      <div v-for="x in schools" :key="x" class="sm:flex sm:flex-col sm:gap-6 md:grid md:grid-cols-4">
-        <h3 class="lg:text-xl col-span-1 text-toned">
-          {{ x.dates }}
-        </h3>
-        <div class="flex flex-col gap-2 col-span-3">
-          <h3 class="lg:text-xl text-highlighted">{{ x.name }}</h3>
-          <div class="flex lg:text-lg gap-4 text-muted">
-            <h4>{{ x.major }}</h4>
-            <h4>{{ x.level }}</h4>
-          </div>
-          <div class="flex lg:text-lg gap-4 text-dimmed">
-            <h5>{{ x.location }}</h5>
-            <h5>GPA {{ x.grade }}</h5>
-          </div>
+<template>
+  <section class="flex flex-col gap-6">
+    <h2 class="text-2xl font-bold text-teal-800 dark:text-teal-300">Education</h2>
+    <UTimeline :items="formattedItems" color="neutral" class="px-2">
+      <template #default="{ item }">
+        <div class="space-y-1 pb-6">
+          <span class="text-xs font-mono font-semibold text-teal-700 dark:text-teal-400 block">
+            {{ item.dates || item.start ? `${item.start} - ${item.end}` : item.date }}
+          </span>
+          <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-100">
+            {{ item.name || item.title }}
+          </h3>
+          <p class="text-xs font-medium text-zinc-600 dark:text-zinc-400">
+            {{ item.major || item.level }} {{ item.location ? `— ${item.location}` : '' }}
+          </p>
+          <p v-if="item.remarks" class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed pt-1">
+            {{ item.remarks }}
+          </p>
         </div>
-      </div>
-    </div>
-    <USeparator />
+      </template>
+    </UTimeline>
   </section>
 </template>
 
-<script setup>
-import schools from "../../assets/files/schools.json";
-</script>
-
-<style scoped></style> -->
-<template>
-  <UTimeline :items="items" color="neutral" size="md">
-    <template #title="{ item }"> </template>
-  </UTimeline>
-</template>
 <script setup lang="ts">
-import type { TimelineItem } from "@nuxt/ui";
+import fallbackSchools from "~/assets/files/schools.json";
 
-let items = [
-  {
-    date: "September 2007 - December 2015",
-    title: "Bachelor of Science in Biomedical Engineering",
-    description: "University of Medical Sciences, Tehran",
-    icon: "i-solar-book-bookmark-bold",
-  },
-  {
-    date: "September 2021 - June 2023",
-    title: "Bachelor of Science in Computer Science",
-    description: "University of Medical Sciences, Tehran",
-    icon: "i-solar-book-bookmark-bold",
-  },
-] satisfies TimelineItem[];
+const props = defineProps<{
+  items?: any[];
+}>();
+
+const formattedItems = computed(() => {
+  const raw = (props.items && props.items.length > 0) ? props.items : fallbackSchools;
+  return raw.map((x: any) => ({
+    ...x,
+    icon: "i-solar-academic-cap-bold"
+  }));
+});
 </script>

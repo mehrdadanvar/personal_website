@@ -1,11 +1,17 @@
 <template>
-  <div class="resume dark:bg-zinc-900 bg-zinc-50 center transition-all duration-500 ease-in-out">
-    <slot />
+  <div class="resume min-h-screen flex flex-col bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors duration-300">
+    <Navbar />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
   </div>
 </template>
-<script setup></script>
+
+<script setup lang="ts"></script>
+
 <style scoped>
 .resume {
-  font-family: "Crimson Text";
+  font-family: "Crimson Text", serif;
 }
 </style>
