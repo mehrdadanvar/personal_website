@@ -2,7 +2,11 @@
   <div class="relative min-h-screen py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
     <title>Dr. Mehrdad Anvar, MD — Public Health &amp; Health Informatics</title>
 
-    <ArtBackground src="/sample12.svg" />
+    <!-- FIXED FULL-PAGE SVG ART: two large, non-repeating, viewport-anchored backgrounds -->
+    <div class="pointer-events-none fixed inset-0 z-0">
+      <ArtBackground src="/sample12.svg" fixed position-class="bg-top" height-class="h-full" />
+      <ArtBackground src="/sample15.svg" fixed position-class="bg-bottom" height-class="h-full" />
+    </div>
 
     <!-- MAIN BENTO GRID HERO -->
     <section class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -108,8 +112,6 @@
         </div>
       </div>
     </section>
-
-    <ArtBackground src="/sample15.svg" />
 
     <!-- ACADEMIC RESEARCH BENTO GRID -->
     <section class="relative z-10 space-y-6 pt-6">
