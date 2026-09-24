@@ -1,49 +1,37 @@
 <template>
-  <section class="flex flex-col gap-6">
-    <h2 class="text-2xl font-bold text-teal-800 dark:text-teal-300">Clinical Experience</h2>
-    <UTimeline :items="formattedItems" color="neutral" class="px-2">
-      <template #default="{ item }">
-        <div class="space-y-2 pb-8">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-            <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-100">
+  <ResumeSection title="Clinical Work Experience">
+    <UTimeline :items="items" color="neutral" class="px-1">
+      <template #wrapper="{ item }">
+        <div class="flex flex-col-reverse sm:flex-row items-start justify-between gap-2 sm:gap-8 w-full">
+          <div class="min-w-0 flex-1 space-y-1">
+            <h3 class="text-lg lg:text-xl font-serif font-bold text-zinc-900 dark:text-zinc-100">
               {{ item.title }}
             </h3>
-            <span class="text-xs font-mono font-semibold text-teal-700 dark:text-teal-400 shrink-0">
-              {{ item.period || (item.start ? `${item.start} - ${item.end}` : '') }}
-            </span>
+            <p class="text-sm lg:text-base font-medium text-zinc-600 dark:text-zinc-300">
+              {{ item.place }}
+            </p>
+            <ul v-if="item.definition?.length" class="list-disc space-y-1.5 pl-5 text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed pt-1 marker:text-teal-700 dark:marker:text-teal-400">
+              <li v-for="(line, i) in item.definition" :key="i">{{ line }}</li>
+            </ul>
           </div>
-
-          <p class="text-xs font-medium text-zinc-600 dark:text-zinc-400">
-            {{ item.place || item.center }} <span v-if="item.geo && item.geo.length">({{ Array.isArray(item.geo) ? item.geo.join(', ') : item.geo }})</span>
-            <span v-else-if="item.location">({{ item.location }})</span>
-          </p>
-
-          <ul v-if="Array.isArray(item.definition) || Array.isArray(item.description)" class="space-y-1 text-xs text-zinc-600 dark:text-zinc-300 list-disc pl-4 pt-1">
-            <li v-for="(def, idx) in (item.definition || item.description)" :key="idx" class="leading-relaxed">
-              {{ def }}
-            </li>
-          </ul>
-          <p v-else-if="item.definition || item.description" class="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed pt-1">
-            {{ item.definition || item.description }}
-          </p>
+          <span class="shrink-0 text-sm lg:text-base font-serif font-semibold text-teal-700 dark:text-teal-300 tabular-nums whitespace-nowrap sm:text-right pt-0.5">
+            {{ formatPeriod(item.period) }}
+          </span>
         </div>
       </template>
+      <template #indicator>
+        <span class="block size-2.5 rounded-full bg-teal-700 dark:bg-teal-400 ring-4 ring-teal-700/10 dark:ring-teal-400/15" />
+      </template>
     </UTimeline>
-  </section>
+  </ResumeSection>
 </template>
 
 <script setup lang="ts">
-import fallbackClinics from "~/assets/files/clinics.json";
-
 const props = defineProps<{
-  items?: any[];
+  items?: Record<string, any>[];
 }>();
 
-const formattedItems = computed(() => {
-  const raw = (props.items && props.items.length > 0) ? props.items : fallbackClinics;
-  return raw.map((x: any) => ({
-    ...x,
-    icon: "i-solar-medical-kit-bold"
-  }));
-});
+const items = computed(() =>
+  sortTimeline(pickItems(props.items), "period", "desc"),
+);
 </script>

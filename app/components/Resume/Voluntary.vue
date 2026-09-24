@@ -1,5 +1,5 @@
 <template>
-  <ResumeSection title="Research Experience">
+  <ResumeSection title="Voluntary &amp; Extracurricular Activities">
     <UTimeline :items="items" color="neutral" class="px-1">
       <template #wrapper="{ item }">
         <div class="flex flex-col-reverse sm:flex-row items-start justify-between gap-2 sm:gap-8 w-full">
@@ -12,7 +12,7 @@
             </ul>
           </div>
           <span class="shrink-0 text-sm lg:text-base font-serif font-semibold text-teal-700 dark:text-teal-300 tabular-nums whitespace-nowrap sm:text-right pt-0.5">
-            {{ item.dates }}
+            {{ formatPeriod(item.period) }}
           </span>
         </div>
       </template>
@@ -29,6 +29,6 @@ const props = defineProps<{
 }>();
 
 const items = computed(() =>
-  sortTimeline(pickItems(props.items), "dates", "desc"),
+  sortTimeline(pickItems(props.items), "period", "desc"),
 );
 </script>

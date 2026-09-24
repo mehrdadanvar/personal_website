@@ -1,62 +1,42 @@
 <template>
-  <section class="flex flex-col gap-6">
-    <h2 class="text-2xl font-bold text-teal-800 dark:text-teal-300">Internships</h2>
-    <UTimeline :items="formattedItems" color="neutral" class="px-2">
-      <template #default="{ item }">
-        <div class="space-y-1 pb-6">
-          <div class="flex items-center justify-between gap-4">
-            <h3 class="text-base font-bold text-zinc-900 dark:text-zinc-100">
-              {{ item.title }} <span v-if="item.duration" class="text-xs font-normal text-zinc-500">({{ item.duration }} weeks)</span>
+  <ResumeSection title="Internships">
+    <UTimeline :items="items" color="neutral" class="px-1">
+      <template #wrapper="{ item }">
+        <div class="flex flex-col-reverse sm:flex-row items-start justify-between gap-1 sm:gap-6 w-full">
+          <div class="min-w-0 flex-1 space-y-0.5">
+            <h3 class="text-base lg:text-lg font-serif font-bold text-zinc-900 dark:text-zinc-100">
+              {{ item.title }}
+              <span class="text-xs sm:text-sm text-zinc-500">({{ item.duration }} weeks)</span>
             </h3>
-            <span class="text-xs font-mono font-semibold text-teal-700 dark:text-teal-400 shrink-0">
-              {{ item.short_dates || formatDateRange(item.dates) }}
-            </span>
+            <p class="text-sm text-zinc-500 dark:text-zinc-400">
+              {{ item.description }}
+            </p>
           </div>
-
-          <p class="text-xs font-medium text-zinc-600 dark:text-zinc-400">
-            {{ item.location }}
-          </p>
-          <p v-if="item.description" class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed pt-0.5">
-            {{ item.description }}
-          </p>
+          <span class="shrink-0 text-xs sm:text-sm font-serif font-medium text-teal-700 dark:text-teal-300 tabular-nums whitespace-nowrap sm:text-right pt-0.5">
+            {{ usDateRange(item.dates?.start, item.dates?.end) }}
+          </span>
         </div>
       </template>
+      <template #indicator>
+        <span class="block size-2 rounded-full bg-teal-700/80 dark:bg-teal-400/80 ring-3 ring-teal-700/10 dark:ring-teal-400/15" />
+      </template>
     </UTimeline>
-  </section>
+  </ResumeSection>
 </template>
 
 <script setup lang="ts">
-import fallbackInternships from "~/assets/files/internships.json";
-
 const props = defineProps<{
-  items?: any[];
+  items?: Record<string, any>[];
 }>();
 
-function formatDateRange(datesObj: any) {
-  if (!datesObj) return "";
-  if (typeof datesObj === "string") return datesObj;
-  if (datesObj.start && datesObj.end) {
-    return `${datesObj.start} – ${datesObj.end}`;
-  }
-  return "";
-}
-
-const formattedItems = computed(() => {
-  const raw = (props.items && props.items.length > 0) ? props.items : fallbackInternships;
-  return raw.map((item: any) => {
-    let short_dates = item.short_dates;
-    if (!short_dates && item.dates && typeof item.dates === "object") {
-      const s = item.dates.start ? item.dates.start.split("-") : [];
-      const e = item.dates.end ? item.dates.end.split("-") : [];
-      if (s.length >= 2 && e.length >= 2) {
-        short_dates = `${s[1]} ${s[0]} – ${e[1]} ${e[0]}`;
-      }
-    }
-    return {
+const items = computed(() =>
+  sortTimeline(
+    pickItems(props.items).map((item) => ({
       ...item,
-      short_dates: short_dates || formatDateRange(item.dates),
-      icon: "i-solar-notes-bold"
-    };
-  });
-});
+      start_date: item.dates?.start ?? "",
+    })),
+    "start_date",
+    "asc",
+  ),
+);
 </script>

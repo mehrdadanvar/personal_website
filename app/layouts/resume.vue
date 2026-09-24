@@ -12,6 +12,6 @@
 
 <style scoped>
 .resume {
-  font-family: "Crimson Text", serif;
+  font-family: "Source Serif 4", Georgia, serif;
 }
 </style>

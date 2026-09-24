@@ -1,5 +1,5 @@
 <template>
-  <ResumeSection title="Research Experience">
+  <ResumeSection title="Non-Clinical Work Experience">
     <UTimeline :items="items" color="neutral" class="px-1">
       <template #wrapper="{ item }">
         <div class="flex flex-col-reverse sm:flex-row items-start justify-between gap-2 sm:gap-8 w-full">
@@ -7,12 +7,15 @@
             <h3 class="text-lg lg:text-xl font-serif font-bold text-zinc-900 dark:text-zinc-100">
               {{ item.title }}
             </h3>
-            <ul v-if="item.bullet_points?.length" class="list-disc space-y-1.5 pl-5 text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed pt-1 marker:text-teal-700 dark:marker:text-teal-400">
-              <li v-for="(line, i) in item.bullet_points" :key="i">{{ line }}</li>
+            <p class="text-sm lg:text-base font-medium text-zinc-600 dark:text-zinc-300">
+              {{ item.place }}
+            </p>
+            <ul v-if="item.definition?.length" class="list-disc space-y-1.5 pl-5 text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed pt-1 marker:text-teal-700 dark:marker:text-teal-400">
+              <li v-for="(line, i) in item.definition" :key="i">{{ line }}</li>
             </ul>
           </div>
           <span class="shrink-0 text-sm lg:text-base font-serif font-semibold text-teal-700 dark:text-teal-300 tabular-nums whitespace-nowrap sm:text-right pt-0.5">
-            {{ item.dates }}
+            {{ formatPeriod(item.period) }}
           </span>
         </div>
       </template>
@@ -29,6 +32,6 @@ const props = defineProps<{
 }>();
 
 const items = computed(() =>
-  sortTimeline(pickItems(props.items), "dates", "desc"),
+  sortTimeline(pickItems(props.items), "period", "desc"),
 );
 </script>
