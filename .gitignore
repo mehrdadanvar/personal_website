@@ -1,0 +1,44 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+.vscode
+dist
+personal
+research.txt
+uv.lock
+README.md
+pyproject.toml
+index.ipynb
+previous_cont
+.python-version
+
+# Node dependencies
+node_modules
+public_copy
+py
+.venv
+backend
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
+git
+.gitignore
+.ipynb.*
+.ipynb
+
+.env copy
+pathways.json
+sample.js

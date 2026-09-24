@@ -1,10 +1,6 @@
 <template>
   <div class="relative min-h-screen py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-10">
-    <!-- SVG Background Overlay -->
-    <div
-      class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] pointer-events-none opacity-40 dark:opacity-30 bg-top bg-no-repeat bg-contain z-0"
-      style="background-image: url('/sample23.svg');"
-    ></div>
+    <ArtBackground src="/sample23.svg" />
 
     <!-- Header Banner -->
     <div class="relative z-10 space-y-3 border-b border-zinc-200/80 dark:border-zinc-800/80 pb-8">
@@ -57,7 +53,7 @@
       <div
         v-for="pub in sortedPublications"
         :key="pub.id"
-        class="rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-900/70 backdrop-blur-xl shadow-xs space-y-4"
+        class="rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-xl shadow-xs space-y-4"
       >
         <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 border-b border-zinc-200/80 dark:border-zinc-800/80 pb-4">
           <div class="space-y-1 max-w-4xl">

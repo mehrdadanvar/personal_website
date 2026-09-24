@@ -1,10 +1,13 @@
 <template>
   <footer class="relative border-t border-zinc-200/80 dark:border-zinc-800/80 bg-zinc-100/90 dark:bg-zinc-950/90 overflow-hidden mt-20 text-xs text-zinc-600 dark:text-zinc-400">
-    <!-- SVG Background Overlay with enhanced contrast -->
-    <div
-      class="absolute inset-0 pointer-events-none opacity-30 dark:opacity-20 bg-cover bg-center"
-      style="background-image: url('/sample23.svg');"
-    ></div>
+    <!-- SVG Background Overlay -->
+    <ArtBackground
+      src="/sample23.svg"
+      custom-class="inset-0"
+      position-class=""
+      fit-class="bg-cover bg-center"
+      tone-class="opacity-40 dark:opacity-30 dark:invert"
+    />
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- Col 1: Bio & Credentials -->

@@ -2,16 +2,12 @@
   <div class="relative min-h-screen py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
     <title>Dr. Mehrdad Anvar, MD — Public Health &amp; Health Informatics</title>
 
-    <!-- SVG Background Overlay with enhanced visibility for light and dark modes -->
-    <div
-      class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[700px] pointer-events-none opacity-40 dark:opacity-30 bg-top bg-no-repeat bg-contain z-0"
-      style="background-image: url('/sample12.svg');"
-    ></div>
+    <ArtBackground src="/sample12.svg" />
 
     <!-- MAIN BENTO GRID HERO -->
     <section class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6">
       <!-- Profile Hero Bento Card (12 cols) -->
-      <div class="lg:col-span-12 rounded-3xl p-6 sm:p-10 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-900/70 backdrop-blur-xl shadow-xs flex flex-col md:flex-row items-center md:items-start gap-8">
+      <div class="lg:col-span-12 rounded-3xl p-6 sm:p-10 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-xl shadow-xs flex flex-col md:flex-row items-center md:items-start gap-8">
         <!-- Prominent Doctor Portrait -->
         <div class="relative shrink-0">
           <img
@@ -86,7 +82,7 @@
         <div
           v-for="proj in featuredProjects"
           :key="proj.slug"
-          class="rounded-3xl p-6 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-900/70 backdrop-blur-xl shadow-xs hover:border-teal-500/50 hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+          class="rounded-3xl p-6 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-xl shadow-xs hover:border-teal-500/50 hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
         >
           <div class="space-y-3">
             <div class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-700 dark:text-teal-400 border border-teal-500/20 flex items-center justify-center">
@@ -113,11 +109,7 @@
       </div>
     </section>
 
-    <!-- SECONDARY SVG BACKGROUND -->
-    <div
-      class="absolute left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] pointer-events-none opacity-35 dark:opacity-25 bg-center bg-no-repeat bg-contain z-0"
-      style="background-image: url('/sample15.svg');"
-    ></div>
+    <ArtBackground src="/sample15.svg" />
 
     <!-- ACADEMIC RESEARCH BENTO GRID -->
     <section class="relative z-10 space-y-6 pt-6">
@@ -137,7 +129,7 @@
         <div
           v-for="research in researchList"
           :key="research.title"
-          class="rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-900/70 backdrop-blur-xl shadow-xs space-y-4"
+          class="rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-xl shadow-xs space-y-4"
         >
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-700 dark:text-teal-400 border border-teal-500/20 flex items-center justify-center shrink-0">
@@ -166,7 +158,7 @@
     </section>
 
     <!-- COMPETENCIES & TECHNICAL STACK -->
-    <section class="relative z-10 rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-900/70 backdrop-blur-xl shadow-xs space-y-6">
+    <section class="relative z-10 rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-xl shadow-xs space-y-6">
       <div class="flex items-center justify-between border-b border-zinc-200/80 dark:border-zinc-800/80 pb-4">
         <h2 class="text-xl font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
           Competencies &amp; Quantitative Stack

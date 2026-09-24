@@ -2,11 +2,7 @@
   <div class="relative min-h-screen py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-10">
     <title>About Mehrdad Anvar, MD</title>
 
-    <!-- SVG Background Overlay with enhanced visibility for light and dark modes -->
-    <div
-      class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] pointer-events-none opacity-40 dark:opacity-30 bg-top bg-no-repeat bg-contain z-0"
-      style="background-image: url('/sample6.svg');"
-    ></div>
+    <ArtBackground src="/sample6.svg" />
 
     <!-- Header Banner -->
     <div class="relative z-10 space-y-3 border-b border-zinc-200/80 dark:border-zinc-800/80 pb-8">
@@ -25,7 +21,7 @@
     <!-- Bento Grid Layout for About Content -->
     <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6">
       <!-- Bento Card 1: Early Journey & Foundation (7 cols) -->
-      <div class="lg:col-span-7 rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-900/70 backdrop-blur-xl shadow-xs space-y-4">
+      <div class="lg:col-span-7 rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-xl shadow-xs space-y-4">
         <div class="flex items-center gap-3 text-teal-700 dark:text-teal-400">
           <div class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center">
             <UIcon name="i-solar-history-bold-duotone" class="size-5" />
@@ -46,7 +42,7 @@
       </div>
 
       <!-- Bento Card 2: Strategic Pillars (5 cols) -->
-      <div class="lg:col-span-5 rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-900/70 backdrop-blur-xl shadow-xs space-y-4 flex flex-col justify-between">
+      <div class="lg:col-span-5 rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-xl shadow-xs space-y-4 flex flex-col justify-between">
         <div class="space-y-4">
           <div class="flex items-center gap-3 text-teal-700 dark:text-teal-400">
             <div class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center">
@@ -83,7 +79,7 @@
       </div>
 
       <!-- Bento Card 3: Research & Data Engineering Spectrum (12 cols) -->
-      <div class="lg:col-span-12 rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-900/70 backdrop-blur-xl shadow-xs space-y-6">
+      <div class="lg:col-span-12 rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-xl shadow-xs space-y-6">
         <div class="flex items-center justify-between border-b border-zinc-200/80 dark:border-zinc-800/80 pb-4">
           <h2 class="text-xl font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
             Interdisciplinary Scope: Medicine &amp; Data Science

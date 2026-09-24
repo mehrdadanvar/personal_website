@@ -16,7 +16,7 @@
       <div
         v-for="(project, index) in projectList"
         :key="project.slug ?? project._id ?? index"
-        class="rounded-3xl p-6 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-900/70 backdrop-blur-xl shadow-xs hover:border-teal-500/40 transition-colors duration-300 flex items-start gap-4"
+        class="rounded-3xl p-6 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-xl shadow-xs hover:border-teal-500/40 transition-colors duration-300 flex items-start gap-4"
       >
         <div
           class="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-700 dark:text-teal-400 border border-teal-500/20 flex items-center justify-center shrink-0"

@@ -2,11 +2,7 @@
   <div class="relative min-h-screen py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-10">
     <title>Clinical Review Articles &amp; Blog — Dr. Mehrdad Anvar</title>
 
-    <!-- SVG Background Overlay with enhanced visibility -->
-    <div
-      class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] pointer-events-none opacity-40 dark:opacity-30 bg-top bg-no-repeat bg-contain z-0"
-      style="background-image: url('/sample13.svg');"
-    ></div>
+    <ArtBackground src="/sample13.svg" />
 
     <!-- Header Banner -->
     <div class="relative z-10 space-y-3 border-b border-zinc-200/80 dark:border-zinc-800/80 pb-8">
@@ -25,7 +21,7 @@
     <!-- Featured Categories & Search Bento Grid -->
     <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6">
       <!-- Search Tile (7 cols) -->
-      <div class="lg:col-span-7 rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-900/70 backdrop-blur-xl shadow-xs space-y-4">
+      <div class="lg:col-span-7 rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-xl shadow-xs space-y-4">
         <div class="flex items-center gap-2 text-teal-700 dark:text-teal-400 font-bold text-sm">
           <UIcon name="i-solar-magnifer-bold-duotone" class="size-5" />
           <span>Search Clinical Topics &amp; Guidelines</span>
@@ -37,7 +33,7 @@
       </div>
 
       <!-- Categories Tile (5 cols) -->
-      <div class="lg:col-span-5 rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-900/70 backdrop-blur-xl shadow-xs space-y-4">
+      <div class="lg:col-span-5 rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-xl shadow-xs space-y-4">
         <div class="flex items-center justify-between border-b border-zinc-200/80 dark:border-zinc-800/80 pb-3">
           <span class="text-xs font-bold text-zinc-900 dark:text-zinc-100 uppercase tracking-wider">Clinical Specialties</span>
           <span class="text-xs text-teal-700 dark:text-teal-400">MCCQE1 High-Yield</span>
@@ -64,7 +60,7 @@
         <div
           v-for="item in articlesList"
           :key="item._id || item.slug"
-          class="rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-900/70 backdrop-blur-xl shadow-xs hover:border-teal-500/50 hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+          class="rounded-3xl p-6 sm:p-8 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-xl shadow-xs hover:border-teal-500/50 hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
         >
           <div class="space-y-4">
             <div class="flex items-center justify-between gap-4 text-xs text-zinc-500 border-b border-zinc-200/80 dark:border-zinc-800/80 pb-3">
