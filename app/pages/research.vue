@@ -1,8 +1,6 @@
 <template>
   <div class="relative min-h-screen py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-10">
-    <title>Academic Research &amp; Peer-Reviewed Publications — Dr. Mehrdad Anvar</title>
-
-    <!-- SVG Background Overlay with enhanced visibility -->
+    <!-- SVG Background Overlay -->
     <div
       class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[650px] pointer-events-none opacity-40 dark:opacity-30 bg-top bg-no-repeat bg-contain z-0"
       style="background-image: url('/sample23.svg');"
@@ -12,40 +10,45 @@
     <div class="relative z-10 space-y-3 border-b border-zinc-200/80 dark:border-zinc-800/80 pb-8">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-teal-500/10 text-teal-800 dark:text-teal-300 border border-teal-500/20">
         <UIcon name="i-solar-document-text-bold-duotone" class="size-4 text-teal-600" />
-        PubMed &amp; Embase Peer-Reviewed Research
+        Peer-Reviewed Research
       </div>
       <h1 class="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-zinc-100 tracking-tight">
-        Academic Publications &amp; Research Index
+        Academic Publications &amp; Research Experience
       </h1>
       <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 max-w-3xl leading-relaxed">
-        Investigative studies in trauma epidemiology, mortality prediction algorithms, injury surveillance databases, and healthcare quality assessment across major medical centers.
+        Investigative studies in trauma epidemiology, mortality prediction, injury surveillance databases, and healthcare quality assessment across major medical centers.
       </p>
     </div>
 
-    <!-- Research Metrics Summary (Clean Dark Teal Accent) -->
-    <div class="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="rounded-2xl p-5 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-900/70 backdrop-blur-xl shadow-xs">
-        <div class="text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-1">Indexed Journal Articles</div>
-        <div class="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100">6 Manuscripts</div>
-        <p class="text-xs text-zinc-500 mt-1">Medicine, CJTEE, IRCMJ, Razavi IJMed</p>
-      </div>
-
-      <div class="rounded-2xl p-5 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-900/70 backdrop-blur-xl shadow-xs">
-        <div class="text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-1">Primary Methodology</div>
-        <div class="text-3xl font-extrabold text-teal-700 dark:text-teal-400">Logistic Reg.</div>
-        <p class="text-xs text-zinc-500 mt-1">Odds ratios, AIS-98 / ICD-10 mapping</p>
-      </div>
-
-      <div class="rounded-2xl p-5 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-900/70 backdrop-blur-xl shadow-xs">
-        <div class="text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-1">Database Scope</div>
-        <div class="text-3xl font-extrabold text-teal-700 dark:text-teal-400">47,000+ Cohort</div>
-        <p class="text-xs text-zinc-500 mt-1">Level 1 Trauma Center Registries</p>
-      </div>
-
-      <div class="rounded-2xl p-5 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-900/70 backdrop-blur-xl shadow-xs">
-        <div class="text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-1">Scholarly Databases</div>
-        <div class="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100">PubMed / PMC</div>
-        <p class="text-xs text-zinc-500 mt-1">Full-text open access links available</p>
+    <!-- Research Experience Card -->
+    <div
+      v-if="researchItems.length"
+      class="relative z-10 rounded-3xl border border-zinc-200/80 dark:border-zinc-800/80 bg-linear-to-bl from-zinc-400/10 to-white/10 dark:from-zinc-500/10 dark:to-zinc-800/20 backdrop-blur-md p-[1px]"
+    >
+      <div class="rounded-3xl bg-white/80 dark:bg-black/50 p-6 sm:p-8">
+        <h2 class="flex items-center gap-2 text-xl font-bold text-teal-800 dark:text-teal-300 pb-5">
+          <UIcon name="i-solar-test-tube-bold" class="size-5" />
+          Research Experience
+        </h2>
+        <div class="space-y-5">
+          <div
+            v-for="(item, idx) in researchItems"
+            :key="item.id ?? idx"
+            class="grid grid-cols-1 sm:grid-cols-[150px,1fr] gap-1 sm:gap-4"
+          >
+            <span class="text-xs font-mono font-semibold text-teal-700 dark:text-teal-400 pt-1 tabular-nums">
+              {{ item.dates }}
+            </span>
+            <div class="space-y-1.5 border-l border-zinc-200 dark:border-zinc-800 pl-4">
+              <h3 class="text-base font-bold text-zinc-900 dark:text-zinc-100 leading-snug">
+                {{ item.title }}
+              </h3>
+              <ul v-if="item.bullet_points?.length" class="list-disc pl-4 space-y-1 text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed marker:text-teal-700 dark:marker:text-teal-400">
+                <li v-for="(line, i) in item.bullet_points" :key="i">{{ line }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -123,9 +126,24 @@ definePageMeta({
   layout: "default",
 });
 
-import pubs from "~/assets/files/pubs.json";
+useHead({
+  title: "Academic Research & Peer-Reviewed Publications — Dr. Mehrdad Anvar",
+});
+
+import pubsData from "~/assets/files/pubs.json";
+import researchData from "~/assets/files/research.json";
+
+const { data: docs } = await useFetch("/api/getDocuments?route=/vita");
+
+function dbItems(sectionName: string, fallback: Record<string, any>[]): Record<string, any>[] {
+  const list = (docs.value as Record<string, any>[] | null) ?? [];
+  const doc = list.find((d) => d.section === sectionName);
+  return doc && Array.isArray(doc.items) && doc.items.length > 0 ? doc.items : fallback;
+}
+
+const researchItems = computed(() => dbItems("research experience", researchData));
 
 const sortedPublications = computed(() => {
-  return [...pubs].sort((a, b) => b.year - a.year);
+  return [...dbItems("publications", pubsData)].sort((a, b) => b.year - a.year);
 });
 </script>
