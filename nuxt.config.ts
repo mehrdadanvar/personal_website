@@ -57,4 +57,10 @@ export default defineNuxtConfig({
     url: "https://mdanvar.ca",
     name: "Mehrdad Anvar Website",
   },
+  routeRules: {
+    "/vita/**": { swr: 300 },
+    "/research/**": { swr: 300 },
+    "/blog/**": { swr: 300 },
+    "/projects/**": { swr: 300 },
+  },
 });

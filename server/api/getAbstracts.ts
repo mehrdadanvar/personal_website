@@ -1,30 +1,37 @@
-import { MongoClient } from "mongodb";
-let config = useRuntimeConfig();
-const client = new MongoClient(config.connectionString);
-function delay(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+import { getMongoClient } from "~~/server/utils/connection";
+
+function withTimeout<T>(promise: Promise<T>, ms: number, fallback: T): Promise<T> {
+  return Promise.race([
+    promise,
+    new Promise<T>((resolve) => setTimeout(() => resolve(fallback), ms)),
+  ]);
 }
 
-async function loadArticles() {
+async function loadArticles(): Promise<any[]> {
   try {
-    // await delay(2000);
-    const database = client.db("blog_articles");
-    let article_collection = database.collection("abstract_collection");
-    let result = await article_collection.find({}).toArray();
-    if (result) {
-      return result;
-    } else {
-      return { articles: [] };
+    const client = await getMongoClient();
+    const database = client?.db("blog_articles");
+    const article_collection = database?.collection("abstract_collection");
+    if (!article_collection) {
+      return [];
     }
+
+    const result = await withTimeout(
+      article_collection.find({}).toArray() as Promise<any>,
+      8000,
+      [],
+    );
+    return result || [];
   } catch (error) {
-    console.log(error);
+    console.error("Error in getAbstracts:", error);
+    return [];
   }
 }
-export default defineEventHandler(async (event) => {
-  let articles = await loadArticles();
-  if (articles) {
+
+export default defineCachedEventHandler(
+  async (event) => {
+    const articles = await loadArticles();
     return { articles };
-  } else {
-    return { data: [] };
-  }
-});
+  },
+  { maxAge: 60 * 5, name: "getAbstracts", swr: true },
+);

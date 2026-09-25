@@ -115,13 +115,31 @@ definePageMeta({
 });
 
 useHead({
-  title: "Academic Research & Peer-Reviewed Publications - Mehrdad Anvar",
+  title: "Academic Research & Peer-Reviewed Publications — Mehrdad Anvar",
+});
+
+useSeoMeta({
+  title: "Academic Research & Peer-Reviewed Publications — Mehrdad Anvar",
+  description:
+    "Peer-reviewed trauma epidemiology and public health research by Dr. Mehrdad Anvar, MD, LMCC: in-hospital mortality risk modeling, nosocomial infection analysis, and healthcare quality evaluation.",
+  ogTitle: "Academic Research & Publications — Mehrdad Anvar, MD, LMCC",
+  ogDescription:
+    "Peer-reviewed studies in trauma epidemiology, mortality prediction, injury surveillance, and healthcare quality assessment.",
+  ogUrl: "https://mdanvar.ca/research",
+  ogType: "profile",
+  twitterCard: "summary_large_image",
+  twitterTitle: "Academic Research & Publications — Mehrdad Anvar, MD, LMCC",
+  twitterDescription:
+    "Peer-reviewed studies in trauma epidemiology, mortality prediction, and healthcare quality assessment.",
+  robots: "index, follow",
 });
 
 import pubsData from "~/assets/files/pubs.json";
 import researchData from "~/assets/files/research.json";
 
-const { data: docs } = await useFetch("/api/getDocuments?route=/vita");
+const { data: docs } = await useFetch("/api/getDocuments?route=/vita", {
+  default: () => [] as Record<string, any>[],
+});
 
 function dbItems(sectionName: string, fallback: Record<string, any>[]): Record<string, any>[] {
   const list = (docs.value as Record<string, any>[] | null) ?? [];

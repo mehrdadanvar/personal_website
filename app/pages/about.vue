@@ -1,6 +1,5 @@
 <template>
   <div class="relative min-h-screen py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-10">
-    <title>About Mehrdad Anvar</title>
 
     <ArtBackground src="/sample6.svg" />
 
@@ -131,5 +130,18 @@
 <script setup lang="ts">
 definePageMeta({
   layout: "default",
+});
+
+useSeoMeta({
+  title: "About — Mehrdad Anvar, MD, LMCC",
+  description:
+    "About Mehrdad Anvar, MD, LMCC: physician, population & public health researcher, and health data systems developer. Medical training at Shiraz University of Medical Sciences.",
+  ogTitle: "About — Mehrdad Anvar, MD, LMCC",
+  ogDescription:
+    "Physician, population & public health researcher, and health data systems developer.",
+  ogUrl: "https://mdanvar.ca/about",
+  ogType: "profile",
+  twitterCard: "summary_large_image",
+  robots: "index, follow",
 });
 </script>

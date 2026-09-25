@@ -101,8 +101,15 @@ let some = ref({});
 let route = useRoute();
 some.value = route.params;
 let { data: blog } = await useAsyncData("blog", async () => {
-  let response = await $fetch(`/api/query?title=${route.params.slug}`);
-  return response.article;
-});
+  try {
+    const response = await $fetch(`/api/query?title=${route.params.slug}`, {
+      timeout: 8000,
+    });
+    return response.article;
+  } catch (error) {
+    console.error("Error fetching article:", error);
+    return null;
+  }
+}, { server: true });
 </script>
 <style scoped></style>

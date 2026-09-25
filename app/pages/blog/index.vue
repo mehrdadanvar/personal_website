@@ -1,6 +1,5 @@
 <template>
   <div class="relative min-h-screen py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-10">
-    <title>Clinical Review Articles &amp; Blog - Mehrdad Anvar</title>
 
     <ArtBackground src="/sample13.svg" />
 
@@ -120,6 +119,19 @@ definePageMeta({
   layout: "default",
 });
 
+useSeoMeta({
+  title: "Clinical Review Articles & Blog — Mehrdad Anvar",
+  description:
+    "Evidence-based clinical reviews and high-yield case breakdowns for MCCQE1 / USMLE preparation — cardiology, gastroenterology, obstetrics, and emergency medicine.",
+  ogTitle: "Clinical Review Articles & Blog — Mehrdad Anvar",
+  ogDescription:
+    "Evidence-based clinical reviews and high-yield case breakdowns for MCCQE1 / USMLE preparation.",
+  ogUrl: "https://mdanvar.ca/blog",
+  ogType: "website",
+  twitterCard: "summary_large_image",
+  robots: "index, follow",
+});
+
 const categories = [
   { name: "Cardiology", number: 5 },
   { name: "Gastroenterology", number: 11 },
@@ -155,7 +167,9 @@ const fallbackArticles = [
   }
 ];
 
-const { data: loaded_blogs } = await useFetch("/api/getAbstracts").catch(() => ({ data: ref(null) }));
+const { data: loaded_blogs } = await useFetch<{ articles: Record<string, any>[] }>("/api/getAbstracts", {
+  default: () => ({ articles: [] }),
+});
 
 const articlesList = computed(() => {
   if (loaded_blogs.value && loaded_blogs.value.articles && Array.isArray(loaded_blogs.value.articles) && loaded_blogs.value.articles.length > 0) {

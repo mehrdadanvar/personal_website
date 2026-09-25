@@ -33,7 +33,25 @@ useHead({
   title: "Curriculum Vitae, Mehrdad Anvar, MD, LMCC",
 });
 
-const { data: docs } = await useFetch("/api/getDocuments?route=/vita");
+useSeoMeta({
+  title: "Curriculum Vitae — Mehrdad Anvar, MD, LMCC",
+  description:
+    "Curriculum Vitae of Mehrdad Anvar, MD, LMCC: medical education, Canadian clinical experience, licensure, publications, research, and technical skills.",
+  ogTitle: "Curriculum Vitae — Mehrdad Anvar, MD, LMCC",
+  ogDescription:
+    "Medical education, clinical experience, licensure, publications, and research experience of Mehrdad Anvar, MD, LMCC — North Vancouver, BC.",
+  ogUrl: "https://mdanvar.ca/vita",
+  ogType: "profile",
+  twitterCard: "summary_large_image",
+  twitterTitle: "Curriculum Vitae — Mehrdad Anvar, MD, LMCC",
+  twitterDescription:
+    "Medical education, clinical experience, licensure, publications, and research experience of Mehrdad Anvar, MD, LMCC.",
+  robots: "index, follow",
+});
+
+const { data: docs } = await useFetch("/api/getDocuments?route=/vita", {
+  default: () => [] as Record<string, any>[],
+});
 
 function section(sectionName: string): Record<string, any>[] {
   const list = (docs.value as Record<string, any>[] | null) ?? [];
