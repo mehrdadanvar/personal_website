@@ -63,8 +63,8 @@ const docs = [
     title: "Examinations",
     items: [
       { title: "CELPIP General", scores: ["Listening 11", "Speaking 12", "Reading 10", "Writing 11"], date: "11/2025" },
-      { title: "NAC OSCE", scores: ["598"], date: "05/2025" },
-      { title: "MCCQE1", scores: ["241"], date: "11/2024" },
+      { title: "NAC OSCE", scores: ["pass"], date: "05/2025" },
+      { title: "MCCQE1", scores: ["pass"], date: "11/2024" },
     ],
   },
   {
@@ -181,23 +181,17 @@ const docs = [
       {
         title: "Student Consultant at Shiraz Bone & Joint Research Center, Shiraz, Iran",
         dates: "2016 - 2019",
-        bullet_points: [
-          "Assisted in formulating/refining research questions, interpreting results and drafting three observational studies.",
-        ],
+        bullet_points: ["Assisted in formulating/refining research questions, interpreting results and drafting three observational studies."],
       },
       {
         title: "Research Assistant at Shiraz Trauma Center, Shiraz, Iran",
         dates: "2015 - 2019",
-        bullet_points: [
-          "Identified potential use of trauma center & EMS administrative databases in studying epidemiological patterns of injuries.",
-        ],
+        bullet_points: ["Identified potential use of trauma center & EMS administrative databases in studying epidemiological patterns of injuries."],
       },
       {
         title: "Data Analysis Advisor at Shiraz Neonatology Research Center",
         dates: "2018 - 2019",
-        bullet_points: [
-          "Contributed to model development in quantifying risk of catheter-related blood stream infections in neonatal intensive care units.",
-        ],
+        bullet_points: ["Contributed to model development in quantifying risk of catheter-related blood stream infections in neonatal intensive care units."],
       },
     ],
   },
@@ -217,16 +211,12 @@ const docs = [
       {
         title: "Health Care Consultant at Kurdistan Red Crescent Society.",
         period: "09/2016 - 09/2017",
-        bullet_points: [
-          "Actively engaged in providing unpaid services at clinics and wards, emphasizing a compassionate approach to patient care. Saqquez Imam Khomaini Hospital.",
-        ],
+        bullet_points: ["Actively engaged in providing unpaid services at clinics and wards, emphasizing a compassionate approach to patient care. Saqquez Imam Khomaini Hospital."],
       },
       {
         title: "Student Committee Coordinator at Shiraz Education Development Center.",
         period: "09/2007 - 09/2012",
-        bullet_points: [
-          "Facilitated active involvement of students in improving the medical education curriculum and advocated for continuous evidence-based improvements in the curriculum.",
-        ],
+        bullet_points: ["Facilitated active involvement of students in improving the medical education curriculum and advocated for continuous evidence-based improvements in the curriculum."],
       },
     ],
   },
@@ -235,9 +225,7 @@ const docs = [
     section: "technical skills",
     type: "skills",
     title: "Technical Skills",
-    items: [
-      { label: "Technical Skills", text: "Fluent in programming in Python, JavaScript, R languages to analyze health data, design and deploy secure web applications." },
-    ],
+    items: [{ label: "Technical Skills", text: "Fluent in programming in Python, JavaScript, R languages to analyze health data, design and deploy secure web applications." }],
   },
   {
     route: "/vita",
@@ -276,11 +264,7 @@ for (const doc of docs) {
     console.log(`skip (keep existing items): ${doc.section}`);
     continue;
   }
-  await col.updateOne(
-    { route: "/vita", section: doc.section },
-    { $set: doc },
-    { upsert: true },
-  );
+  await col.updateOne({ route: "/vita", section: doc.section }, { $set: doc }, { upsert: true });
   console.log(`upserted: ${doc.section}${doc.items ? ` (${doc.items.length} items)` : ""}`);
 }
 
