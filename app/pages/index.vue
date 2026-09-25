@@ -98,15 +98,15 @@
             <UIcon name="i-solar-hospital-bold-duotone" class="size-5" />
           </div>
           <div>
-            <h2 class="text-lg font-bold text-zinc-900 dark:text-zinc-100">Clinical Practice in Canada</h2>
-            <p class="text-xs text-zinc-500">Recent Work Experience</p>
+            <h2 class="text-lg font-bold text-zinc-900 dark:text-zinc-100">Clinical Experience in Canada</h2>
+            <p class="text-xs text-zinc-500">Clinical Observerships &amp; Training</p>
           </div>
         </div>
 
         <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
-          Practicing clinically in Canada since licensure &mdash; recent roles span hospital-based clinical
-          assessment and community practice in British Columbia, pairing day-to-day patient care with
-          ongoing public health research.
+          Interning with three physicians across BC clinics &mdash; family medicine in North and West Vancouver
+          (Nuevo &amp; Ocean Medical Clinics) and cardiology at North Shore Heart Center &mdash; conducting supervised
+          patient assessments, differential diagnoses, and EMR-based follow-up.
         </p>
 
         <NuxtLink to="/vita"
