@@ -43,14 +43,14 @@ definePageMeta({
 });
 
 useHead({
-  title: "Projects — Mehrdad Anvar, MD, LMCC",
+  title: "Projects-Mehrdad Anvar, MD, LMCC",
 });
 
 useSeoMeta({
-  title: "Projects — Mehrdad Anvar, MD, LMCC",
+  title: "Projects-Mehrdad Anvar, MD, LMCC",
   description:
-    "qliniql: clinical software in development by Mehrdad Anvar, MD, LMCC — qliniql.drugs (clinical drug reference) and qliniqla.qbank (licensing exam question bank).",
-  ogTitle: "Projects — Mehrdad Anvar, MD, LMCC",
+    "qliniql: clinical software in development by Mehrdad Anvar, MD, LMCC- qliniql.drugs (clinical drug reference) and qliniqla.qbank (licensing exam question bank).",
+  ogTitle: "Projects- Mehrdad Anvar, MD, LMCC",
   ogDescription:
     "qliniql clinical software suite: qliniql.drugs and qliniqla.qbank, both in development.",
   ogUrl: "https://mdanvar.ca/projects",

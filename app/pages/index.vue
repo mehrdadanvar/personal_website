@@ -33,7 +33,7 @@
 
           <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 max-w-3xl leading-relaxed">
             International medical graduate based in Vancouver, BC. Clinical practice alongside public health and
-            epidemiology research &mdash; quantitative injury surveillance, risk-factor modeling, and population-level
+            epidemiology research - quantitative injury surveillance, risk-factor modeling, and population-level
             outcome analysis.
           </p>
 
@@ -79,7 +79,7 @@
         <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
           Multi-center epidemiologic studies spanning trauma registry analytics, in-hospital mortality risk
           modeling, hospital-acquired infection surveillance, and healthcare quality evaluation across
-          47,000+ patient records &mdash; published in peer-reviewed journals.
+          47,000+ patient records - published in peer-reviewed journals.
         </p>
 
         <NuxtLink to="/research"
@@ -104,8 +104,8 @@
         </div>
 
         <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
-          Interning with three physicians across BC clinics &mdash; family medicine in North and West Vancouver
-          (Nuevo &amp; Ocean Medical Clinics) and cardiology at North Shore Heart Center &mdash; conducting supervised
+          Interning with three physicians across BC clinics - family medicine in North and West Vancouver
+          (Nuevo &amp; Ocean Medical Clinics) and cardiology at North Shore Heart Center - conducting supervised
           patient assessments, differential diagnoses, and EMR-based follow-up.
         </p>
 
@@ -225,18 +225,18 @@ definePageMeta({
 });
 
 useSeoMeta({
-  title: "Mehrdad Anvar, MD, LMCC — Public Health & Epidemiology Research",
+  title: "Mehrdad Anvar, MD, LMCC- Public Health & Epidemiology Research",
   description:
-    "Mehrdad Anvar, MD, LMCC — Canadian physician in Vancouver, BC practicing clinically alongside public health and epidemiology research: trauma registry analytics, mortality risk modeling, and population-level outcome analysis.",
+    "Mehrdad Anvar, MD, LMCC- Canadian physician in Vancouver, BC practicing clinically alongside public health and epidemiology research: trauma registry analytics, mortality risk modeling, and population-level outcome analysis.",
   ogTitle: "Mehrdad Anvar, MD, LMCC",
   ogDescription:
-    "Canadian physician in Vancouver, BC — clinical practice, public health and epidemiology research.",
+    "Canadian physician in Vancouver, BC- clinical practice, public health and epidemiology research.",
   ogUrl: "https://mdanvar.ca/",
   ogType: "website",
   twitterCard: "summary_large_image",
   twitterTitle: "Mehrdad Anvar, MD, LMCC",
   twitterDescription:
-    "Canadian physician in Vancouver, BC — clinical practice, public health and epidemiology research.",
+    "Canadian physician in Vancouver, BC- clinical practice, public health and epidemiology research.",
   robots: "index, follow",
 });
 

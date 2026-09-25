@@ -54,7 +54,7 @@
           class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 border-b border-zinc-200/80 dark:border-zinc-800/80 pb-4">
           <div class="space-y-1 max-w-4xl">
             <span class="text-xs font-bold text-teal-700 dark:text-teal-400 tracking-wider">
-              {{ pub.journal }} &mdash; {{ pub.year }}
+              {{ pub.journal }} - {{ pub.year }}
             </span>
             <h2 class="text-xl font-bold text-zinc-900 dark:text-zinc-100 tracking-tight leading-snug">
               {{ pub.title }}
@@ -115,20 +115,20 @@ definePageMeta({
 });
 
 useHead({
-  title: "Academic Research & Peer-Reviewed Publications — Mehrdad Anvar",
+  title: "Academic Research & Peer-Reviewed Publications- Mehrdad Anvar",
 });
 
 useSeoMeta({
-  title: "Academic Research & Peer-Reviewed Publications — Mehrdad Anvar",
+  title: "Academic Research & Peer-Reviewed Publications- Mehrdad Anvar",
   description:
     "Peer-reviewed trauma epidemiology and public health research by Dr. Mehrdad Anvar, MD, LMCC: in-hospital mortality risk modeling, nosocomial infection analysis, and healthcare quality evaluation.",
-  ogTitle: "Academic Research & Publications — Mehrdad Anvar, MD, LMCC",
+  ogTitle: "Academic Research & Publications- Mehrdad Anvar, MD, LMCC",
   ogDescription:
     "Peer-reviewed studies in trauma epidemiology, mortality prediction, injury surveillance, and healthcare quality assessment.",
   ogUrl: "https://mdanvar.ca/research",
   ogType: "profile",
   twitterCard: "summary_large_image",
-  twitterTitle: "Academic Research & Publications — Mehrdad Anvar, MD, LMCC",
+  twitterTitle: "Academic Research & Publications- Mehrdad Anvar, MD, LMCC",
   twitterDescription:
     "Peer-reviewed studies in trauma epidemiology, mortality prediction, and healthcare quality assessment.",
   robots: "index, follow",

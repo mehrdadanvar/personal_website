@@ -120,10 +120,10 @@ definePageMeta({
 });
 
 useSeoMeta({
-  title: "Clinical Review Articles & Blog — Mehrdad Anvar",
+  title: "Clinical Review Articles & Blog- Mehrdad Anvar",
   description:
-    "Evidence-based clinical reviews and high-yield case breakdowns for MCCQE1 / USMLE preparation — cardiology, gastroenterology, obstetrics, and emergency medicine.",
-  ogTitle: "Clinical Review Articles & Blog — Mehrdad Anvar",
+    "Evidence-based clinical reviews and high-yield case breakdowns for MCCQE1 / USMLE preparation- cardiology, gastroenterology, obstetrics, and emergency medicine.",
+  ogTitle: "Clinical Review Articles & Blog- Mehrdad Anvar",
   ogDescription:
     "Evidence-based clinical reviews and high-yield case breakdowns for MCCQE1 / USMLE preparation.",
   ogUrl: "https://mdanvar.ca/blog",
