@@ -15,8 +15,8 @@
             <span class="font-bold text-base text-zinc-900 dark:text-zinc-100 group-hover:text-teal-700 dark:group-hover:text-teal-400 transition-colors">
               Mehrdad Anvar
             </span>
-            <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold uppercase bg-teal-500/10 text-teal-800 dark:text-teal-300 border border-teal-500/20">
-              MD
+            <span class="text-[10px] font-bold text-teal-800 dark:text-teal-300">
+              MD, LMCC
             </span>
           </div>
           <span class="text-xs text-zinc-500 dark:text-zinc-400 font-medium hidden sm:inline-block">
@@ -106,7 +106,7 @@ const mobileMenuOpen = ref(false);
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
-  { label: "Medical Systems", path: "/projects" },
+  { label: "Projects", path: "/projects" },
   { label: "Research", path: "/research" },
   { label: "Curriculum Vitae", path: "/vita" },
   { label: "Blog", path: "/blog" }

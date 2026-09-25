@@ -14,10 +14,11 @@
           </div>
 
           <p class="text-sm font-medium text-zinc-600 dark:text-zinc-400">
-            {{ item.type }} — {{ item.conference_title }}
+            {{ item.type }} - {{ item.conference_title }}
           </p>
 
-          <ul v-if="item.bullet_points && item.bullet_points.length" class="space-y-1.5 text-sm text-zinc-500 dark:text-zinc-400 list-disc pl-4 pt-1">
+          <ul v-if="item.bullet_points && item.bullet_points.length"
+            class="space-y-1.5 text-sm text-zinc-500 dark:text-zinc-400 list-disc pl-4 pt-1">
             <li v-for="(bullet, idx) in item.bullet_points" :key="idx" class="leading-relaxed">
               {{ bullet }}
             </li>

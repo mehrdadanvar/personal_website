@@ -8,16 +8,18 @@
               {{ item.title }}
             </h3>
             <p v-if="item.scores?.length" class="text-sm text-zinc-500 dark:text-zinc-400">
-              {{ item.scores.join(' — ') }}
+              {{ item.scores.join(' - ') }}
             </p>
           </div>
-          <span class="shrink-0 text-sm lg:text-base font-serif font-semibold text-teal-700 dark:text-teal-300 tabular-nums whitespace-nowrap sm:text-right">
+          <span
+            class="shrink-0 text-sm lg:text-base font-serif font-semibold text-teal-700 dark:text-teal-300 tabular-nums whitespace-nowrap sm:text-right">
             {{ item.date }}
           </span>
         </div>
       </template>
       <template #indicator>
-        <span class="block size-2.5 rounded-full bg-teal-700 dark:bg-teal-400 ring-4 ring-teal-700/10 dark:ring-teal-400/15" />
+        <span
+          class="block size-2.5 rounded-full bg-teal-700 dark:bg-teal-400 ring-4 ring-teal-700/10 dark:ring-teal-400/15" />
       </template>
     </UTimeline>
   </ResumeSection>

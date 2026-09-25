@@ -1,16 +1,12 @@
 <template>
-  <div
-    class="pointer-events-none aria-hidden"
-    :class="[
-      fixed ? 'fixed inset-0 z-0' : 'absolute inset-x-0 z-0',
-      customClass,
-      positionClass,
-      fitClass,
-      toneClass,
-      heightClass,
-    ]"
-    :style="{ backgroundImage: `url('${src}')` }"
-  />
+  <div class="pointer-events-none aria-hidden" :class="[
+    fixed ? 'fixed inset-0 z-0' : 'absolute inset-x-0 z-0',
+    customClass,
+    positionClass,
+    fitClass,
+    toneClass,
+    heightClass,
+  ]" :style="{ backgroundImage: `url('${src}')` }" />
 </template>
 
 <script setup lang="ts">
@@ -29,7 +25,7 @@ const props = withDefaults(
     positionClass: "top-0 bg-center",
     fitClass: "bg-no-repeat bg-contain",
     toneClass: "opacity-70 dark:opacity-60 dark:invert",
-    heightClass: "h-[360px] sm:h-[500px] lg:h-[680px]",
+    heightClass: "sm:h-[500px] lg:h-[680px]",
     fixed: false,
   },
 );

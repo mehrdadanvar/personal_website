@@ -19,7 +19,7 @@
     <p class="">
       My first goal was to build a strong foundation in research methodology. I attended university workshops where I
       learned statistics and quantitative reasoning, which actually sparked my interest in computer science and
-      programming—areas I've since become very passionate about. The second goal involved deepening my theoretical
+      programming-areas I've since become very passionate about. The second goal involved deepening my theoretical
       knowledge through practical experience. I volunteered to help draft and edit research projects and dissertations,
       collaborated with peers and seniors, and later even helped others turn their initial ideas into well-structured
       research proposals. These experiences also sharpened my skills in analyzing datasets, tailoring my approach to

@@ -1,7 +1,6 @@
 <template>
   <div
-    class="bio text-zinc-400 px-12 py-12 mx-auto w-11/12 text-justify rounded-xl bg-linear-to-br from-zinc-800 to bg-zinc-950"
-  >
+    class="bio text-zinc-400 px-12 py-12 mx-auto w-11/12 text-justify rounded-xl bg-linear-to-br from-zinc-800 to bg-zinc-950">
     <h1 class="hidden">About Mehrdad Anvar</h1>
     <div class="absolute -mt-20 -ml-16">
       <!-- <img
@@ -36,7 +35,7 @@
       valuable experience in data analysis tailored to diverse research questions.
     </p>
     <p class="my-3">
-      By the time I completed medical school, I had worked on a wide range of study types—from narrative reviews to
+      By the time I completed medical school, I had worked on a wide range of study types-from narrative reviews to
       clinical trials. Today, I draw on both my clinical background and research skills to approach healthcare from an
       integrated, population-level perspective. I see myself not only as a physician but as a data-informed
       problem-solver, always eager to explore new questions and improve how care is delivered.

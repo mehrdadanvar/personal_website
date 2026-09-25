@@ -1,5 +1,5 @@
 <template>
-  <ResumeSection title="Non-Clinical Work Experience">
+  <ResumeSection title="Canadian Clinical Experience">
     <UTimeline :items="items" color="neutral" class="px-1">
       <template #wrapper="{ item }">
         <div class="flex flex-col-reverse sm:flex-row items-start justify-between gap-2 sm:gap-8 w-full">

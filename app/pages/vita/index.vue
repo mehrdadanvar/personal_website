@@ -6,7 +6,7 @@
         Curriculum Vitae
       </h1>
       <p class="text-base lg:text-lg text-zinc-600 dark:text-zinc-400 font-serif">
-        Dr. Mehrdad Anvar, MD — North Vancouver, BC
+        Mehrdad Anvar, MD, LMCC - North Vancouver, BC
       </p>
     </div>
 
@@ -20,10 +20,7 @@
     <ResumeResearch :items="section('research experience')" />
     <ResumePublications :items="section('publications')" />
     <ResumeVoluntary :items="section('voluntary experience')" />
-    <ResumeSkills
-      :skills="section('technical skills')"
-      :languages="section('languages')"
-    />
+    <ResumeSkills :skills="section('technical skills')" :languages="section('languages')" />
   </div>
 </template>
 
@@ -33,7 +30,7 @@ definePageMeta({
 });
 
 useHead({
-  title: "Curriculum Vitae — Dr. Mehrdad Anvar, MD",
+  title: "Curriculum Vitae, Mehrdad Anvar, MD, LMCC",
 });
 
 const { data: docs } = await useFetch("/api/getDocuments?route=/vita");
