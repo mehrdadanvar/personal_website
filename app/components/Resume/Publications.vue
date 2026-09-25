@@ -4,7 +4,7 @@
       <template #wrapper="{ item }">
         <div class="flex flex-col-reverse sm:flex-row items-start justify-between gap-2 sm:gap-8 w-full">
           <div class="min-w-0 flex-1 space-y-1">
-            <h3 class="text-base lg:text-lg font-serif font-bold text-zinc-900 dark:text-zinc-100 leading-snug">
+            <h3 class="text-base lg:text-lg font-bold text-zinc-900 dark:text-zinc-100 leading-snug">
               {{ item.title }}
             </h3>
             <p class="text-sm text-zinc-600 dark:text-zinc-300">
@@ -41,7 +41,7 @@
               </p>
             </div>
           </div>
-          <span class="shrink-0 text-sm lg:text-base font-serif font-semibold text-teal-700 dark:text-teal-300 tabular-nums whitespace-nowrap sm:text-right pt-0.5">
+          <span class="shrink-0 text-sm lg:text-base font-semibold text-teal-700 dark:text-teal-300 tabular-nums whitespace-nowrap sm:text-right pt-0.5">
             {{ item.year }}
           </span>
         </div>

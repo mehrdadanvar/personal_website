@@ -1,5 +1,6 @@
 <template>
-  <div class="resume min-h-screen flex flex-col bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors duration-300">
+  <div
+    class="resume min-h-screen flex flex-col bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors duration-300">
     <Navbar />
     <main class="flex-1">
       <slot />
@@ -10,8 +11,3 @@
 
 <script setup lang="ts"></script>
 
-<style scoped>
-.resume {
-  font-family: "Source Serif 4", Georgia, serif;
-}
-</style>

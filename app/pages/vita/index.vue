@@ -2,11 +2,11 @@
   <div class="container mx-auto p-6 max-w-5xl space-y-16 mb-24">
     <!-- Header -->
     <div class="space-y-3 border-b border-zinc-200 dark:border-zinc-800 pb-6">
-      <h1 class="text-3xl sm:text-4xl font-serif font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
+      <h1 class="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
         Curriculum Vitae
       </h1>
-      <p class="text-base lg:text-lg text-zinc-600 dark:text-zinc-400 font-serif">
-        Mehrdad Anvar, MD, LMCC - North Vancouver, BC
+      <p class="text-base  text-zinc-600 dark:text-zinc-400">
+        Mehrdad Anvar, MD, LMCC — North Vancouver, BC
       </p>
     </div>
 
@@ -60,8 +60,4 @@ function section(sectionName: string): Record<string, any>[] {
 }
 </script>
 
-<style scoped>
-.container {
-  font-family: "Source Serif 4", Georgia, serif;
-}
-</style>
+<style scoped></style>
