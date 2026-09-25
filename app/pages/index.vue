@@ -11,8 +11,8 @@
         class="lg:col-span-12 rounded-3xl p-6 sm:p-10 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-xl shadow-xs flex flex-col md:flex-row items-center md:items-start gap-8">
         <!-- Prominent Doctor Portrait -->
         <div class="relative shrink-0">
-          <img src="/self.webp" alt="Mehrdad Anvar, MD, LMCC"
-            class="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl object-cover grayscale opacity-90 border-2 border-zinc-200 dark:border-zinc-800 shadow-sm" />
+          <img src="/anvar.webp" alt="Mehrdad Anvar, MD, LMCC"
+            class="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl object-cover  opacity-90 border-2 border-zinc-200 dark:border-zinc-800 shadow-sm" />
           <span
             class="absolute -bottom-2 -right-2 px-2.5 py-1 rounded-full text-xs font-bold bg-teal-700 text-white dark:bg-teal-400 dark:text-zinc-950 shadow-xs">
             MD Physician
