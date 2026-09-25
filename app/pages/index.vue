@@ -11,7 +11,7 @@
         class="lg:col-span-12 rounded-3xl p-6 sm:p-10 border border-zinc-200/80 dark:border-zinc-800/80 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-xl shadow-xs flex flex-col md:flex-row items-center md:items-start gap-8">
         <!-- Prominent Doctor Portrait -->
         <div class="relative shrink-0">
-          <img src="/me2.png" alt="Mehrdad Anvar, MD, LMCC"
+          <img src="/self.webp" alt="Mehrdad Anvar, MD, LMCC"
             class="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl object-cover grayscale opacity-90 border-2 border-zinc-200 dark:border-zinc-800 shadow-sm" />
           <span
             class="absolute -bottom-2 -right-2 px-2.5 py-1 rounded-full text-xs font-bold bg-teal-700 text-white dark:bg-teal-400 dark:text-zinc-950 shadow-xs">
@@ -32,7 +32,7 @@
           </h1>
 
           <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 max-w-3xl leading-relaxed">
-            Canadian physician based in Vancouver, BC. Clinical practice alongside public health and
+            International medical graduate based in Vancouver, BC. Clinical practice alongside public health and
             epidemiology research &mdash; quantitative injury surveillance, risk-factor modeling, and population-level
             outcome analysis.
           </p>
@@ -125,7 +125,7 @@
       <div
         class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-zinc-200/80 dark:border-zinc-800/80 pb-4">
         <div>
-          <span class="text-xs font-bold text-teal-700 dark:text-teal-400 tracking-wider">Investigative
+          <span class="text-sm font-bold text-teal-700 dark:text-teal-400 tracking-wider">Investigative
             Domains</span>
           <h2 class="text-2xl font-bold text-zinc-900 dark:text-zinc-100 tracking-tight">
             Academic Research Focus
@@ -145,19 +145,19 @@
               <UIcon name="i-solar-notes-bold-duotone" class="size-5" />
             </div>
             <div>
-              <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-100">
+              <h3 class="text-xl font-bold text-zinc-900 dark:text-zinc-100">
                 {{ research.title }}
               </h3>
               <p class="text-xs text-zinc-500">Methodology &amp; Clinical Analytics</p>
             </div>
           </div>
 
-          <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+          <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 leading-relaxed">
             {{ research.description }}
           </p>
 
           <ul v-if="research.bullets && research.bullets.length"
-            class="space-y-1.5 pt-2 text-xs text-zinc-600 dark:text-zinc-400 border-t border-zinc-200/60 dark:border-zinc-800/60">
+            class="space-y-1.5 pt-2 text-sm text-zinc-600 dark:text-zinc-400 border-t border-zinc-200/60 dark:border-zinc-800/60">
             <li v-for="(b, i) in research.bullets" :key="i" class="flex items-start gap-2">
               <UIcon name="i-solar-check-read-bold" class="size-4 text-teal-600 dark:text-teal-400 shrink-0 mt-0.5" />
               <span>{{ b }}</span>
